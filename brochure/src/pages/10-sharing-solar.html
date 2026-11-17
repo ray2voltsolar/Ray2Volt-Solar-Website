@@ -1,104 +1,112 @@
 <section class="page p10" data-sec="metering">
   <style>
-    .p10 .bt { font-family: var(--head); font-size: 9px; font-weight: 800; }
-    .p10 .fig h2 { margin: 0 0 1mm; }
-    .p10 table.cmp td:first-child { width: 24%; }
+    .p10 .eq .t .n { font-size: 17pt; }
   </style>
-  <header class="ph"><span class="sec">Metering &nbsp;·&nbsp; Sharing solar</span><img src="{{LOGO}}" alt="Ray2Volt"></header>
+  <header class="ph"><span class="sec">How solar is billed &nbsp;/&nbsp; Sharing solar</span><img src="{{LOGO}}" alt="Ray2Volt"></header>
   <div class="pb">
     <div>
-      <div class="kicker">How solar is billed · When the roof and the use are apart</div>
-      <h1 class="title">Sharing solar: <em>group and virtual net metering</em></h1>
-      <p class="lede">Sometimes the best roof is not above the building that uses the power, or one roof serves many households. Two arrangements let a single plant's units be <b>credited on other electricity bills</b>, in shares agreed in advance.</p>
+      <div class="kicker">Beyond one roof and one meter</div>
+      <h1 class="title">Sharing solar <em>Group and virtual net metering</em></h1>
+      <p class="lede">Sometimes the best roof is not above the building that uses the power, or one roof serves many households. Two arrangements let one plant's units be <b>credited on other electricity bills</b>, in shares set in advance.</p>
     </div>
 
     <div class="cols-2">
       <div class="fig">
-        <div class="fig-title">Group net metering</div>
-        <h2>One owner, several connections</h2>
-        <p class="small" style="margin-bottom:2mm">The plant's surplus is adjusted against the <b>same owner's</b> other connections in the same DISCOM area, for example a trust with a school, a hostel and an office.</p>
-        <svg viewBox="0 0 340 240" role="img" aria-label="Group net metering: 100 units of surplus from the plant on the school roof are split, 60 units credited to the hostel bill and 40 units to the office bill, all owned by the same trust.">
-        <text x="10" y="26" class="lbl-b">Plant on the school roof</text>
-        <text x="10" y="38" class="lbl-s">Surplus: 100 units a month</text>
-        <text x="336" y="26" text-anchor="end" class="lbl-s">Credit lands on</text>
-        <text x="336" y="37" text-anchor="end" class="lbl-s">separate bills</text>
-        <path d="M20 60.0 C110 60.0 110 52.0 200 52.0 L200 148.0 C110 148.0 110 156.0 20 156.0 Z" fill="#1F9D62" opacity=".85" stroke="#fff" stroke-width="1.2"/>
-        <path d="M20 156.0 C110 156.0 110 164.0 200 164.0 L200 228.0 C110 228.0 110 220.0 20 220.0 Z" fill="#1F9D62" opacity=".85" stroke="#fff" stroke-width="1.2"/>
-        <text x="30" y="111.2" class="bt on-dark">60</text>
-        <text x="30" y="191.2" class="bt on-dark">40</text>
-        <rect x="10" y="60" width="10" height="160.0" rx="2" fill="#0A2540"/>
-        <rect x="204" y="52.0" width="132" height="96.0" rx="3" fill="#fff" stroke="#9FB3C8" stroke-width="1"/>
-        <rect x="204" y="52.0" width="3" height="96.0" fill="#1F9D62"/>
-        <text x="213" y="98.0" class="lbl">Hostel bill</text>
-        <text x="330" y="98.0" text-anchor="end" class="lbl c-export">−60 units</text>
-        <text x="213" y="110.0" class="lbl-s">Same owner: the trust</text>
-        <rect x="204" y="164.0" width="132" height="64.0" rx="3" fill="#fff" stroke="#9FB3C8" stroke-width="1"/>
-        <rect x="204" y="164.0" width="3" height="64.0" fill="#1F9D62"/>
-        <text x="213" y="194.0" class="lbl">Office bill</text>
-        <text x="330" y="194.0" text-anchor="end" class="lbl c-export">−40 units</text>
-        <text x="213" y="206.0" class="lbl-s">Same owner: the trust</text>
+        <div class="fig-title">Exhibit 1 &nbsp;·&nbsp; Group net metering <span>Illustrative</span></div>
+        <svg viewBox="0 0 340 250" role="img" aria-label="Group net metering: 100 units of surplus a month from the plant on the school roof are split 60 percent to the hostel connection and 40 percent to the office connection, both owned by the same trust.">
+        <!-- 1.9 px per unit; ribbons from the plant (x 96) to each connection (x 236) -->
+        <text x="10" y="12" class="cap">From</text><text x="246" y="12" class="cap">Credited to</text>
+        <path class="gridline" d="M10 18H330"/>
+        <path class="band f-export" d="M102 44.0 C169 44.0 169 35.0 236 35.0 L236 149.0 C169 149.0 169 158.0 102 158.0 Z"/>
+        <rect class="f-ink" x="236" y="35.0" width="6" height="114.0"/>
+        <text x="228" y="95.0" text-anchor="end" class="lbl">60%</text>
+        <path class="band f-export" d="M102 158.0 C169 158.0 169 167.0 236 167.0 L236 243.0 C169 243.0 169 234.0 102 234.0 Z"/>
+        <rect class="f-ink" x="236" y="167.0" width="6" height="76.0"/>
+        <text x="228" y="208.0" text-anchor="end" class="lbl">40%</text>
+        <rect class="f-export" x="96" y="44" width="6" height="190.0"/>
+        <text x="250" y="85.5" class="cap">Hostel</text>
+        <text x="250" y="101.5" class="num">60</text><text x="273" y="101.5" class="lbl-s">units off its bill</text>
+        <text x="250" y="198.5" class="cap">Office</text>
+        <text x="250" y="214.5" class="num">40</text><text x="273" y="214.5" class="lbl-s">units off its bill</text>
+        <text x="88" y="125.0" text-anchor="end" class="cap">Surplus</text>
+        <text x="88" y="143.0" text-anchor="end" class="num">100</text>
+        <text x="88" y="154.0" text-anchor="end" class="lbl-s">units a month</text>
+        <text x="88" y="169.0" text-anchor="end" class="lbl-s">from the plant on</text>
+        <text x="88" y="179.0" text-anchor="end" class="lbl-s">the school roof</text>
         </svg>
+        <p class="fig-cap"><b>One owner, several connections.</b> A trust's plant on its school roof serves the school first; the surplus is adjusted against the same trust's hostel and office connections in the same DISCOM area.</p>
       </div>
       <div class="fig">
-        <div class="fig-title">Virtual net metering</div>
-        <h2>One plant, several consumers</h2>
-        <p class="small" style="margin-bottom:2mm">One shared plant's output is credited to <b>different consumers</b> in agreed shares, for example flats in a block whose only roof is the common terrace.</p>
-        <svg viewBox="0 0 340 240" role="img" aria-label="Virtual net metering: 100 units from a shared plant on an apartment terrace are credited in agreed shares to four different residents: 30, 30, 20 and 20 units.">
-        <text x="10" y="26" class="lbl-b">Plant on the common terrace</text>
-        <text x="10" y="38" class="lbl-s">Output: 100 units a month</text>
-        <text x="336" y="26" text-anchor="end" class="lbl-s">Credit lands on</text>
-        <text x="336" y="37" text-anchor="end" class="lbl-s">separate bills</text>
-        <path d="M20 60.0 C110 60.0 110 48.0 200 48.0 L200 96.0 C110 96.0 110 108.0 20 108.0 Z" fill="#1F9D62" opacity=".85" stroke="#fff" stroke-width="1.2"/>
-        <path d="M20 108.0 C110 108.0 110 104.0 200 104.0 L200 152.0 C110 152.0 110 156.0 20 156.0 Z" fill="#1F9D62" opacity=".85" stroke="#fff" stroke-width="1.2"/>
-        <path d="M20 156.0 C110 156.0 110 160.0 200 160.0 L200 192.0 C110 192.0 110 188.0 20 188.0 Z" fill="#1F9D62" opacity=".85" stroke="#fff" stroke-width="1.2"/>
-        <path d="M20 188.0 C110 188.0 110 200.0 200 200.0 L200 232.0 C110 232.0 110 220.0 20 220.0 Z" fill="#1F9D62" opacity=".85" stroke="#fff" stroke-width="1.2"/>
-        <text x="30" y="87.2" class="bt on-dark">30</text>
-        <text x="30" y="135.2" class="bt on-dark">30</text>
-        <text x="30" y="175.2" class="bt on-dark">20</text>
-        <text x="30" y="207.2" class="bt on-dark">20</text>
-        <rect x="10" y="60" width="10" height="160.0" rx="2" fill="#0A2540"/>
-        <rect x="204" y="48.0" width="132" height="48.0" rx="3" fill="#fff" stroke="#9FB3C8" stroke-width="1"/>
-        <rect x="204" y="48.0" width="3" height="48.0" fill="#1F9D62"/>
-        <text x="213" y="70.0" class="lbl">Flat 101 bill</text>
-        <text x="330" y="70.0" text-anchor="end" class="lbl c-export">−30 units</text>
-        <text x="213" y="82.0" class="lbl-s">Resident A</text>
-        <rect x="204" y="104.0" width="132" height="48.0" rx="3" fill="#fff" stroke="#9FB3C8" stroke-width="1"/>
-        <rect x="204" y="104.0" width="3" height="48.0" fill="#1F9D62"/>
-        <text x="213" y="126.0" class="lbl">Flat 102 bill</text>
-        <text x="330" y="126.0" text-anchor="end" class="lbl c-export">−30 units</text>
-        <text x="213" y="138.0" class="lbl-s">Resident B</text>
-        <rect x="204" y="160.0" width="132" height="32.0" rx="3" fill="#fff" stroke="#9FB3C8" stroke-width="1"/>
-        <rect x="204" y="160.0" width="3" height="32.0" fill="#1F9D62"/>
-        <text x="213" y="174.0" class="lbl">Flat 201 bill</text>
-        <text x="330" y="174.0" text-anchor="end" class="lbl c-export">−20 units</text>
-        <text x="213" y="186.0" class="lbl-s">Resident C</text>
-        <rect x="204" y="200.0" width="132" height="32.0" rx="3" fill="#fff" stroke="#9FB3C8" stroke-width="1"/>
-        <rect x="204" y="200.0" width="3" height="32.0" fill="#1F9D62"/>
-        <text x="213" y="214.0" class="lbl">Flat 202 bill</text>
-        <text x="330" y="214.0" text-anchor="end" class="lbl c-export">−20 units</text>
-        <text x="213" y="226.0" class="lbl-s">Resident D</text>
+        <div class="fig-title">Exhibit 2 &nbsp;·&nbsp; Virtual net metering <span>Illustrative</span></div>
+        <svg viewBox="0 0 340 250" role="img" aria-label="Virtual net metering: 100 units a month from a shared plant on the common terrace are credited in agreed shares to four different residents: 30, 30, 20 and 20 units.">
+        <!-- 1.9 px per unit; ribbons from the plant (x 96) to each connection (x 236) -->
+        <text x="10" y="12" class="cap">From</text><text x="246" y="12" class="cap">Credited to</text>
+        <path class="gridline" d="M10 18H330"/>
+        <path class="band f-export" d="M102 44.0 C169 44.0 169 32.0 236 32.0 L236 89.0 C169 89.0 169 101.0 102 101.0 Z"/>
+        <rect class="f-ink" x="236" y="32.0" width="6" height="57.0"/>
+        <text x="228" y="63.5" text-anchor="end" class="lbl">30%</text>
+        <path class="band f-export" d="M102 101.0 C169 101.0 169 97.0 236 97.0 L236 154.0 C169 154.0 169 158.0 102 158.0 Z"/>
+        <rect class="f-ink" x="236" y="97.0" width="6" height="57.0"/>
+        <text x="228" y="128.5" text-anchor="end" class="lbl">30%</text>
+        <path class="band f-export" d="M102 158.0 C169 158.0 169 162.0 236 162.0 L236 200.0 C169 200.0 169 196.0 102 196.0 Z"/>
+        <rect class="f-ink" x="236" y="162.0" width="6" height="38.0"/>
+        <text x="228" y="184.0" text-anchor="end" class="lbl">20%</text>
+        <path class="band f-export" d="M102 196.0 C169 196.0 169 208.0 236 208.0 L236 246.0 C169 246.0 169 234.0 102 234.0 Z"/>
+        <rect class="f-ink" x="236" y="208.0" width="6" height="38.0"/>
+        <text x="228" y="230.0" text-anchor="end" class="lbl">20%</text>
+        <rect class="f-export" x="96" y="44" width="6" height="190.0"/>
+        <text x="250" y="54.0" class="cap">Flat 101</text>
+        <text x="250" y="70.0" class="num">30</text><text x="273" y="70.0" class="lbl-s">units on own bill</text>
+        <text x="250" y="119.0" class="cap">Flat 102</text>
+        <text x="250" y="135.0" class="num">30</text><text x="273" y="135.0" class="lbl-s">units on own bill</text>
+        <text x="250" y="174.5" class="cap">Flat 201</text>
+        <text x="250" y="190.5" class="num">20</text><text x="273" y="190.5" class="lbl-s">units on own bill</text>
+        <text x="250" y="220.5" class="cap">Flat 202</text>
+        <text x="250" y="236.5" class="num">20</text><text x="273" y="236.5" class="lbl-s">units on own bill</text>
+        <text x="88" y="125.0" text-anchor="end" class="cap">Shared plant</text>
+        <text x="88" y="143.0" text-anchor="end" class="num">100</text>
+        <text x="88" y="154.0" text-anchor="end" class="lbl-s">units a month</text>
+        <text x="88" y="169.0" text-anchor="end" class="lbl-s">on the common</text>
+        <text x="88" y="179.0" text-anchor="end" class="lbl-s">terrace</text>
         </svg>
+        <p class="fig-cap"><b>One plant, several consumers.</b> A shared plant on an apartment block's common terrace; each flat, a separate consumer with no roof of its own, receives an agreed share on its own bill.</p>
       </div>
     </div>
 
     <table class="cmp">
       <tr><th></th><th>Group net metering</th><th>Virtual net metering</th></tr>
       <tr><td>Who owns the plant</td><td>One consumer</td><td>Shared by several consumers</td></tr>
-      <tr><td>Whose bills get credit</td><td>That same consumer's other connections</td><td>Each participating consumer's own bill</td></tr>
+      <tr><td>Whose bills get the credit</td><td>That same consumer's other connections</td><td>Each participating consumer's own bill</td></tr>
       <tr><td>How the units are split</td><td>Across the owner's connections, as the rules allow</td><td>In shares the participants agree</td></tr>
+      <tr><td>Where the connections are</td><td>In the same DISCOM area</td><td>As the state regulation sets</td></tr>
       <tr><td>Typically suits</td><td>A trust with several buildings; a company with a warehouse and an office</td><td>Residents of an apartment block, who have no roof of their own</td></tr>
     </table>
 
-    <div class="cols-2 grow">
-      <div class="callout note">
-        <h4>Only where your state allows it</h4>
-        <p class="small">Group and virtual net metering exist only where the state regulation provides for them. Your State Electricity Regulatory Commission sets the terms, and your DISCOM decides how they are applied. Confirm current rules with your DISCOM before you decide.</p>
+    <div class="row grow">
+      <div class="card top" style="flex:1.15">
+        <h4>On one bill &nbsp;·&nbsp; illustrative</h4>
+        <h2>Flat 101 in a month</h2>
+        <div class="eq" style="margin-top:3mm">
+          <div class="t grid"><span class="k">Used</span><span class="n">250</span><span class="u">units from the grid</span></div>
+          <span class="op">−</span>
+          <div class="t export"><span class="k">Share</span><span class="n">30</span><span class="u">units credited</span></div>
+          <span class="op">=</span>
+          <div class="t total"><span class="k">Billed</span><span class="n">220</span><span class="u">units</span></div>
+        </div>
+        <p class="small" style="margin-top:2.4mm">The flat's use of 250 units is an assumed figure. Its credit comes from the shared plant, not from its own roof.</p>
       </div>
-      <div class="callout ok">
-        <h4>Subsidy</h4>
-        <p class="small">Group and virtual net-metered rooftop systems can qualify for the PM Surya Ghar subsidy where the DISCOM permits them. The subsidy is for homes only, not for commercial or industrial connections.</p>
+      <div class="stack" style="flex:1;gap:3.4mm">
+        <div class="callout note">
+          <h4>Only where the state allows it</h4>
+          <p class="small">Group and virtual net metering exist only where the state regulation provides for them, on terms set by the State Electricity Regulatory Commission. Confirm current rules with your DISCOM before you decide.</p>
+        </div>
+        <div class="callout ok">
+          <h4>Subsidy</h4>
+          <p class="small">Group and virtual net-metered rooftop systems can qualify for the PM Surya Ghar subsidy where the DISCOM permits them. The subsidy is for homes only.</p>
+        </div>
       </div>
     </div>
+    <p class="tiny">Figures are illustrative. How surplus is calculated and how shares are set and changed follow each state's regulation.</p>
   </div>
   <footer class="pf"><span>{{FOOT}}</span><span class="pn">{{PN}}</span></footer>
 </section>

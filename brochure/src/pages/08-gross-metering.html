@@ -1,6 +1,6 @@
 <section class="page p08" data-sec="metering">
   <style>
-    .p08 .eq .t .n { font-size: 17pt; }
+    .p08 .eq .t .n { font-size: 15pt; }
   </style>
   <header class="ph"><span class="sec">How solar is billed &nbsp;/&nbsp; Gross metering</span><img src="{{LOGO}}" alt="Ray2Volt"></header>
   <div class="pb">
@@ -22,6 +22,10 @@
           <text x="326" y="28" class="lbl">Solar meter</text><text x="326" y="40" class="lbl-s">counts all generation</text>
           <rect class="node" x="562" y="8" width="112" height="120" rx="2"/><use href="#i-pylon" x="570" y="20" width="21" height="21"/>
           <text x="598" y="28" class="lbl">Grid</text><text x="598" y="40" class="lbl-s">your DISCOM</text>
+          <path class="gridline" d="M570 58 H666"/>
+          <text x="570" y="74" class="cap">Settled apart</text>
+          <text x="570" y="88" class="lbl-s c-export">Income: 360 × ₹3</text>
+          <text x="570" y="100" class="lbl-s c-grid">Bill: 500 × ₹7</text>
           <rect class="node em" x="290" y="82" width="128" height="46" rx="2"/><use href="#i-meter" x="298" y="94" width="21" height="21"/>
           <text x="326" y="102" class="lbl">Consumption meter</text><text x="326" y="114" class="lbl-s">counts all use</text>
           <rect class="node" x="148" y="82" width="112" height="46" rx="2"/><use href="#i-board" x="156" y="94" width="21" height="21"/>
@@ -110,6 +114,8 @@
             <!-- 0..4000 rupees over y 80..8 (0.018 px per rupee) -->
             <g class="gridline"><path d="M44 8H296M44 26H296M44 44H296M44 62H296"/></g>
             <g class="tick" text-anchor="end"><text x="38" y="82.5">₹0</text><text x="38" y="64.5">1,000</text><text x="38" y="46.5">2,000</text><text x="38" y="28.5">3,000</text><text x="38" y="10.5">4,000</text></g>
+            <path class="guide" d="M44 62.36H296" style="stroke:#0F4AAB"/>
+            <text x="120" y="59" class="lbl-s c-grid">Net metering: ₹980</text>
             <rect class="f-grid" x="60" y="17" width="54" height="63"/>
             <rect class="f-export" x="150" y="17" width="54" height="19.44"/>
             <rect class="f-ink" x="240" y="36.44" width="54" height="43.56"/>
@@ -120,7 +126,7 @@
             <path class="axis" d="M44 80H296"/>
             <g class="tick" text-anchor="middle"><text x="87" y="92">Pays for use</text><text x="177" y="92">Earns from solar</text><text x="267" y="92">Net cost</text></g>
           </svg>
-          <p class="small" style="margin-top:1.6mm">The same home pays <b>₹980</b> under net metering. The gap is the export rate: here every solar unit earns ₹3, while under net metering each one offsets a ₹7 unit.</p>
+          <p class="small" style="margin-top:1.6mm">Under net metering the same home pays <b>₹980</b> (dashed line). The gap is the export rate: here every solar unit earns ₹3, while under net metering each one offsets a ₹7 unit.</p>
         </div>
       </div>
     </div>
@@ -128,7 +134,7 @@
     <div class="cols-3 grow">
       <div class="card top">
         <h3>The feed-in tariff</h3>
-        <p class="small">The rate per unit paid for solar power sent to the grid. It is set by the State Electricity Regulatory Commission and usually fixed for the agreement term. It is usually lower than the retail tariff, which also pays for the wires and services that bring power to the door.</p>
+        <p class="small">The rate per unit paid for solar power sent to the grid. It is set by the State Electricity Regulatory Commission and usually fixed for the agreement term. It is usually lower than the retail tariff, which also pays for the wires and services that bring power to the door. In this example it is ₹3 a unit against ₹7.</p>
       </div>
       <div class="card top">
         <h3>Why it can still appeal</h3>
@@ -136,6 +142,7 @@
           <li>A fixed, predictable income for the agreement term.</li>
           <li>Income does not depend on how much power the building uses.</li>
           <li>Plants can be larger than net-metering limits allow.</li>
+          <li>Generation and use are metered apart, so each is simple to check.</li>
         </ul>
       </div>
       <div class="card top">

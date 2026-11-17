@@ -1,128 +1,118 @@
 <section class="page" data-sec="basics">
-  <style>
-    .p03-node { fill: #fff; stroke: #C9D6E3; stroke-width: 1; }
-    .p03-g { fill: #1F9D62; } .p03-f { fill: #7C8FA5; }
-    .p03-sol { fill: #F5A300; } .p03-nf { fill: #1F9D62; } .p03-fos { fill: #D3DCE6; }
-    .p03-nf2 { fill: #1F9D62; } .p03-tgt { fill: #E6F6EE; stroke: #1F9D62; stroke-width: 1; stroke-dasharray: 4 3; }
-    svg .p03-on { fill: #fff; }
-    .p03-brk { stroke: #1F9D62; stroke-width: 1.2; }
-    .p03-half { stroke: #0A2540; stroke-width: 1; stroke-dasharray: 2 2; }
-    .p03-axis { stroke: #9FB3C8; stroke-width: 1.4; fill: none; }
-    .p03-dot { fill: #fff; stroke: #1F9D62; stroke-width: 2.4; }
-    .p03-why .stat { margin-top: 2.4mm; }
-  </style>
-  <header class="ph"><span class="sec">The basics &nbsp;·&nbsp; Green energy</span><img src="{{LOGO}}" alt="Ray2Volt"></header>
+  <header class="ph"><span class="sec">The basics &nbsp;/&nbsp; Green energy</span><img src="{{LOGO}}" alt="Ray2Volt"></header>
   <div class="pb">
     <div>
-      <div class="kicker">The basics · 1</div>
-      <h1 class="title">Green energy: <em>what it is and why it matters</em></h1>
-      <p class="lede"><b>Green energy</b> is electricity from sources that nature keeps replenishing and that emit little or no carbon dioxide (CO₂) while running: solar, wind, hydro and biomass, plus storage or green hydrogen charged from them. <b>Fossil power</b> burns coal, gas or oil, which are used up as they burn.</p>
+      <div class="kicker">The basics · 1 of 4</div>
+      <h1 class="title">Green energy <em>What it is, and why it matters</em></h1>
+      <p class="lede"><b>Green energy</b> is electricity from sources that nature replenishes and that emit little or no carbon dioxide (CO₂) while running: solar, wind, hydro and biomass, and storage or green hydrogen charged from them. <b>Fossil power</b> burns coal, gas or oil, which are used up.</p>
     </div>
 
     <div class="fig">
-      <div class="fig-title">Two ways to make the same electricity</div>
-      <svg viewBox="0 0 680 178" role="img" aria-label="Comparison. Green energy: sun, wind, water and biomass are replenished naturally, mostly captured rather than burnt, and leave little or no CO2 in operation. Fossil power: coal, gas and oil are burnt for heat, leave CO2, smoke and ash, and are used up.">
-        <g class="lbl-s" font-weight="800" letter-spacing=".08em">
-          <text x="132" y="12" class="lbl-s">SOURCE</text><text x="312" y="12" class="lbl-s">HOW POWER IS MADE</text><text x="492" y="12" class="lbl-s">WHAT IT LEAVES BEHIND</text>
-        </g>
-        <!-- lane 1 -->
-        <text x="0" y="48" class="lbl-b c-export">Green energy</text>
-        <text x="0" y="61" class="lbl-s">Replenished by nature</text>
-        <rect x="132" y="22" width="150" height="58" rx="6" class="p03-node"/><rect x="132" y="22" width="3.500" height="58" class="p03-g"/>
-        <rect x="312" y="22" width="150" height="58" rx="6" class="p03-node"/><rect x="312" y="22" width="3.500" height="58" class="p03-g"/>
-        <rect x="492" y="22" width="188" height="58" rx="6" class="p03-node"/><rect x="492" y="22" width="3.500" height="58" class="p03-g"/>
-        <text x="144" y="42" class="lbl">Sun, wind, water, biomass</text>
-        <text x="144" y="55" class="lbl-s">Arrive or regrow naturally,</text><text x="144" y="66" class="lbl-s">day after day</text>
-        <text x="324" y="42" class="lbl">Mostly captured, not burnt</text>
-        <text x="324" y="55" class="lbl-s">Panels and turbines convert</text><text x="324" y="66" class="lbl-s">energy nature keeps supplying</text>
-        <text x="504" y="42" class="lbl c-export">Little or no CO₂ in operation</text>
-        <text x="504" y="55" class="lbl-s">No fuel is burnt in solar panels,</text><text x="504" y="66" class="lbl-s">wind turbines or hydro plants</text>
-        <path class="flow export" style="stroke-width:2" d="M286 51 H306"/>
-        <path class="flow export" style="stroke-width:2" d="M466 51 H486"/>
-        <!-- lane 2 -->
-        <text x="0" y="120" class="lbl-b">Fossil power</text>
-        <text x="0" y="133" class="lbl-s">Used up as it burns</text>
-        <rect x="132" y="94" width="150" height="58" rx="6" class="p03-node"/><rect x="132" y="94" width="3.500" height="58" class="p03-f"/>
-        <rect x="312" y="94" width="150" height="58" rx="6" class="p03-node"/><rect x="312" y="94" width="3.500" height="58" class="p03-f"/>
-        <rect x="492" y="94" width="188" height="58" rx="6" class="p03-node"/><rect x="492" y="94" width="3.500" height="58" class="p03-f"/>
-        <text x="144" y="114" class="lbl">Coal, natural gas, oil</text>
-        <text x="144" y="127" class="lbl-s">Formed over millions of years;</text><text x="144" y="138" class="lbl-s">once burnt, gone for good</text>
-        <text x="324" y="114" class="lbl">Burnt for heat</text>
-        <text x="324" y="127" class="lbl-s">The heat usually makes steam</text><text x="324" y="138" class="lbl-s">that spins a turbine</text>
-        <text x="504" y="114" class="lbl c-cost">CO₂, smoke and ash</text>
-        <text x="504" y="127" class="lbl-s">Released into the air, or left as</text><text x="504" y="138" class="lbl-s">waste, with every unit generated</text>
-        <path class="flow plain" style="stroke-width:2" d="M286 123 H306"/>
-        <path class="flow plain" style="stroke-width:2" d="M466 123 H486"/>
-        <path d="M0 162 H680" stroke="#DCE5EE" stroke-width=".8"/>
-        <text x="0" y="175" class="lbl-s">Once on the wires, a unit is a unit: green and fossil electricity run your appliances in exactly the same way.</text>
+      <div class="fig-title">Exhibit 1 &nbsp;·&nbsp; Two ways to make the same electricity <span>Schematic</span></div>
+      <svg viewBox="0 0 680 158" role="img" aria-label="Comparison of green and fossil power. Green energy: sun, wind, water and biomass are replenished naturally, are mostly captured rather than burnt, and leave little or no CO2 in operation. Fossil power: coal, gas and oil are burnt for heat, leave CO2, smoke and ash, and are used up.">
+        <text x="118" y="10" class="cap">Source</text>
+        <text x="300" y="10" class="cap">How power is made</text>
+        <text x="482" y="10" class="cap">What it leaves behind</text>
+        <text x="0" y="42" class="lbl-b c-export">Green energy</text>
+        <text x="0" y="54" class="lbl-s">Replenished by nature</text>
+        <rect class="node" x="118" y="20" width="160" height="50" rx="2"/><path d="M118 20.5V69.5" class="s-export" stroke-width="2.4"/>
+        <text x="128" y="38" class="lbl ">Sun, wind, water, biomass</text><text x="128" y="50" class="lbl-s">Arrive or regrow naturally,</text><text x="128" y="60" class="lbl-s">day after day</text>
+        <rect class="node" x="300" y="20" width="160" height="50" rx="2"/><path d="M300 20.5V69.5" class="s-export" stroke-width="2.4"/>
+        <text x="310" y="38" class="lbl ">Mostly captured, not burnt</text><text x="310" y="50" class="lbl-s">Panels and turbines convert</text><text x="310" y="60" class="lbl-s">energy nature keeps supplying</text>
+        <rect class="node" x="482" y="20" width="198" height="50" rx="2"/><path d="M482 20.5V69.5" class="s-export" stroke-width="2.4"/>
+        <text x="492" y="38" class="lbl c-export">Little or no CO₂ in operation</text><text x="492" y="50" class="lbl-s">No fuel is burnt in solar panels,</text><text x="492" y="60" class="lbl-s">wind turbines or hydro plants</text>
+        <path class="flow export" d="M279 45 H298"/>
+        <path class="flow export" d="M461 45 H480"/>
+        <text x="0" y="104" class="lbl-b">Fossil power</text>
+        <text x="0" y="116" class="lbl-s">Used up as it burns</text>
+        <rect class="node" x="118" y="82" width="160" height="50" rx="2"/><path d="M118 82.5V131.5" class="s-ink" stroke-width="2.4"/>
+        <text x="128" y="100" class="lbl ">Coal, natural gas, oil</text><text x="128" y="112" class="lbl-s">Formed over millions of years;</text><text x="128" y="122" class="lbl-s">once burnt, gone for good</text>
+        <rect class="node" x="300" y="82" width="160" height="50" rx="2"/><path d="M300 82.5V131.5" class="s-ink" stroke-width="2.4"/>
+        <text x="310" y="100" class="lbl ">Burnt for heat</text><text x="310" y="112" class="lbl-s">The heat usually makes steam</text><text x="310" y="122" class="lbl-s">that spins a turbine</text>
+        <rect class="node" x="482" y="82" width="198" height="50" rx="2"/><path d="M482 82.5V131.5" class="s-ink" stroke-width="2.4"/>
+        <text x="492" y="100" class="lbl c-cost">CO₂, smoke and ash</text><text x="492" y="112" class="lbl-s">Released into the air, or left as</text><text x="492" y="122" class="lbl-s">waste, with every unit made</text>
+        <path class="flow plain" d="M279 107 H298"/>
+        <path class="flow plain" d="M461 107 H480"/>
+        <path class="gridline" d="M0 142H680"/>
+        <text x="0" y="154" class="lbl-s">Once on the wires, a unit is a unit: green and fossil electricity run appliances in exactly the same way.</text>
       </svg>
     </div>
 
-    <div class="fig">
-      <div class="fig-title">India’s position · power capacity, in gigawatts (GW)</div>
-      <svg viewBox="0 0 680 252" role="img" aria-label="India's installed power capacity is about 560 gigawatts, of which about 308 are non-fossil (about 55 percent), including about 174 of solar. The 2030 target is 500 gigawatts of non-fossil capacity. Timeline: non-fossil passed half of capacity in June 2025; net zero is targeted for 2070.">
-        <!-- row 1: installed capacity -->
-        <text x="0" y="12" class="lbl">Installed power capacity · about 560 GW</text>
-        <text x="680" y="12" text-anchor="end" class="lbl-s">CEA, Sept 2026 · solar: MNRE, Oct 2026</text>
-        <rect x="0" y="20" width="211.3" height="26" class="p03-sol"/>
-        <rect x="212.3" y="20" width="161.7" height="26" class="p03-nf"/>
-        <rect x="375.0" y="20" width="305.0" height="26" class="p03-fos"/>
-        <text x="8" y="37" class="lbl p03-on">Solar · about 174 GW</text>
-        <text x="219.3" y="37" class="lbl p03-on">Wind, hydro, nuclear, other</text>
-        <text x="382.0" y="37" class="lbl">Coal, gas and other fossil fuels</text>
-        <path d="M0 52 V57 H374.0 V52" fill="none" class="p03-brk"/>
-        <text x="187.0" y="68" text-anchor="middle" class="lbl c-export">Non-fossil · about 308 GW · around 55%</text>
-        <path d="M340 16 V50" class="p03-half"/>
-        <!-- row 2: progress to 2030 -->
-        <text x="0" y="92" class="lbl">Non-fossil capacity against the 2030 target</text>
-        <rect x="0" y="100" width="607.1" height="22" class="p03-tgt"/>
-        <rect x="0" y="100" width="374.0" height="22" class="p03-nf2"/>
-        <text x="8" y="115" class="lbl p03-on">About 308 GW today</text>
-        <text x="599.1" y="115" text-anchor="end" class="lbl c-export">500 GW by 2030</text>
-        <text x="613.1" y="115" class="lbl-s">same scale</text>
-        <!-- timeline -->
-        <path d="M0 158 H680" class="p03-axis"/>
-        <path d="M486 150 l6 16 M494 150 l6 16" class="p03-axis" style="stroke:#fff;stroke-width:5"/>
-        <path d="M486 150 l6 16 M494 150 l6 16" class="p03-axis"/>
-        <circle cx="8" cy="158" r="5" class="p03-dot"/>
-        <text x="2" y="144" class="num-b">June 2025</text>
-        <text x="2" y="180" class="lbl-s">Non-fossil passes half of</text>
-        <text x="2" y="191" class="lbl-s">installed capacity, five years</text>
-        <text x="2" y="202" class="lbl-s">ahead of the 2030 pledge</text>
-        <circle cx="176" cy="158" r="5" class="p03-dot"/>
-        <text x="170" y="144" class="num-b">Sept 2026</text>
-        <text x="170" y="180" class="lbl-s">About 308 GW non-fossil,</text>
-        <text x="170" y="191" class="lbl-s">around 55% of capacity;</text>
-        <text x="170" y="202" class="lbl-s">solar about 174 GW</text>
-        <circle cx="344" cy="158" r="5" class="p03-dot"/>
-        <text x="338" y="144" class="num-b">2030</text>
-        <text x="338" y="180" class="lbl-s">Target: 500 GW of non-fossil</text>
-        <text x="338" y="191" class="lbl-s">capacity (includes large</text>
-        <text x="338" y="202" class="lbl-s">hydro and nuclear)</text>
-        <circle cx="560" cy="158" r="5" class="p03-dot"/>
-        <text x="554" y="144" class="num-b">2070</text>
-        <text x="554" y="180" class="lbl-s">Target: net-zero</text>
-        <text x="554" y="191" class="lbl-s">emissions</text>
+    <div class="fig plain">
+      <div class="fig-title">Exhibit 2 &nbsp;·&nbsp; India’s power capacity, fossil and non-fossil <span>Gigawatts (GW)</span></div>
+      <svg viewBox="0 0 680 158" role="img" aria-label="Bar chart in gigawatts. India's installed power capacity is about 560 GW: solar about 174 GW, other non-fossil sources (wind, hydro, nuclear and others) bringing non-fossil to about 308 GW or around 55 percent, and the rest fossil. A second bar shows the 308 GW of non-fossil capacity against the 2030 target of 500 GW.">
+        <g class="gridline"><path d="M212.0 14V136"/><path d="M304.0 14V136"/><path d="M396.0 14V136"/><path d="M488.0 14V136"/><path d="M580.0 14V136"/><path d="M672.0 14V136"/></g>
+        <text x="112" y="42" text-anchor="end" class="lbl">Installed capacity</text><text x="112" y="52" text-anchor="end" class="lbl-s">all sources, 2026</text>
+        <rect class="f-solar" x="120" y="32" width="160.1" height="28"/>
+        <rect class="f-export" x="280.7" y="32" width="122.7" height="28"/>
+        <rect class="f-none" x="404.0" y="32" width="231.2" height="28"/>
+        <text x="126" y="49.5" class="lbl">Solar · about 174 GW</text>
+        <text x="286.1" y="49.5" class="lbl on-dark">Wind, hydro, nuclear</text>
+        <text x="409.4" y="49.5" class="lbl">Coal, gas and other fossil fuels</text>
+        <text x="640.2" y="49.5" class="num-b">560</text>
+        <path d="M120 28V23H403.4V28" fill="none" class="s-export" stroke-width="1"/>
+        <text x="261.7" y="19" text-anchor="middle" class="lbl c-export">Non-fossil · about 308 GW, around 55% of capacity</text>
+        <text x="112" y="104" text-anchor="end" class="lbl">Non-fossil capacity</text><text x="112" y="114" text-anchor="end" class="lbl-s">today vs 2030 target</text>
+        <rect x="120" y="94" width="460.0" height="28" fill="#fff" class="s-export" stroke-width=".9" stroke-dasharray="3 2"/>
+        <rect class="f-export" x="120" y="94" width="283.4" height="28"/>
+        <text x="126" y="111.5" class="lbl on-dark">About 308 GW today</text>
+        <text x="574.0" y="111.5" text-anchor="end" class="lbl c-export">Target 500 GW by 2030</text>
+        <text x="585.0" y="111.5" class="num-b">500</text>
+        <path class="axis" d="M120 136H672"/>
+        <g class="tick" text-anchor="middle"><text x="120.0" y="146">0</text><text x="212.0" y="146">100</text><text x="304.0" y="146">200</text><text x="396.0" y="146">300</text><text x="488.0" y="146">400</text><text x="580.0" y="146">500</text><text x="672.0" y="146">600</text></g>
+        <text x="672" y="156" text-anchor="end" class="tick">GW</text>
       </svg>
-      <p class="fig-cap">1 GW = 1,000,000 kW. India ranks 3rd in the world in total renewable energy capacity (IRENA 2026). The 500 GW target counts all non-fossil sources, including large hydro and nuclear. Timeline not to scale.</p>
+      <p class="fig-cap">1 GW = 1,000,000 kW. Sources: Central Electricity Authority (Sept 2026) for total and non-fossil capacity; MNRE (Oct 2026) for solar. Non-fossil also includes biomass. The 500 GW target counts all non-fossil sources, including large hydro and nuclear.</p>
     </div>
 
-    <div class="cols-3 grow p03-why">
+    <div class="row">
+      <div class="fig plain" style="flex:2.6">
+        <div class="fig-title">Exhibit 3 &nbsp;·&nbsp; Milestones and targets <span>Not to scale</span></div>
+        <svg viewBox="0 0 430 80" role="img" aria-label="Timeline: June 2025, non-fossil sources pass half of installed capacity; 2026, about 308 GW non-fossil, around 55 percent; 2030, target of 500 GW non-fossil capacity; 2070, target of net-zero emissions.">
+          <path class="axis" d="M0 28H400"/>
+          <path d="M332 22 l5 12 M338 22 l5 12" stroke="#fff" stroke-width="4"/><path d="M332 22 l5 12 M338 22 l5 12" class="axis"/>
+          <circle cx="6" cy="28" r="4" class="f-export"  stroke="#17855A" stroke-width="1.4"/>
+          <text x="2" y="16" class="num-b">June 2025</text>
+          <text x="2" y="48" class="lbl-s">Non-fossil passes half of</text>
+          <text x="2" y="58" class="lbl-s">installed capacity, five years</text>
+          <text x="2" y="68" class="lbl-s">ahead of the 2030 pledge</text>
+          <circle cx="124" cy="28" r="4" class="f-export"  stroke="#17855A" stroke-width="1.4"/>
+          <text x="120" y="16" class="num-b">2026</text>
+          <text x="120" y="48" class="lbl-s">About 308 GW non-fossil,</text>
+          <text x="120" y="58" class="lbl-s">around 55% of capacity;</text>
+          <text x="120" y="68" class="lbl-s">solar about 174 GW</text>
+          <circle cx="242" cy="28" r="4" class="" fill="#fff" stroke="#17855A" stroke-width="1.4"/>
+          <text x="238" y="16" class="num-b">2030</text>
+          <text x="238" y="48" class="lbl-s">Target: 500 GW of non-fossil</text>
+          <text x="238" y="58" class="lbl-s">capacity, including large</text>
+          <text x="238" y="68" class="lbl-s">hydro and nuclear</text>
+          <circle cx="360" cy="28" r="4" class="" fill="#fff" stroke="#17855A" stroke-width="1.4"/>
+          <text x="356" y="16" class="num-b">2070</text>
+          <text x="356" y="48" class="lbl-s">Target: net-zero</text>
+          <text x="356" y="58" class="lbl-s">emissions</text>
+        </svg>
+      </div>
+      <div class="card top" style="flex:1">
+        <h4>World ranking</h4>
+        <div class="stat" style="margin-top:2mm"><span class="n">3rd</span><span class="l">India’s place in the world for total renewable energy capacity (IRENA 2026)</span></div>
+      </div>
+    </div>
+
+    <div class="cols-3 grow">
       <div class="card top">
-        <h4>Why it matters · 1</h4>
+        <h4>Why it matters · 01</h4>
         <h3>Steadier costs</h3>
         <p class="small">Sunlight and wind come with no fuel bill. Once a plant is built, the cost of each unit it makes does not rise and fall with coal or gas prices.</p>
       </div>
       <div class="card top">
-        <h4>Why it matters · 2</h4>
+        <h4>Why it matters · 02</h4>
         <h3>Cleaner air, lower emissions</h3>
-        <p class="small">Each unit of solar used in place of grid power avoids roughly the grid’s average emissions. 1 kW of solar avoids about 1 tonne of CO₂ a year.</p>
-        <div class="stat"><span class="n">0.68<small>kg CO₂</small></span><span class="l">per unit, India’s grid average (Central Electricity Authority, FY 2025-26)</span></div>
+        <p class="small">India’s grid emits about <b>0.68 kg of CO₂ per unit</b> on average (Central Electricity Authority, FY 2025-26). Each kW of solar avoids about <b>1 tonne</b> a year.</p>
       </div>
       <div class="card top">
-        <h4>Why it matters · 3</h4>
+        <h4>Why it matters · 03</h4>
         <h3>Energy security</h3>
-        <p class="small">Sunshine and wind are home-grown. Power made on your own roof is used where it is made, with no fuel to mine or ship, and less lost along the wires.</p>
+        <p class="small">Sunshine and wind are home-grown. Power made on a roof is used where it is made, with no fuel to mine or transport and less lost along the wires.</p>
       </div>
     </div>
   </div>

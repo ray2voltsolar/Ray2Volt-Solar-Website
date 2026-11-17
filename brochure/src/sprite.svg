@@ -51,7 +51,7 @@
     <rect x="10" y="10" width="44" height="44" rx="4"/><path d="M10 54L54 10" stroke-width="1.800"/><path d="M17 20h10M17 26h10" /><path d="M36 44c2-6 4-6 6 0s4 6 6 0"/></g></symbol>
 
   <symbol id="i-battery" viewBox="0 0 64 64"><g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
-    <rect x="15" y="12" width="34" height="45" rx="4"/><path d="M26 12V7h12v5"/><path d="M23 47h18M23 38h18M23 29h18"/></g></symbol>
+    <rect x="7" y="19" width="44" height="26" rx="3"/><path d="M51 27h6v10h-6"/><path d="M16 27v10M24 27v10M32 27v10"/></g></symbol>
 
   <symbol id="i-plug" viewBox="0 0 64 64"><g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
     <path d="M24 8v13M40 8v13"/><path d="M16 21h32v7a16 16 0 0 1-32 0z"/><path d="M32 44v13"/></g></symbol>

@@ -1,170 +1,170 @@
 <section class="page p11" data-sec="access">
-  <style>
-    .p11 .p11-node { fill: #fff; stroke: #B9C7D6; stroke-width: 1; }
-    .p11 .p11-lane { font-size: 7.6px; font-weight: 800; letter-spacing: .14em; fill: var(--navy-2); }
-    .p11 .p11-rule { stroke: #C9D5E2; stroke-width: .8; }
-    .p11 .p11-thin { fill: none; stroke: #8FA3B8; stroke-width: 1; }
-    .p11 .p11-acct { fill: none; stroke: var(--navy-2); stroke-width: 1; stroke-dasharray: 3 3; }
-    .p11 .p11-roles { display: grid; grid-template-columns: repeat(5, 1fr); gap: 3mm; margin-top: 2.6mm; }
-    .p11 .p11-roles > div { border-top: .4mm solid var(--navy); padding-top: 1.4mm; }
-    .p11 .p11-roles b { display: block; font-family: var(--head); font-size: 7.4pt; }
-    .p11 .p11-an { display: grid; grid-template-columns: 1fr auto 1fr auto 1fr; align-items: stretch; gap: 2mm; }
-    .p11 .p11-an .t { background: #fff; border-radius: 2mm; padding: 2.2mm 3mm; }
-    .p11 .p11-an .k { font-family: var(--head); font-weight: 800; font-size: 6.4pt; letter-spacing: .12em; text-transform: uppercase; color: var(--accent-ink); }
-    .p11 .p11-an .op { align-self: center; font-family: var(--head); font-weight: 800; font-size: 13pt; color: var(--muted); }
-  </style>
-  <header class="ph"><span class="sec">Open access &nbsp;·&nbsp; How it works</span><img src="{{LOGO}}" alt="Ray2Volt"></header>
+  <header class="ph"><span class="sec">Open access &nbsp;/&nbsp; How it works</span><img src="{{LOGO}}" alt="Ray2Volt"></header>
   <div class="pb">
     <div>
       <div class="kicker">Buying green power at scale</div>
-      <h1 class="title">Open access: <em>buying power from someone other than your local supplier</em></h1>
-      <p class="lede">Normally all your electricity comes from the <b>DISCOM</b>, your local distribution company. <b>Open access</b> lets a large consumer buy power from another seller, or from its own plant elsewhere, and use the existing grid to deliver it. Think of a courier: you choose who you buy from, the network already in place carries it, and you pay for the delivery.</p>
+      <h1 class="title">Open access <em>Buying power from someone other than your local supplier</em></h1>
+      <p class="lede">Normally a site buys all its power from the <b>DISCOM</b>, its local distribution company. <b>Open access</b> lets a large consumer buy from another seller, or its own distant plant, over the existing grid. Like a courier: you choose the seller, the network delivers, you pay for delivery.</p>
     </div>
 
     <div class="fig">
-      <div class="fig-title">One delivery, two paths: the wires and the accounts</div>
-      <svg viewBox="0 0 680 344" role="img" aria-label="Open access schematic. Physical path: a solar plant feeds the shared grid through transmission lines and the DISCOM's local network, and the consumer draws from the grid as usual. Contractual path: the units the plant puts in are metered, losses are deducted, and the rest are credited against the units the consumer takes out; the State Load Despatch Centre keeps the account and the DISCOM supplies the remainder.">
-        <!-- ===== Lane 1: physical ===== -->
-        <text x="0" y="10" class="p11-lane">A · PHYSICAL PATH</text>
-        <text x="96" y="10" class="lbl-s">what the electricity does</text>
-        <!-- shared grid bracket -->
-        <path class="p11-thin" d="M168 40 V34 H500 V40"/>
-        <text x="334" y="29" text-anchor="middle" class="lbl c-grid">The shared grid: one pool of power, already built</text>
+      <div class="fig-title">Exhibit 1 &nbsp;·&nbsp; One delivery, two paths <span>Schematic</span></div>
+      <svg viewBox="0 0 680 218" role="img" aria-label="Two-lane schematic. Physical path: a solar plant feeds the shared grid through the transmission company's high-voltage lines and the DISCOM's local network, and the consumer draws from the grid as usual, alongside other generators and consumers. Contract and accounts: the units the plant puts in are metered; the State Load Despatch Centre schedules them and keeps the account; the units, less losses, are credited on the consumer's DISCOM bill, and the DISCOM bills any top-up. The consumer pays the DISCOM bill and pays the seller a price per unit under the agreement.">
+        <!-- ===== Lane A: physical ===== -->
+        <text x="0" y="8" class="cap" style="fill:#0B1F3A">A &nbsp;Physical path</text>
+        <text x="86" y="8" class="lbl-s">what the electricity does</text>
+        <path class="guide" d="M168 34 V27 H498 V34"/>
+        <text x="333" y="22" text-anchor="middle" class="cap c-grid">The shared grid: one pool of power</text>
 
-        <!-- nodes -->
-        <rect x="0" y="50" width="122" height="62" rx="5" class="p11-node" style="stroke:#F5A300;stroke-width:1.4"/>
-        <circle cx="14" cy="64" r="7" fill="#0A2540"/><text x="14" y="67" text-anchor="middle" class="lbl on-dark" style="font-size:8px">1</text>
-        <text x="26" y="67" class="lbl">Solar plant</text>
-        <text x="12" y="84" class="lbl-s">Generator. Can be on</text>
-        <text x="12" y="95" class="lbl-s">land far from you.</text>
+        <rect class="node" x="0" y="34" width="132" height="46" rx="2" style="stroke:#E0A106"/>
+        <use href="#i-solarfarm" x="8" y="44" width="21" height="21"/>
+        <text x="36" y="50" class="lbl">Solar plant</text>
+        <text x="36" y="61" class="lbl-s">Generator; can be</text>
+        <text x="36" y="71" class="lbl-s">far from the consumer</text>
 
-        <rect x="168" y="50" width="152" height="62" rx="5" class="p11-node"/>
-        <circle cx="182" cy="64" r="7" fill="#0A2540"/><text x="182" y="67" text-anchor="middle" class="lbl on-dark" style="font-size:8px">2</text>
-        <text x="194" y="67" class="lbl">Transmission lines</text>
-        <text x="180" y="84" class="lbl-s">Transmission company runs</text>
-        <text x="180" y="95" class="lbl-s">the high-voltage network.</text>
+        <rect class="node" x="168" y="34" width="150" height="46" rx="2"/>
+        <use href="#i-pylon" x="176" y="44" width="21" height="21"/>
+        <text x="204" y="50" class="lbl">Transmission lines</text>
+        <text x="204" y="61" class="lbl-s">Transmission company:</text>
+        <text x="204" y="71" class="lbl-s">the high-voltage grid</text>
 
-        <rect x="348" y="50" width="152" height="62" rx="5" class="p11-node"/>
-        <circle cx="362" cy="64" r="7" fill="#0A2540"/><text x="362" y="67" text-anchor="middle" class="lbl on-dark" style="font-size:8px">3</text>
-        <text x="374" y="67" class="lbl">DISCOM's local network</text>
-        <text x="360" y="84" class="lbl-s">Carries ("wheels") power to</text>
-        <text x="360" y="95" class="lbl-s">you; stays your backup supply.</text>
+        <rect class="node" x="348" y="34" width="150" height="46" rx="2"/>
+        <use href="#i-transformer" x="356" y="44" width="21" height="21"/>
+        <text x="384" y="50" class="lbl">Local network</text>
+        <text x="384" y="61" class="lbl-s">DISCOM: carries the power,</text>
+        <text x="384" y="71" class="lbl-s">remains backup supplier</text>
 
-        <rect x="558" y="50" width="122" height="62" rx="5" class="p11-node" style="stroke:#0B63CE;stroke-width:1.4"/>
-        <circle cx="572" cy="64" r="7" fill="#0A2540"/><text x="572" y="67" text-anchor="middle" class="lbl on-dark" style="font-size:8px">5</text>
-        <text x="584" y="67" class="lbl">Your premises</text>
-        <text x="570" y="84" class="lbl-s">Consumer. Draws from</text>
-        <text x="570" y="95" class="lbl-s">the grid, as always.</text>
+        <rect class="node em" x="548" y="34" width="132" height="46" rx="2"/>
+        <use href="#i-factory" x="556" y="44" width="21" height="21"/>
+        <text x="584" y="50" class="lbl">Your premises</text>
+        <text x="584" y="61" class="lbl-s">Consumer: draws from</text>
+        <text x="584" y="71" class="lbl-s">the grid, as always</text>
 
-        <!-- flows -->
-        <path class="flow solar" d="M124 81 H162"/>
-        <path class="flow grid noarrow" d="M322 81 H346"/>
-        <path class="flow grid" d="M502 81 H552"/>
-        <text x="143" y="74" text-anchor="middle" class="lbl-s c-solar">in</text>
-        <text x="528" y="74" text-anchor="middle" class="lbl-s c-grid">out</text>
+        <path class="flow solar" d="M132 57 H166"/>
+        <path class="flow grid" d="M318 57 H346"/>
+        <path class="flow grid" d="M498 57 H546"/>
 
-        <!-- pooling stubs -->
-        <path class="flow plain" style="stroke-width:1.4" d="M244 140 V116"/>
-        <text x="244" y="150" text-anchor="middle" class="lbl-s">other power stations feed in</text>
-        <path class="flow plain" style="stroke-width:1.4" d="M424 114 V138"/>
-        <text x="424" y="150" text-anchor="middle" class="lbl-s">other consumers draw out</text>
+        <path class="flow plain" d="M243 98 V82"/>
+        <text x="243" y="107" text-anchor="middle" class="lbl-s">other generators feed in</text>
+        <path class="flow plain" d="M423 80 V96"/>
+        <text x="423" y="107" text-anchor="middle" class="lbl-s">other consumers draw out</text>
+        <text x="0" y="93" class="lbl-s">Units join the shared pool;</text>
+        <text x="0" y="104" class="lbl-s">no private wire is laid.</text>
+        <text x="680" y="93" text-anchor="end" class="lbl-s">Same connection and meter</text>
+        <text x="680" y="104" text-anchor="end" class="lbl-s">as before.</text>
 
-        <line x1="0" y1="168" x2="680" y2="168" class="p11-rule"/>
+        <line x1="0" y1="118" x2="680" y2="118" class="gridline"/>
 
-        <!-- ===== Lane 2: contractual ===== -->
-        <text x="0" y="186" class="p11-lane">B · CONTRACTUAL PATH</text>
-        <text x="122" y="186" class="lbl-s">what the accounts record (illustrative, not to scale)</text>
+        <!-- ===== Lane B: contract and accounts ===== -->
+        <text x="0" y="132" class="cap" style="fill:#0B1F3A">B &nbsp;Contract and accounts</text>
+        <text x="134" y="132" class="lbl-s">who pays whom, and where units are credited</text>
 
-        <!-- SLDC -->
-        <rect x="258" y="198" width="164" height="40" rx="5" class="p11-node" style="stroke:#123A63"/>
-        <circle cx="272" cy="212" r="7" fill="#0A2540"/><text x="272" y="215" text-anchor="middle" class="lbl on-dark" style="font-size:8px">4</text>
-        <text x="284" y="215" class="lbl">Load despatch centre</text>
-        <text x="270" y="229" class="lbl-s">SLDC: schedules, keeps the account</text>
-        <path class="p11-acct" d="M256 218 H60 V252"/>
-        <path class="p11-acct" d="M424 218 H604 V242"/>
+        <rect class="node" x="0" y="142" width="132" height="42" rx="2"/>
+        <use href="#i-handshake" x="8" y="152" width="21" height="21"/>
+        <text x="36" y="159" class="lbl">Seller</text>
+        <text x="36" y="171" class="lbl-s">Units put in are metered</text>
 
-        <!-- Sankey: 100 units in -> losses -> credited -->
-        <rect x="0" y="252" width="200" height="50" fill="#F5A300"/>
-        <text x="10" y="273" class="lbl-b" style="fill:#0A2540">100 units</text>
-        <text x="10" y="287" class="lbl" style="fill:#0A2540">metered into the grid</text>
-        <!-- main band continues (credited) -->
-        <path d="M200 252 C250 252 260 252 300 252 L560 252 L560 294 L300 294 C260 294 250 294 200 294 Z" fill="#1F9D62"/>
-        <!-- losses sliver -->
-        <path d="M200 294 C240 294 250 302 270 320 L282 320 C262 302 252 302 200 302 Z" fill="#D9453D"/>
-        <text x="288" y="324" class="lbl c-cost">Losses</text>
-        <text x="324" y="324" class="lbl-s">deducted in units, at a rate set by your state</text>
-        <text x="330" y="270" class="lbl on-dark">Units credited to you</text>
-        <text x="330" y="284" class="lbl-s" style="fill:#E6F6EE">100 minus losses</text>
+        <rect class="node" x="168" y="142" width="150" height="42" rx="2"/>
+        <use href="#i-chart" x="176" y="152" width="21" height="21"/>
+        <text x="204" y="159" class="lbl">Load despatch centre</text>
+        <text x="204" y="171" class="lbl-s">SLDC: schedules, accounts</text>
 
-        <!-- consumer total stack -->
-        <rect x="560" y="242" width="40" height="10" fill="#fff"/>
-        <rect x="560" y="210" width="40" height="42" fill="#0B63CE"/>
-        <rect x="560" y="252" width="40" height="42" fill="#1F9D62"/>
-        <text x="608" y="225" class="lbl c-grid">Rest from</text>
-        <text x="608" y="236" class="lbl c-grid">the DISCOM</text>
-        <text x="608" y="247" class="lbl-s">billed as usual</text>
-        <text x="608" y="270" class="lbl c-export">Credited</text>
-        <text x="608" y="281" class="lbl c-export">units</text>
-        <path class="p11-thin" d="M560 300 V306 H600 V300"/>
-        <text x="580" y="318" text-anchor="middle" class="lbl">Your total use</text>
+        <rect class="node" x="348" y="142" width="150" height="42" rx="2"/>
+        <use href="#i-doc" x="356" y="152" width="21" height="21"/>
+        <text x="384" y="159" class="lbl">Your DISCOM bill</text>
+        <text x="384" y="171" class="lbl-s">Credits units, bills top-up</text>
+
+        <rect class="node em" x="548" y="142" width="132" height="42" rx="2"/>
+        <use href="#i-rupee" x="556" y="152" width="21" height="21"/>
+        <text x="584" y="159" class="lbl">You</text>
+        <text x="584" y="171" class="lbl-s">Pay the bill and the seller</text>
+
+        <!-- units in the account -->
+        <path class="flow plain" d="M132 156 H166"/>
+        <path class="flow plain" d="M318 156 H346"/>
+        <text x="150" y="194" text-anchor="middle" class="cap">Units in</text>
+        <text x="333" y="194" text-anchor="middle" class="cap c-cost">Less losses</text>
+        <!-- money -->
+        <path class="flow money" d="M548 170 H500"/>
+        <text x="523" y="163" text-anchor="middle" class="cap c-cost">Pays</text>
+        <path class="flow money" d="M614 184 V202 H66 V186"/>
+        <text x="340" y="214" text-anchor="middle" class="lbl-s c-cost">Price per unit under the agreement (captive users own the plant instead)</text>
       </svg>
-    </div>
-
-    <div class="p11-an">
-      <div class="t"><div class="k">You choose the seller</div><p class="small">A third party's plant, or your own plant somewhere else.</p></div>
-      <span class="op">+</span>
-      <div class="t"><div class="k">The grid delivers</div><p class="small">Existing lines carry it, like a courier on public roads.</p></div>
-      <span class="op">=</span>
-      <div class="t"><div class="k">You pay for delivery</div><p class="small">Regulated network charges, set by your state.</p></div>
+      <div class="legend" style="margin-top:2.2mm"><span><i class="ln"></i>Solar power from the plant</span><span><i class="ln grid"></i>Power in the shared grid</span><span><i class="ln" style="background:#7F8FA3"></i>Units in the account</span><span><i class="ln money"></i>Payments</span></div>
     </div>
 
     <div class="row">
-      <div class="card">
-        <h4>Who can use it</h4>
-        <h2>From 100 kW, down from 1 MW</h2>
-        <svg viewBox="0 0 300 74" role="img" aria-label="Eligibility threshold: earlier generally 1,000 kW and above, now 100 kW and above." style="width:100%;margin:2mm 0 1.4mm">
-          <g class="p11-rule"><line x1="20" y1="8" x2="20" y2="58"/><line x1="65" y1="8" x2="65" y2="58"/><line x1="110" y1="8" x2="110" y2="58"/><line x1="155" y1="8" x2="155" y2="58"/><line x1="200" y1="8" x2="200" y2="58"/><line x1="245" y1="8" x2="245" y2="58"/><line x1="290" y1="8" x2="290" y2="58"/></g>
-          <text x="20" y="18" class="lbl-s">Earlier</text>
-          <rect x="245" y="22" width="45" height="10" fill="#8FA3B8"/>
-          <text x="240" y="30" text-anchor="end" class="lbl-s">generally 1 MW and above</text>
-          <text x="20" y="42" class="lbl-s">Now</text>
-          <rect x="42.5" y="45" width="247.5" height="10" fill="#1F9D62"/>
-          <text x="20" y="70" text-anchor="middle" class="lbl-s">0</text>
-          <text x="42.5" y="70" text-anchor="middle" class="lbl">100</text>
-          <text x="110" y="70" text-anchor="middle" class="lbl-s">400</text>
-          <text x="200" y="70" text-anchor="middle" class="lbl-s">800</text>
-          <text x="245" y="70" text-anchor="middle" class="lbl">1,000</text>
-          <text x="290" y="70" text-anchor="end" class="lbl-s">kW</text>
+      <div class="fig" style="flex:1">
+        <div class="fig-title">Exhibit 2 &nbsp;·&nbsp; Units, plant to meter <span>Illustrative</span></div>
+        <svg viewBox="0 0 300 168" role="img" aria-label="Flow diagram. The plant puts 100 units into the grid. A small share is deducted as losses; the rest is credited to the consumer. The DISCOM supplies the rest of the consumer's use, so total use is credited units plus the top-up.">
+          <path class="band f-cost"   d="M72 6 C139 6 139 6 206 6 L206 12 C139 12 139 12 72 12 Z"/>
+          <path class="band f-export" d="M72 12 C139 12 139 34 206 34 L206 112 C139 112 139 90 72 90 Z"/>
+          <path class="band f-grid"   d="M72 110 C139 110 139 112 206 112 L206 164 C139 164 139 162 72 162 Z"/>
+          <rect class="f-solar" x="66" y="6" width="6" height="84"/>
+          <rect class="f-grid" x="66" y="110" width="6" height="52"/>
+          <rect class="f-cost" x="206" y="6" width="6" height="6"/>
+          <rect class="f-ink" x="206" y="34" width="6" height="130"/>
+          <text x="58" y="34" text-anchor="end" class="cap">Plant</text>
+          <text x="58" y="52" text-anchor="end" class="num">100</text>
+          <text x="58" y="63" text-anchor="end" class="lbl-s">units put in</text>
+          <text x="58" y="124" text-anchor="end" class="cap">DISCOM</text>
+          <text x="58" y="137" text-anchor="end" class="lbl">supplies</text>
+          <text x="58" y="148" text-anchor="end" class="lbl-s">the rest</text>
+          <text x="218" y="11" class="cap c-cost">Losses</text>
+          <text x="218" y="21" class="lbl-s">deducted in kind</text>
+          <text x="218" y="88" class="cap">Your premises</text>
+          <text x="218" y="101" class="lbl">Total use</text>
+          <text x="218" y="112" class="lbl-s">credited units</text>
+          <text x="218" y="122" class="lbl-s">plus the top-up</text>
+          <text x="80" y="47" class="lbl c-export">Credited to you</text>
+          <text x="80" y="58" class="lbl-s" style="fill:#2A3A4E">100 minus losses</text>
+          <text x="80" y="141" class="lbl c-grid">Top-up, billed as usual</text>
         </svg>
-        <p class="small">National rules and state regulations allow consumers with <b>100 kW or more of sanctioned load</b> (the maximum load a connection is approved for) to buy green power through open access, on terms set by each state. That can be one connection, or several in the same DISCOM electricity division adding up to 100 kW. Captive users, who own their plant, have no minimum.</p>
+        <p class="fig-cap">Each state sets the loss rate; the red ribbon is not to scale.</p>
       </div>
-      <div class="card">
+
+      <div class="fig plain" style="flex:1">
+        <div class="fig-title">Exhibit 3 &nbsp;·&nbsp; Who can use it <span>kW</span></div>
+        <svg viewBox="0 0 260 96" role="img" aria-label="Scale bar of eligibility by sanctioned load, 0 to 1,200 kilowatts. Earlier, open access generally started at 1,000 kilowatts (1 MW). For green power it now starts at 100 kilowatts. Captive users have no minimum.">
+          <g class="gridline"><path d="M80 2V70M138.7 2V70M197.3 2V70M256 2V70"/></g>
+          <path class="guide" d="M94.7 2V84M226.7 2V84"/>
+          <text x="0" y="11" class="lbl">Earlier</text><text x="0" y="21" class="lbl-s">generally from 1 MW</text>
+          <rect class="f-none" x="226.7" y="5" width="29.3" height="12"/>
+          <text x="0" y="35" class="lbl">Now, green power</text><text x="0" y="45" class="lbl-s">from 100 kW</text>
+          <rect class="f-export" x="94.7" y="29" width="161.3" height="12"/>
+          <text x="0" y="59" class="lbl">Captive users</text><text x="0" y="69" class="lbl-s">no minimum</text>
+          <rect class="f-ink" x="80" y="53" width="176" height="12"/>
+          <path class="axis" d="M80 70H256"/>
+          <g class="tick" text-anchor="middle"><text x="80" y="79">0</text><text x="138.7" y="79">400</text><text x="197.3" y="79">800</text><text x="256" y="79" text-anchor="end">1,200</text></g>
+          <text x="94.7" y="93" text-anchor="middle" class="num-b" style="font-size:8px">100</text>
+          <text x="226.7" y="93" text-anchor="middle" class="num-b" style="font-size:8px">1,000</text>
+        </svg>
+        <p class="small" style="margin-top:1.6mm">National rules and state regulations allow consumers with 100 kW or more of sanctioned load to buy green power through open access, on terms set by each state.</p>
+        <p class="tiny" style="margin-top:1mm">Sanctioned load: the maximum load a connection is approved for. Several connections in one DISCOM division can add up to 100 kW.</p>
+      </div>
+    </div>
+
+    <div class="row grow">
+      <div class="card top" style="flex:1.4">
         <h4>How it differs from rooftop solar</h4>
         <h2>The plant need not be on your premises</h2>
         <table class="cmp" style="margin-top:2.4mm">
           <tr><th></th><th>Rooftop solar</th><th>Open access</th></tr>
-          <tr><td>Where the plant is</td><td>On your own roof</td><td>Anywhere on the grid</td></tr>
-          <tr><td>Size limit</td><td>Your roof: about 10 m² per kW</td><td>Sized to your demand</td></tr>
-          <tr><td>Network charges</td><td>None on power used on site</td><td>Paid on every unit delivered</td></tr>
+          <tr><td>Plant location</td><td>Your own roof</td><td>Anywhere on the grid</td></tr>
+          <tr><td>Size set by</td><td>Roof area, about 10 m² per kW</td><td>Your demand</td></tr>
+          <tr><td>Grid charges</td><td>None on power used on site</td><td>Paid on each unit delivered</td></tr>
         </table>
-        <p class="small" style="margin-top:2mm">Useful when a site uses far more power than its roof could ever produce.</p>
+        <p class="small" style="margin-top:2mm">Useful when a site needs far more power than its roof can produce. Typically viable for consumers with large, steady daytime demand.</p>
       </div>
-    </div>
-
-    <div class="cols-3 grow">
-      <div class="card top">
-        <h3>One national portal</h3>
-        <p class="small">Applications go through a single-window portal, <b>greenopenaccess.in</b>, run by Grid-India, and are processed by state nodal agencies.</p>
-      </div>
-      <div class="card top">
-        <h3>Typically suits</h3>
-        <p class="small" style="margin-bottom:2mm">Typically viable for consumers with large, steady daytime demand.</p>
-        <div class="chips"><span class="chip">Factories</span><span class="chip">Hospitals</span><span class="chip">Malls</span><span class="chip">Large offices</span><span class="chip">Campuses</span></div>
-      </div>
-      <div class="card top">
-        <h3>The alternative: a green tariff</h3>
-        <p class="small">A consumer who cannot or does not want to use open access can ask the DISCOM to supply green power at a “green tariff” set by the State Electricity Regulatory Commission.</p>
-        <p class="tiny" style="margin-top:1.6mm">Confirm current rules with your DISCOM before you decide.</p>
+      <div class="stack" style="flex:1;gap:3mm">
+        <div class="card top">
+          <h3>One national portal</h3>
+          <p class="small">Apply through <b>greenopenaccess.in</b>, a single-window portal run by Grid-India; state nodal agencies process applications.</p>
+        </div>
+        <div class="card top">
+          <h3>The alternative: a green tariff</h3>
+          <p class="small">Consumers who cannot or prefer not to use open access can ask the DISCOM for green power at a “green tariff” set by the state regulator.</p>
+        </div>
       </div>
     </div>
   </div>

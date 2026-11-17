@@ -1,142 +1,97 @@
 <section class="page p16" data-sec="guide">
   <style>
-    .p16-sw { display: grid; grid-template-columns: 15mm repeat(8, 1fr); column-gap: 1.6mm; }
-    .p16-sw .st { position: relative; padding: 0 0 2mm; }
-    .p16-sw .st .n { font-family: var(--head); font-weight: 300; font-size: 12pt; line-height: 1; letter-spacing: -.03em; color: var(--ink); font-variant-numeric: tabular-nums; }
-    .p16-sw .st .rail { position: relative; height: 3mm; margin: 1.6mm 0 1.6mm; }
-    .p16-sw .st .rail::before { content: ""; position: absolute; left: 0; right: -1.6mm; top: 1.35mm; height: .3mm; background: var(--navy); }
-    .p16-sw .st:last-child .rail::before { right: 0; }
-    .p16-sw .st .rail::after { content: ""; position: absolute; left: 0; top: .3mm; width: 2.4mm; height: 2.4mm; border-radius: 50%; background: #fff; border: .45mm solid var(--navy); }
-    .p16-sw .st:last-child .rail::after { background: var(--navy); }
-    .p16-sw .st h3 { font-size: 7.3pt; line-height: 1.2; }
-    .p16-sw .who { font-family: var(--head); font-weight: 700; font-size: 6pt; letter-spacing: .14em; text-transform: uppercase; color: var(--ink); padding-top: 1.8mm; border-top: .25mm solid var(--line); }
-    .p16-sw .who span { display: block; font-weight: 500; letter-spacing: .02em; text-transform: none; color: var(--muted); font-size: 6.2pt; margin-top: .4mm; }
-    .p16-sw .c { border-top: .25mm solid var(--line); padding: 1.4mm 0 1.6mm; font-size: 6.8pt; line-height: 1.3; color: var(--text); }
-    .p16-sw .c > div { border-left: .6mm solid #C3CDD8; padding-left: 1.5mm; }
-    .p16-sw .c.lead > div { border-left-color: var(--navy); color: var(--ink); }
-    .p16-sw .c:empty::after { content: ""; display: block; width: 2.4mm; height: .25mm; background: var(--line); margin-top: 2mm; }
-    .p16-ap { border-top: .6mm solid var(--ink); padding-top: 3mm; display: flex; flex-direction: column; gap: 4mm; }
-    .p16-ap .hd { display: flex; justify-content: space-between; align-items: baseline; }
-    .p16-ap .kf { display: grid; grid-template-columns: repeat(3, 1fr); gap: 4mm 4.4mm; align-content: start; }
-    .p16-ap .kf .stat .n { font-size: 19pt; }
-    .p16-ap .kf .stat .l { font-size: 7.2pt; }
-    .p16-ap .kf .stat .l b { color: var(--ink); font-weight: 700; }
+    .p16-tl { display: grid; grid-template-columns: 21mm repeat(8, 1fr); column-gap: 0; }
+    .p16-tl .st { padding-right: 2mm; padding-bottom: 2.4mm; border-bottom: .6mm solid var(--ink); }
+    .p16-tl > div:first-child { border-bottom: .6mm solid var(--ink); font-family: var(--head); font-weight: 700; font-size: 6.2pt; letter-spacing: .16em; text-transform: uppercase; color: var(--muted); display: flex; align-items: flex-end; padding-bottom: 1.6mm; }
+    .p16-tl .st .n { font-family: var(--head); font-weight: 300; font-size: 14pt; line-height: 1; letter-spacing: -.02em; color: var(--ink); font-variant-numeric: tabular-nums; }
+    .p16-tl .st .rail { display: block; position: relative; height: 2.6mm; margin: 1.8mm 0 2mm; }
+    .p16-tl .st .rail::before { content: ""; position: absolute; left: 0; right: 0; top: 1.15mm; height: .25mm; background: var(--navy); }
+    .p16-tl .st .rail::after { content: ""; position: absolute; left: 0; top: 0; width: 2.6mm; height: 2.6mm; border-radius: 50%; background: #fff; border: .35mm solid var(--navy); box-sizing: border-box; }
+    .p16-tl .st:nth-child(9) .rail::after { background: var(--navy); }
+    .p16-tl .st h3 { font-size: 7.2pt; line-height: 1.2; min-height: 6.2mm; }
+    .p16-tl .st p { font-size: 6.7pt; line-height: 1.32; color: var(--text); margin-top: 1mm; }
+    .p16-tl .lane-h { grid-column: 1 / -1; font-family: var(--head); font-weight: 700; font-size: 6.2pt; letter-spacing: .16em; text-transform: uppercase; color: var(--muted); padding: 1.4mm 0 1.4mm; border-top: .6mm solid var(--ink); }
+    .p16-tl .who { font-family: var(--head); font-weight: 600; font-size: 7pt; color: var(--ink); border-bottom: .25mm solid var(--line); padding: 1.8mm 0; }
+    .p16-tl .mk { border-bottom: .25mm solid var(--line); padding: 1.8mm 0; line-height: 0; display: flex; align-items: center; }
+    .p16 .hb { display: inline-block; width: 2.7mm; height: 2.7mm; border-radius: 50%; border: .3mm solid var(--navy); }
+    .p16 .hb.h2 { background: var(--navy); }
+    .p16 .hb.h1 { background: #fff; }
+    .p16 .hb.h0 { width: 2.4mm; height: .25mm; border: 0; border-radius: 0; background: #C3CDD8; }
+    .p16-ft { display: flex; gap: 4mm; margin-top: 2.2mm; align-items: center; font-family: var(--head); font-size: 6.4pt; font-weight: 500; color: var(--text); }
+    .p16-ft span { display: inline-flex; align-items: center; gap: 1.4mm; white-space: nowrap; }
+    .p16-ap { border-top: .6mm solid var(--ink); padding-top: 2.6mm; display: flex; justify-content: space-between; align-items: baseline; }
+    .p16-fb { display: grid; grid-template-columns: repeat(6, 1fr); gap: 4mm; }
+    .p16-fb .stat .n { font-size: 19pt; }
+    .p16-fb .stat .l { font-size: 7pt; }
+    .p16-fb .stat .l b { display: block; color: var(--ink); font-family: var(--head); font-weight: 600; font-size: 6.9pt; }
+    .p16 table.cmp td { padding: 1.9mm 2mm 1.9mm 0; font-size: 7.6pt; }
   </style>
-  <header class="ph"><span class="sec">Your guide &nbsp;·&nbsp; The journey</span><img src="{{LOGO}}" alt="Ray2Volt"></header>
+  <header class="ph"><span class="sec">Your guide &nbsp;/&nbsp; The journey</span><img src="{{LOGO}}" alt="Ray2Volt"></header>
   <div class="pb">
     <div>
       <div class="kicker">Putting it together</div>
-      <h1 class="title">Going solar, step by step <em>and Andhra Pradesh at a glance</em></h1>
-      <p class="lede">A typical rooftop project passes through eight steps, from a first conversation to a working plant. The chart shows who does what; below it are the Andhra Pradesh rules that shape a project.</p>
+      <h1 class="title">Going solar, step by step <em>And Andhra Pradesh at a glance</em></h1>
+      <p class="lede">A rooftop project typically passes through eight steps, from a first conversation to a working plant. Below them are the Andhra Pradesh rules that shape a project.</p>
     </div>
 
     <div class="fig">
-      <div class="fig-title">A typical rooftop project, start to finish <span>Who does what at each step</span></div>
-      <div class="p16-sw">
-        <div></div>
-        <div class="st"><div class="n">01</div><div class="rail"></div><h3>Site survey, bill study</h3></div>
-        <div class="st"><div class="n">02</div><div class="rail"></div><h3>Design and proposal</h3></div>
-        <div class="st"><div class="n">03</div><div class="rail"></div><h3>Finance or subsidy</h3></div>
-        <div class="st"><div class="n">04</div><div class="rail"></div><h3>DISCOM application</h3></div>
-        <div class="st"><div class="n">05</div><div class="rail"></div><h3>Installation</h3></div>
-        <div class="st"><div class="n">06</div><div class="rail"></div><h3>Inspection, meter change</h3></div>
-        <div class="st"><div class="n">07</div><div class="rail"></div><h3>Commissioning</h3></div>
-        <div class="st"><div class="n">08</div><div class="rail"></div><h3>Monitoring, upkeep</h3></div>
-
-        <div class="who">You<span>the customer</span></div>
-        <div class="c"><div>Share bills and sanctioned load</div></div>
-        <div class="c lead"><div>Choose metering and ownership</div></div>
-        <div class="c lead"><div>Apply for subsidy or a loan</div></div>
-        <div class="c"><div>Sign the application</div></div>
-        <div class="c"><div>Give access to the site</div></div>
-        <div class="c"></div>
-        <div class="c"><div>Receive warranties</div></div>
-        <div class="c lead"><div>Watch output; keep panels clean</div></div>
-
-        <div class="who">Installer<span>the vendor</span></div>
-        <div class="c lead"><div>Check roof, shade and wiring</div></div>
-        <div class="c lead"><div>Size the plant; quote</div></div>
-        <div class="c"><div>Supply papers the bank needs</div></div>
-        <div class="c lead"><div>File with the DISCOM</div></div>
-        <div class="c lead"><div>Fit panels, inverter, wiring</div></div>
-        <div class="c"><div>Fix points raised</div></div>
-        <div class="c lead"><div>Test and switch on</div></div>
-        <div class="c"><div>Maintenance; warranty claims</div></div>
-
-        <div class="who">DISCOM<span>power company</span></div>
-        <div class="c"></div>
-        <div class="c"></div>
-        <div class="c"></div>
-        <div class="c lead"><div>Check the local network</div></div>
-        <div class="c"></div>
-        <div class="c lead"><div>Inspect; fit two-way meter</div></div>
-        <div class="c"><div>Record the connection</div></div>
-        <div class="c"><div>Bill import and export</div></div>
-
-        <div class="who">Bank<span>or scheme</span></div>
-        <div class="c"></div>
-        <div class="c"></div>
-        <div class="c lead"><div>Assess and sanction loan</div></div>
-        <div class="c"></div>
-        <div class="c"></div>
-        <div class="c"></div>
-        <div class="c lead"><div>Subsidy paid after commissioning</div></div>
-        <div class="c"></div>
+      <div class="fig-title">Exhibit 1 &nbsp;·&nbsp; A typical rooftop project <span>Sequence only; no timings implied</span></div>
+      <div class="p16-tl">
+        <div>Who acts</div><div class="st"><span class="n">01</span><i class="rail"></i><h3>Site survey, bill study</h3><p>Roof, shade and wiring checked; bills read.</p></div><div class="st"><span class="n">02</span><i class="rail"></i><h3>Design and proposal</h3><p>Plant sized; metering and ownership chosen.</p></div><div class="st"><span class="n">03</span><i class="rail"></i><h3>Finance or subsidy</h3><p>Home subsidy via the national portal, or a loan.</p></div><div class="st"><span class="n">04</span><i class="rail"></i><h3>DISCOM application</h3><p>DISCOM checks its network can take the plant.</p></div><div class="st"><span class="n">05</span><i class="rail"></i><h3>Installation</h3><p>Panels, inverter, wiring and earthing fitted.</p></div><div class="st"><span class="n">06</span><i class="rail"></i><h3>Inspection, meter change</h3><p>DISCOM inspects; fits a two-way meter.</p></div><div class="st"><span class="n">07</span><i class="rail"></i><h3>Commissioning</h3><p>Plant tested and switched on.</p></div><div class="st"><span class="n">08</span><i class="rail"></i><h3>Monitoring, upkeep</h3><p>Output watched; panels kept clean.</p></div>
+        <div class="who">Customer</div><div class="mk"><i class="hb h2"></i></div><div class="mk"><i class="hb h2"></i></div><div class="mk"><i class="hb h2"></i></div><div class="mk"><i class="hb h1"></i></div><div class="mk"><i class="hb h1"></i></div><div class="mk"><i class="hb h0"></i></div><div class="mk"><i class="hb h1"></i></div><div class="mk"><i class="hb h2"></i></div><div class="who">Installer</div><div class="mk"><i class="hb h2"></i></div><div class="mk"><i class="hb h2"></i></div><div class="mk"><i class="hb h1"></i></div><div class="mk"><i class="hb h2"></i></div><div class="mk"><i class="hb h2"></i></div><div class="mk"><i class="hb h1"></i></div><div class="mk"><i class="hb h2"></i></div><div class="mk"><i class="hb h1"></i></div><div class="who">DISCOM</div><div class="mk"><i class="hb h0"></i></div><div class="mk"><i class="hb h0"></i></div><div class="mk"><i class="hb h0"></i></div><div class="mk"><i class="hb h2"></i></div><div class="mk"><i class="hb h0"></i></div><div class="mk"><i class="hb h2"></i></div><div class="mk"><i class="hb h1"></i></div><div class="mk"><i class="hb h1"></i></div><div class="who">Bank / scheme</div><div class="mk"><i class="hb h0"></i></div><div class="mk"><i class="hb h0"></i></div><div class="mk"><i class="hb h2"></i></div><div class="mk"><i class="hb h0"></i></div><div class="mk"><i class="hb h0"></i></div><div class="mk"><i class="hb h0"></i></div><div class="mk"><i class="hb h1"></i></div><div class="mk"><i class="hb h0"></i></div>
       </div>
-      <div class="fig-cap">Dark edge: who leads the step. Timings vary with the DISCOM, plant size and paperwork, so none are shown. National rules: rooftop applications up to 10 kW are deemed accepted without a technical feasibility study; for others the study must be done within 15 days.</div>
+      <div class="p16-ft">
+        <span><i class="hb h2"></i>Leads the step</span><span><i class="hb h1"></i>Takes part</span>
+        <span style="white-space:normal;margin-left:2mm;color:var(--muted)">Timings vary, so none are shown. National rules: applications up to 10 kW are deemed accepted without a technical feasibility study; for others it is due within 15 days.</span>
+      </div>
     </div>
 
-    <div class="p16-ap grow">
-      <div class="hd"><h2>Andhra Pradesh at a glance</h2><span class="chip solid">As of November 2026</span></div>
-      <div style="display:grid;grid-template-columns:64mm 1fr;gap:7mm">
-        <div>
-          <h4 style="margin-bottom:1.8mm">Regulator and DISCOMs</h4>
-          <svg viewBox="0 0 260 152" role="img" aria-label="Schematic, not a map: APERC regulates three DISCOMs. APEPDCL, Eastern, based in Visakhapatnam; APCPDCL, Central, based in Vijayawada; APSPDCL, Southern, based in Tirupati." style="display:block;width:100%;height:auto">
-            <rect x="1" y="1" width="258" height="32" class="node em"/>
-            <text x="10" y="14" class="lbl">APERC</text>
-            <text x="10" y="26" class="lbl-s">State regulator: sets tariffs and rules</text>
-            <path class="wire" d="M204 33 V46 M136 33 V82 M68 33 V118"/>
-            <rect x="148" y="46" width="111" height="32" class="node"/><rect x="148" y="46" width="2.4" height="32" class="f-ink"/>
-            <text x="157" y="59" class="lbl">APEPDCL</text><text x="157" y="71" class="lbl-s">Eastern · Visakhapatnam</text>
-            <rect x="80" y="82" width="111" height="32" class="node"/><rect x="80" y="82" width="2.4" height="32" class="f-ink"/>
-            <text x="89" y="95" class="lbl">APCPDCL</text><text x="89" y="107" class="lbl-s">Central · Vijayawada</text>
-            <rect x="12" y="118" width="111" height="32" class="node"/><rect x="12" y="118" width="2.4" height="32" class="f-ink"/>
-            <text x="21" y="131" class="lbl">APSPDCL</text><text x="21" y="143" class="lbl-s">Southern · Tirupati</text>
-            <g transform="translate(236,118)"><path d="M0 22 V3 M-3.500 8 L0 2 L3.500 8" fill="none" stroke="#627287" stroke-width="1"/><text x="0" y="31" text-anchor="middle" class="tick">N</text></g>
-          </svg>
-          <p class="tiny" style="margin-top:1.4mm">Each DISCOM with the city it is based in. Schematic only, not a map.</p>
-          <h4 style="margin:3.6mm 0 1.8mm">Monthly settlement</h4>
-          <svg viewBox="0 0 260 78" role="img" aria-label="Each month import and export are compared. If you imported more, the net is billed at the retail tariff. If you exported more, the surplus is paid at the feed-in tariff fixed by APERC." style="display:block;width:100%;height:auto">
-            <rect x="1" y="20" width="70" height="38" class="node em"/>
-            <text x="8" y="35" class="lbl">Import vs</text><text x="8" y="47" class="lbl">export</text>
-            <path class="wire" d="M71 39 H82 M82 18 V60"/>
-            <path class="flow grid" d="M82 18 H98"/>
-            <path class="flow export" d="M82 60 H98"/>
-            <rect x="102" y="1" width="157" height="34" class="node"/><rect x="102" y="1" width="2.4" height="34" class="f-grid"/>
-            <text x="111" y="15" class="lbl c-grid">Imported more</text><text x="111" y="27" class="lbl-s">Net billed at the retail tariff</text>
-            <rect x="102" y="43" width="157" height="34" class="node"/><rect x="102" y="43" width="2.4" height="34" class="f-export"/>
-            <text x="111" y="57" class="lbl c-export">Exported more</text><text x="111" y="69" class="lbl-s">Surplus paid at APERC’s feed-in tariff</text>
-          </svg>
-        </div>
-        <div style="display:flex;flex-direction:column;gap:4.4mm">
-          <div class="kf">
-            <div class="stat rule"><span class="n">500<small>kW</small></span><span class="l"><b>Net metering:</b> new systems up to this size</span></div>
-            <div class="stat rule"><span class="n">5<small>MW</small></span><span class="l"><b>Gross metering:</b> available for larger systems, up to this size</span></div>
-            <div class="stat rule"><span class="n">5<small>kW</small></span><span class="l"><b>Single-phase</b> connections: up to this size, within sanctioned load</span></div>
-            <div class="stat rule"><span class="n">10<small>kW</small></span><span class="l"><b>Homes under PM Surya Ghar</b> up to this size: no application fee or net-meter cost; feasibility study waived</span></div>
-            <div class="stat rule"><span class="n">30<small>%</small></span><span class="l"><b>Open access banking:</b> up to this share of monthly consumption, within the billing cycle</span></div>
-            <div class="stat rule"><span class="n">8<small>%</small></span><span class="l"><b>Banking charge</b> on banked energy, taken in kind (in units)</span></div>
-          </div>
-          <div>
-            <h4 style="margin-bottom:1.6mm">The rules behind the numbers</h4>
-            <ul class="dots" style="font-size:7.4pt;line-height:1.38">
-              <li>Rooftop solar: APERC Regulation 4 of 2023, amended by Regulation 10 of 2025. Zero-export behind-the-meter systems follow a simplified intimation process.</li>
-              <li>Green open access: APERC Regulation 3 of 2024 (amended 2025). Under the AP Integrated Clean Energy Policy 2024, cross-subsidy surcharge and additional surcharge do not apply to captive consumption.</li>
-            </ul>
-          </div>
-        </div>
+    <div class="p16-ap"><h2>Andhra Pradesh at a glance</h2><span class="small" style="color:var(--ink)"><b>As of November 2026.</b> Confirm current rules with your DISCOM before you decide.</span></div>
+
+    <div>
+      <div class="fig-title" style="margin-bottom:2.6mm">Exhibit 2 &nbsp;·&nbsp; The rules in figures <span>Set by APERC, the state regulator</span></div>
+      <div class="p16-fb">
+        <div class="stat rule"><span class="n">500<small>kW</small></span><span class="l"><b>Net metering</b>new systems up to this size</span></div>
+        <div class="stat rule"><span class="n">5<small>MW</small></span><span class="l"><b>Gross metering</b>larger systems, up to this size</span></div>
+        <div class="stat rule"><span class="n">5<small>kW</small></span><span class="l"><b>Single-phase</b>limit, within sanctioned load</span></div>
+        <div class="stat rule"><span class="n">Monthly</span><span class="l"><b>Settlement</b>import and export squared each month</span></div>
+        <div class="stat rule"><span class="n">30<small>%</small></span><span class="l"><b>Open access banking</b>cap, as a share of monthly use</span></div>
+        <div class="stat rule"><span class="n">8<small>%</small></span><span class="l"><b>Banking charge</b>taken in kind, in units</span></div>
       </div>
-      <div class="callout note push"><p class="small"><b>Rules change often.</b> These are the Andhra Pradesh rules as of November 2026. Confirm current rules with your DISCOM before you decide.</p></div>
+    </div>
+
+    <div class="row" style="gap:6mm">
+      <div style="flex:1">
+        <div class="fig-title" style="margin-bottom:1mm">Exhibit 3 &nbsp;·&nbsp; The three DISCOMs</div>
+        <table class="cmp">
+          <thead><tr><th>DISCOM</th><th>Region</th><th>Based in</th></tr></thead>
+          <tbody>
+            <tr><td>APEPDCL</td><td>Eastern</td><td>Visakhapatnam</td></tr>
+            <tr><td>APCPDCL</td><td>Central</td><td>Vijayawada</td></tr>
+            <tr><td>APSPDCL</td><td>Southern</td><td>Tirupati</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div style="flex:1.15">
+        <div class="fig-title" style="margin-bottom:2.4mm">Exhibit 4 &nbsp;·&nbsp; Monthly settlement <span>Schematic</span></div>
+        <svg viewBox="0 0 330 80" role="img" aria-label="Each month, units imported and exported are compared. If more was imported, the net is billed at the retail tariff. If more was exported, the surplus is paid at the feed-in tariff fixed by APERC." style="display:block;width:100%;height:auto">
+          <rect class="node em" x="1" y="21" width="96" height="38" rx="2"/>
+          <text x="10" y="36" class="lbl">Month’s readings</text><text x="10" y="48" class="lbl-s">import vs export</text>
+          <path class="wire" d="M97 40 H112 M112 19 V61"/>
+          <path class="flow grid" d="M112 19 H130"/>
+          <path class="flow export" d="M112 61 H130"/>
+          <rect class="node" x="134" y="1" width="195" height="36" rx="2"/><rect class="f-grid" x="134" y="1" width="2.4" height="36"/>
+          <text x="144" y="15" class="lbl c-grid">Imported more</text><text x="144" y="28" class="lbl-s">The net is billed at the retail tariff</text>
+          <rect class="node" x="134" y="43" width="195" height="36" rx="2"/><rect class="f-export" x="134" y="43" width="2.4" height="36"/>
+          <text x="144" y="57" class="lbl c-export">Exported more</text><text x="144" y="70" class="lbl-s">Surplus paid at the feed-in tariff set by APERC</text>
+        </svg>
+      </div>
+    </div>
+
+    <div class="cols-3 grow">
+      <div class="card top"><h3>Homes up to 10 kW</h3><p class="small">Under PM Surya Ghar, domestic consumers pay no application fee or net-meter cost; the feasibility study is waived.</p></div>
+      <div class="card top"><h3>Rooftop regulation</h3><p class="small">APERC Regulation 4 of 2023, amended by Regulation 10 of 2025. Zero-export behind-the-meter systems follow a simplified intimation process.</p></div>
+      <div class="card top"><h3>Green open access</h3><p class="small">APERC Regulation 3 of 2024 (amended 2025). Under the AP Integrated Clean Energy Policy 2024, cross-subsidy surcharge and additional surcharge do not apply to captive consumption.</p></div>
     </div>
   </div>
   <footer class="pf"><span>{{FOOT}}</span><span class="pn">{{PN}}</span></footer>

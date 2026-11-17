@@ -1,167 +1,150 @@
 <section class="page p14" data-sec="money">
   <style>
-    .p14 svg .grid-l { stroke: #E9EDF2; stroke-width: .8; }
-    .p14 svg .axis { stroke: #627287; stroke-width: .9; }
-    .p14 svg .ax { font-size: 7.5px; font-weight: 600; fill: #627287; }
-    .p14 svg .cap { font-size: 7.5px; font-weight: 700; letter-spacing: .08em; fill: #1F3A5F; }
-    .p14 svg .inb { font-size: 7.5px; font-weight: 700; fill: #fff; }
-    .p14 svg .box { fill: #fff; stroke: #0B1F3A; stroke-width: 1; }
-    .p14 .asof { display: flex; gap: 3mm; align-items: baseline; margin-top: 3mm; padding: 1.8mm 3mm; border: .25mm solid var(--gold); border-radius: var(--r); background: var(--t-gold); font-size: 8pt; color: var(--ink); }
-    .p14 .asof b { font-family: var(--head); font-size: 6.6pt; letter-spacing: .14em; text-transform: uppercase; color: var(--gold-ink); white-space: nowrap; }
-    .p14 .sg { display: grid; grid-template-columns: 1.22fr 1fr; gap: 5mm; align-items: start; }
-    .p14 .gst { display: flex; height: 5.4mm; gap: .4mm; margin: 1.4mm 0 1mm; }
-    .p14 .gst i { font-style: normal; font-family: var(--head); font-weight: 600; font-size: 6.6pt; display: flex; align-items: center; padding: 0 1.8mm; white-space: nowrap; color: #fff; }
-    .p14 .sec-h { display: flex; align-items: baseline; justify-content: space-between; border-bottom: .25mm solid var(--line); padding-bottom: 1.6mm; margin-bottom: 2.6mm; }
+    .p14 .legend i.g2 { background: var(--green-2); } .p14 .legend i.cap { background: #D3E8DD; }
+    .p14 table.cmp td:first-child { width: 19%; }
+    .p14 table.cmp td { padding: 1.5mm 3mm 1.5mm 0; }
+    .p14 table.cmp td:nth-child(2) { width: 36%; }
+    .p14 .xt { display: block; }
   </style>
-  <header class="ph"><span class="sec">Money &nbsp;·&nbsp; Subsidy, loans &amp; tax</span><img src="{{LOGO}}" alt="Ray2Volt"></header>
+  <header class="ph"><span class="sec">Money &nbsp;/&nbsp; Subsidy, loans and tax</span><img src="{{LOGO}}" alt="Ray2Volt"></header>
   <div class="pb">
     <div>
-      <div class="kicker">Paying for solar · Help that exists</div>
-      <h1 class="title">Paying for it: <em>subsidy, loans and tax</em></h1>
-      <p class="lede">Homes can get a central government subsidy and a bank loan on easy terms. Businesses cannot get the home subsidy, but can borrow and may save on tax. Here is what is available today.</p>
-      <p class="asof"><b>As of November 2026</b><span>Schemes and rates change. Confirm with your bank and the official portal, pmsuryaghar.gov.in, before you decide.</span></p>
+      <div class="kicker">Financing</div>
+      <h1 class="title">Paying for it <em>Subsidy, loans and tax</em></h1>
+      <p class="lede">Homes can claim a central government subsidy and borrow on concessional terms. Businesses cannot claim the home subsidy, but can borrow and may benefit from tax rules on depreciation.</p>
+      <p class="callout small" style="margin-top:2.6mm"><b>As of November 2026.</b> Schemes and rates change. Confirm with your bank and the official portal, pmsuryaghar.gov.in, before you decide.</p>
     </div>
 
-    <div class="fig">
-      <div class="fig-title">PM Surya Ghar: Muft Bijli Yojana <span>Central subsidy for home rooftop solar</span></div>
-      <div class="sg">
-        <svg viewBox="0 0 380 214" role="img" aria-label="Step chart of the central subsidy by plant size: 1 kW gets 30,000 rupees, 2 kW gets 60,000 rupees, 3 kW gets 78,000 rupees, and 4 kW or more stays at the 78,000 rupee maximum.">
-          <text x="0" y="10" class="cap">SUBSIDY BY PLANT SIZE · INDIVIDUAL HOMES</text>
-          <!-- gridlines: scale 120px = ₹78,000 -->
-          <path class="grid-l" d="M52 139.2 H376 M52 108.5 H376 M52 77.7 H376 M52 46.9 H376"/>
-          <g class="ax" text-anchor="end">
-            <text x="46" y="173">₹0</text><text x="46" y="142">₹20,000</text><text x="46" y="111">₹40,000</text><text x="46" y="80">₹60,000</text><text x="46" y="49">₹80,000</text>
-          </g>
+    <div class="row">
+      <div class="fig" style="flex:1.3">
+        <div class="fig-title">Exhibit 1 &nbsp;·&nbsp; PM Surya Ghar subsidy by plant size <span>₹ per home</span></div>
+        <svg viewBox="0 0 400 190" role="img" aria-label="Step chart of the central PM Surya Ghar subsidy for individual homes: 30,000 rupees for 1 kW, 60,000 rupees for 2 kW, 78,000 rupees for 3 kW, and the same 78,000 rupee maximum for 4 kW and above.">
+          <g class="gridline"><path d="M56 127.5H392M56 95H392M56 62.5H392M56 30H392"/></g>
+          <g class="tick" text-anchor="end"><text x="50" y="162.5">₹0</text><text x="50" y="130">₹20,000</text><text x="50" y="97.5">₹40,000</text><text x="50" y="65">₹60,000</text><text x="50" y="32.5">₹80,000</text></g>
           <!-- 1 kW -->
-          <rect x="70" y="123.8" width="56" height="46.2" fill="#17855A"/>
-          <text x="98" y="150" text-anchor="middle" class="inb">₹30,000</text>
+          <rect class="f-export" x="67" y="111.25" width="34" height="48.75"/>
           <!-- 2 kW -->
-          <rect x="146" y="123.8" width="56" height="46.2" fill="#17855A"/>
-          <rect x="146" y="77.7" width="56" height="45.6" fill="#17855A"/>
-          <text x="174" y="150" text-anchor="middle" class="inb">₹30,000</text>
-          <text x="174" y="104" text-anchor="middle" class="inb">₹30,000</text>
+          <rect class="f-export" x="123" y="111.25" width="34" height="48.75"/>
+          <rect class="f-export" x="123" y="62.5" width="34" height="48"/>
           <!-- 3 kW -->
-          <rect x="222" y="123.8" width="56" height="46.2" fill="#17855A"/>
-          <rect x="222" y="77.7" width="56" height="45.6" fill="#17855A"/>
-          <rect x="222" y="50" width="56" height="27.2" fill="#6DBB98"/>
-          <text x="250" y="150" text-anchor="middle" class="inb">₹30,000</text>
-          <text x="250" y="104" text-anchor="middle" class="inb">₹30,000</text>
-          <text x="250" y="66.5" text-anchor="middle" class="inb" style="fill:#0B1F3A">₹18,000</text>
-          <!-- 4 kW+ : capped -->
-          <rect x="298.5" y="50.5" width="55" height="119.5" fill="#EEF6F2" stroke="#17855A" stroke-dasharray="3 2"/>
-          <text x="326" y="104" text-anchor="middle" class="ax">no further</text>
-          <text x="326" y="114" text-anchor="middle" class="ax">increase</text>
-          <!-- step line over bar tops -->
-          <path d="M70 123.8 H126 M146 77.7 H202 M222 50 H354" stroke="#0B1F3A" stroke-width="1.2" fill="none"/>
-          <path d="M126 123.8 H146 V77.7 M202 77.7 H222 V50" stroke="#0B1F3A" stroke-width=".8" stroke-dasharray="2 2" fill="none"/>
-          <!-- totals -->
-          <text x="98" y="117" text-anchor="middle" class="lbl-b">₹30,000</text>
-          <text x="174" y="71" text-anchor="middle" class="lbl-b">₹60,000</text>
-          <text x="250" y="43" text-anchor="middle" class="lbl-b">₹78,000</text>
-          <text x="326" y="43" text-anchor="middle" class="lbl-b c-export">maximum</text>
-          <path class="axis" d="M52 170 H376"/>
-          <g class="lbl" text-anchor="middle"><text x="98" y="183">1 kW</text><text x="174" y="183">2 kW</text><text x="250" y="183">3 kW</text><text x="326" y="183">4 kW or more</text></g>
-          <!-- key -->
-          <rect x="52" y="198" width="10" height="7" fill="#17855A"/><text x="66" y="204.5" class="ax">₹30,000 per kW for the first 2 kW</text>
-          <rect x="220" y="198" width="10" height="7" fill="#6DBB98"/><text x="234" y="204.5" class="ax">₹18,000 for the third kW</text>
+          <rect class="f-export" x="179" y="111.25" width="34" height="48.75"/>
+          <rect class="f-export" x="179" y="62.5" width="34" height="48"/>
+          <rect x="179" y="33.25" width="34" height="28.5" fill="#6DBB98"/>
+          <!-- 4 kW + : capped -->
+          <rect x="235" y="33.25" width="34" height="126.75" fill="#D3E8DD"/>
+          <rect x="291" y="33.25" width="34" height="126.75" fill="#D3E8DD"/>
+          <rect x="347" y="33.25" width="34" height="126.75" fill="#D3E8DD"/>
+          <!-- step line -->
+          <path d="M60 111.25 H108 V62.5 H164 V33.25 H388" fill="none" stroke="#0B1F3A" stroke-width="1.1"/>
+          <!-- values -->
+          <g class="num-b" text-anchor="middle"><text x="84" y="105">₹30,000</text><text x="140" y="56">₹60,000</text><text x="196" y="27">₹78,000</text></g>
+          <text x="308" y="27" text-anchor="middle" class="lbl c-export">maximum: no increase above 3 kW</text>
+          <path class="axis" d="M56 160H392"/>
+          <g class="tick" text-anchor="middle"><text x="84" y="171">1 kW</text><text x="140" y="171">2 kW</text><text x="196" y="171">3 kW</text><text x="252" y="171">4 kW</text><text x="308" y="171">5 kW</text><text x="364" y="171">6 kW +</text></g>
+          <text x="224" y="185" text-anchor="middle" class="tick">Plant size</text>
         </svg>
-        <div class="small">
-          <h3>Conditions</h3>
-          <ul class="ticks" style="margin-top:1.4mm">
+        <div class="legend" style="margin-top:1.6mm">
+          <span><i class="export"></i>₹30,000 per kW for the first 2 kW</span>
+          <span><i class="g2"></i>₹18,000 for the third kW</span>
+          <span><i class="cap"></i>No further subsidy</span>
+        </div>
+        <p class="fig-cap">Central scheme, currently sanctioned until March 2027. Target: 1 crore households; over 65 lakh homes covered by November 2026.</p>
+      </div>
+      <div class="stack" style="flex:1;gap:3mm">
+        <div class="card top">
+          <h4>Conditions</h4>
+          <ul class="ticks small" style="margin-top:1.6mm">
             <li>A residential electricity connection</li>
             <li>A grid-connected rooftop system</li>
             <li>Made-in-India panels from the government’s approved list</li>
-            <li>Installed by a registered vendor</li>
+            <li>Installation by a registered vendor</li>
           </ul>
-          <p style="margin-top:2.4mm"><b>Housing societies and resident welfare associations:</b> ₹18,000 per kW for common facilities, including EV charging, up to 500 kW (at 3 kW per house).</p>
-          <p class="callout warn" style="margin-top:2.4mm"><b>Homes only.</b> The subsidy is not for commercial or industrial connections such as shops, offices and factories.</p>
         </div>
+        <div class="card top">
+          <h4>Housing societies</h4>
+          <p class="small" style="margin-top:1.4mm">Housing societies and resident welfare associations: <b>₹18,000 per kW</b> for common facilities, including EV charging, up to 500 kW (at 3 kW per house).</p>
+        </div>
+        <p class="callout warn small grow"><b>Homes only.</b> The subsidy is not available to commercial or industrial connections.</p>
       </div>
-      <svg viewBox="0 0 680 66" role="img" aria-label="How the subsidy reaches the applicant: apply on the national portal, a registered vendor installs the plant, inspection and net meter, then the subsidy is paid into the applicant's bank account." style="margin-top:3mm">
-        <text x="0" y="9" class="cap">HOW THE MONEY REACHES THE APPLICANT</text>
-        <g>
-          <rect class="box" x="0.5" y="20.5" width="151" height="44" rx="3"/>
-          <text x="12" y="38" class="lbl-b c-solar">1</text><text x="26" y="38" class="lbl">Apply online</text>
-          <text x="26" y="52" class="lbl-s">only on pmsuryaghar.gov.in</text>
-          <rect class="box" x="176.5" y="20.5" width="151" height="44" rx="3"/>
-          <text x="188" y="38" class="lbl-b c-solar">2</text><text x="202" y="38" class="lbl">Vendor installs</text>
-          <text x="202" y="52" class="lbl-s">a registered vendor</text>
-          <rect class="box" x="352.5" y="20.5" width="151" height="44" rx="3"/>
-          <text x="364" y="38" class="lbl-b c-solar">3</text><text x="378" y="38" class="lbl">Inspection, net meter</text>
-          <text x="378" y="52" class="lbl-s">the plant is commissioned</text>
-          <rect x="528.5" y="20.5" width="151" height="44" rx="3" fill="#EEF6F2" stroke="#17855A"/>
-          <text x="540" y="38" class="lbl-b c-export">4</text><text x="554" y="38" class="lbl c-export">Subsidy paid</text>
-          <text x="554" y="52" class="lbl-s">into the applicant’s bank account</text>
-        </g>
-        <g class="flow plain" style="stroke-width:1.4"><path d="M154 42.5 H172"/><path d="M330 42.5 H348"/></g>
-        <path class="flow export" style="stroke-width:1.4" d="M506 42.5 H524"/>
-      </svg>
-      <p class="fig-cap">A central government scheme, currently sanctioned until March 2027. Target: 1 crore households; over 65 lakh homes covered by November 2026.</p>
     </div>
 
     <div>
-      <div class="sec-h"><h2>Loans, by type of borrower</h2><span class="tiny">Lenders typically fund about 70–80% of a business project’s cost</span></div>
-      <div class="cols-3 small">
-        <div>
-          <h3>Homes</h3>
-          <ul class="dots" style="margin-top:1.2mm">
-            <li>Public-sector banks: collateral-free loans for systems up to 3 kW (up to about ₹2 lakh); larger loans up to 10 kW</li>
-            <li>Tenure up to 10 years, at a concessional interest rate linked to the RBI repo rate; ask your bank for the current rate</li>
-            <li>Apply through JanSamarth (jansamarth.in), linked from the national portal</li>
-          </ul>
-        </div>
-        <div>
-          <h3>Micro, small and medium enterprises</h3>
-          <ul class="dots" style="margin-top:1.2mm">
-            <li>Term loans from banks and NBFCs (non-bank finance companies)</li>
-            <li>SIDBI rooftop-solar loans for MSMEs</li>
-            <li>CGTMSE credit-guarantee cover for micro and small enterprises, up to ₹10 crore from April 2025</li>
-          </ul>
-        </div>
-        <div>
-          <h3>Larger businesses</h3>
-          <ul class="dots" style="margin-top:1.2mm">
-            <li>Term loans from banks and NBFCs</li>
-            <li>IREDA, a government renewable-energy lender</li>
-            <li>Or no loan at all, through the OPEX / RESCO route on page 13</li>
-          </ul>
-        </div>
-      </div>
-      <p class="callout note box small" style="margin-top:3mm"><b>For lenders · priority sector.</b> Under RBI’s priority sector lending directions (2025), renewable-energy loans to individual households count up to ₹10 lakh per borrower, and loans to renewable power generators up to ₹35 crore.</p>
+      <div class="fig-title">Exhibit 2 &nbsp;·&nbsp; From application to payout <span>Process</span></div>
+      <svg viewBox="0 0 680 56" role="img" aria-label="Timeline in four steps: 1, apply on the national portal pmsuryaghar.gov.in; 2, a registered vendor installs the plant; 3, inspection and net meter, and the plant is commissioned; 4, the subsidy is paid into the applicant's bank account." style="display:block;width:100%">
+        <path d="M4 16 H676" stroke="#D8DFE8" stroke-width="1"/>
+        <path d="M4 16 H531" stroke="#0B1F3A" stroke-width="1"/>
+        <g fill="#fff" stroke="#0B1F3A" stroke-width="1.2"><circle cx="4" cy="16" r="3.5"/><circle cx="179" cy="16" r="3.5"/><circle cx="354" cy="16" r="3.5"/></g>
+        <circle cx="531" cy="16" r="4" class="f-export"/>
+        <g class="cap" style="fill:#8A5F00"><text x="0" y="7">01</text><text x="175" y="7">02</text><text x="350" y="7">03</text><text x="527" y="7">04</text></g>
+        <text x="0" y="34" class="lbl">Apply on the national portal</text><text x="0" y="46" class="lbl-s">pmsuryaghar.gov.in only</text>
+        <text x="175" y="34" class="lbl">A registered vendor installs</text><text x="175" y="46" class="lbl-s">approved, made-in-India panels</text>
+        <text x="350" y="34" class="lbl">Inspection and net meter</text><text x="350" y="46" class="lbl-s">the plant is commissioned</text>
+        <text x="527" y="34" class="lbl c-export">Subsidy paid</text><text x="527" y="46" class="lbl-s">into the applicant’s bank account</text>
+      </svg>
+    </div>
+
+    <div>
+      <div class="fig-title" style="margin-bottom:0;border-bottom:0">Exhibit 3 &nbsp;·&nbsp; Loans by type of borrower</div>
+      <table class="cmp">
+        <thead><tr><th>Borrower</th><th>Where to borrow</th><th>Terms to know</th></tr></thead>
+        <tbody>
+          <tr><td>Homes</td><td>Public-sector banks; apply through JanSamarth (jansamarth.in), linked from the national portal</td><td>Collateral-free for systems up to 3 kW (up to about ₹2 lakh); larger loans up to 10 kW. Tenure up to 10 years, at a concessional interest rate linked to the RBI repo rate; ask your bank for the current rate.</td></tr>
+          <tr><td>Micro and small enterprises</td><td>Term loans from banks and NBFCs (non-bank finance companies); SIDBI rooftop-solar loans</td><td>CGTMSE credit-guarantee cover, ceiling ₹10 crore from April 2025. Lenders typically fund about 70–80% of project cost.</td></tr>
+          <tr><td>Medium and larger businesses</td><td>Banks and NBFCs; SIDBI (medium enterprises); IREDA, a government renewable-energy lender</td><td>Lenders typically fund about 70–80% of project cost.</td></tr>
+          <tr><td>No loan</td><td>OPEX / RESCO: a developer funds the plant (page 13)</td><td>The customer pays only per unit used.</td></tr>
+        </tbody>
+      </table>
+      <p class="tiny" style="margin-top:1.6mm"><b>For lenders:</b> under RBI’s priority sector lending directions (2025), renewable-energy loans to individual households count up to ₹10 lakh per borrower, and loans to renewable power generators up to ₹35 crore.</p>
     </div>
 
     <div class="row grow">
-      <div class="card" style="flex:1.12">
-        <h4>For businesses · tax and GST</h4>
-        <div class="cols-2" style="margin-top:2mm;gap:4mm">
-          <div class="stat"><span class="n">40%</span><span class="l">depreciation a year on the written-down value (what is left after earlier years’ claims), under current income-tax rules. Half that if used under 180 days in the first year.</span></div>
-          <div class="stat"><span class="n">5%</span><span class="l">GST on solar panels and solar power generating systems, reduced from 12% in September 2025.</span></div>
-        </div>
-        <p class="small" style="margin-top:2.6mm"><b>Supply-and-install contracts</b> are taxed in two parts:</p>
-        <div class="gst"><i style="flex:70;background:var(--navy-2)">70% as goods · 5%</i><i style="flex:30;background:var(--red)">30% services · 18%</i></div>
-        <p class="small">About <b>8.9% overall</b>. Ask your chartered accountant how it applies to you.</p>
-      </div>
-      <div class="card" style="flex:1">
-        <h4>Payback · illustrative</h4>
-        <svg viewBox="0 0 300 132" role="img" aria-label="Schematic line chart: cumulative savings rise each year and cross the upfront cost line at the payback point; after that, savings exceed the cost. A lower cost after subsidy is crossed earlier. No rupee values." style="display:block;width:100%;margin-top:1.6mm">
-          <path class="grid-l" d="M24 20 H296 M24 46 H296 M24 72 H296 M24 98 H296"/>
-          <path d="M150 52 L290 14 L290 120 L150 120 Z" fill="#EEF6F2"/>
-          <path d="M24 52 H296" stroke="#C2463C" stroke-width="1.4" fill="none"/>
-          <path d="M24 78 H296" stroke="#C2463C" stroke-width="1" stroke-dasharray="3 3" fill="none"/>
-          <path d="M24 120 L290 47.6" stroke="#17855A" stroke-width="2" fill="none"/>
-          <path d="M150 52 V120" stroke="#0B1F3A" stroke-width=".8" stroke-dasharray="2 2"/>
-          <circle cx="150" cy="52" r="3" fill="#0B1F3A"/>
-          <circle cx="111" cy="78" r="2.4" fill="#fff" stroke="#0B1F3A"/>
-          <text x="28" y="47" class="ax" style="fill:#9C342C">Upfront cost</text>
-          <text x="28" y="73" class="ax" style="fill:#9C342C">Cost after subsidy (homes)</text>
-          <text x="156" y="44" class="lbl">Payback point</text>
-          <text x="286" y="40" text-anchor="end" class="ax" style="fill:#0F6645">Cumulative savings</text>
-          <text x="282" y="112" text-anchor="end" class="ax" style="fill:#0F6645">savings beyond cost</text>
-          <path class="axis" d="M24 12 V120 H296"/>
-          <text x="296" y="130" text-anchor="end" class="ax">years →</text>
-          <text x="24" y="130" class="ax">₹ (no scale)</text>
+      <div class="fig plain" style="flex:1">
+        <div class="fig-title">Exhibit 4 &nbsp;·&nbsp; Tax for businesses <span>% of plant cost</span></div>
+        <svg viewBox="0 0 330 104" role="img" aria-label="Bar chart of depreciation at 40 percent of written-down value: 40 percent of cost in year 1, 24 in year 2, 14.4 in year 3, 8.6 in year 4 and 5.2 in year 5." style="display:block;width:100%">
+          <text x="0" y="7" class="cap">Depreciation claimed each year, 40% of written-down value</text>
+          <g class="gridline"><path d="M34 53H326M34 18H326"/></g>
+          <g class="tick" text-anchor="end"><text x="30" y="90.5">0%</text><text x="30" y="55.5">20%</text><text x="30" y="20.5">40%</text></g>
+          <g fill="#1F3A5F">
+            <rect x="48" y="18" width="34" height="70"/><rect x="104" y="46" width="34" height="42"/><rect x="160" y="62.8" width="34" height="25.2"/><rect x="216" y="72.9" width="34" height="15.1"/><rect x="272" y="78.9" width="34" height="9.1"/>
+          </g>
+          <g class="num-b" text-anchor="middle" style="font-size:9px"><text x="65" y="14">40%</text><text x="121" y="42">24%</text><text x="177" y="58.8">14.4%</text><text x="233" y="68.9">8.6%</text><text x="289" y="74.9">5.2%</text></g>
+          <path class="axis" d="M34 88H326"/>
+          <g class="tick" text-anchor="middle"><text x="65" y="99">Year 1</text><text x="121" y="99">Year 2</text><text x="177" y="99">Year 3</text><text x="233" y="99">Year 4</text><text x="289" y="99">Year 5</text></g>
         </svg>
-        <p class="small" style="margin-top:1.4mm">Payback is often around 3 to 6 years, depending on your tariff, how much of the power you use yourself, and any subsidy.</p>
+        <p class="fig-cap" style="margin-top:1.2mm">Under current income-tax rules; half the rate if the plant is used for under 180 days in its first year.</p>
+        <svg viewBox="0 0 330 58" role="img" aria-label="Composition bar: on a supply-and-install contract, 70 percent of the value is taxed as goods at 5 percent and 30 percent as services at 18 percent, about 8.9 percent overall." style="display:block;width:100%;margin-top:2.6mm">
+          <text x="0" y="7" class="cap">GST on a supply-and-install contract</text>
+          <rect x="0" y="14" width="168" height="18" fill="#9AA8B8"/>
+          <rect x="169" y="14" width="72" height="18" class="f-cost"/>
+          <text x="6" y="26" class="lbl on-dark">Goods 70% · at 5%</text>
+          <text x="175" y="26" class="lbl on-dark">Services 30%</text>
+          <text x="6" y="44" class="lbl-s">70% × 5% = 3.5%</text>
+          <text x="175" y="44" class="lbl-s">30% × 18% = 5.4%</text>
+          <text x="252" y="28" class="num">≈ 8.9%</text>
+          <text x="252" y="40" class="lbl-s">overall</text>
+        </svg>
+        <p class="fig-cap" style="margin-top:1mm">GST on solar panels and solar power generating systems is 5% (reduced from 12% in September 2025). Ask your chartered accountant how it applies to you.</p>
+      </div>
+      <div class="fig plain" style="flex:1">
+        <div class="fig-title">Exhibit 5 &nbsp;·&nbsp; Payback <span>Illustrative</span></div>
+        <svg viewBox="0 0 330 172" role="img" aria-label="Illustrative line chart with no rupee values: cumulative savings rise each year and cross the upfront cost line within a shaded band from year 3 to year 6, the typical payback range. After that point, savings exceed the cost." style="display:block;width:100%">
+          <rect x="119.8" y="14" width="85.8" height="136" fill="#FBF5E4"/>
+          <text x="162.7" y="24" text-anchor="middle" class="lbl-s" style="fill:#8A5F00">often 3 to 6 years</text>
+          <g class="gridline"><path d="M34 40H320M34 65H320M34 115H320"/></g>
+          <path d="M162.7 90 L320 90 L320 17 Z" class="f-export" opacity=".16"/>
+          <path d="M34 90 H320" class="s-cost" stroke-width="1.6" fill="none"/>
+          <path class="series s-export" d="M34 150 L320 17"/>
+          <circle cx="162.7" cy="90" r="3" fill="#fff" stroke="#0B1F3A" stroke-width="1.2"/>
+          <text x="38" y="84" class="lbl c-cost">Upfront cost</text>
+          <text x="168" y="104" class="lbl" >Payback point</text>
+          <text x="236" y="40" text-anchor="end" class="lbl c-export">Cumulative savings</text>
+          <text x="316" y="84" text-anchor="end" class="lbl-s c-export">savings beyond cost</text>
+          <path class="axis" d="M34 10V150H320"/>
+          <g class="tick" text-anchor="middle"><text x="34" y="160">0</text><text x="91.2" y="160">2</text><text x="148.4" y="160">4</text><text x="205.6" y="160">6</text><text x="262.8" y="160">8</text><text x="320" y="160" text-anchor="end">10 years</text></g>
+          <text x="30" y="14" text-anchor="end" class="tick">₹</text>
+        </svg>
+        <p class="small" style="margin-top:1.6mm">Payback is often around 3 to 6 years, depending on your tariff, how much of the power you use yourself, and any subsidy.</p>
+        <p class="fig-cap" style="margin-top:1mm">Shape only, no rupee scale. After payback, savings continue for the rest of the plant’s life.</p>
       </div>
     </div>
   </div>

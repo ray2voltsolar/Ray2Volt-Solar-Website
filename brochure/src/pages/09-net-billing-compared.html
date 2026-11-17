@@ -1,128 +1,127 @@
 <section class="page p09" data-sec="metering">
   <style>
-    .p09 .eq .t .n { font-size: 13.5pt; }
-    .p09 .ax { font-size: 7.5px; font-weight: 600; fill: var(--muted); }
-    .p09 .bt { font-family: var(--head); font-size: 9px; font-weight: 800; }
-    .p09 table.cmp td { font-size: 8pt; padding: 1.7mm 2.6mm; }
-    .p09 table.cmp td:first-child { width: 22%; font-size: 7.4pt; }
-    .p09 table.cmp th { padding: 2mm 2.6mm; }
-    .p09 table.cmp tr.tot td { font-family: var(--head); font-weight: 800; color: var(--ink); background: var(--t-grey); }
-    .p09 .legend i.bill { background: var(--navy); }
-    .p09 .legend i.save { background: #BFE6CF; }
+    .p09 .eq .t .n { font-size: 15pt; }
+    .p09 table.cmp td { padding-top: 1.6mm; padding-bottom: 1.6mm; }
+    .p09 table.cmp td:first-child { width: 21%; }
+    .p09 table.cmp tr.tot td { font-family: var(--head); font-weight: 700; color: var(--ink); }
   </style>
-  <header class="ph"><span class="sec">Metering &nbsp;·&nbsp; Net billing and comparison</span><img src="{{LOGO}}" alt="Ray2Volt"></header>
+  <header class="ph"><span class="sec">How solar is billed &nbsp;/&nbsp; Net billing and comparison</span><img src="{{LOGO}}" alt="Ray2Volt"></header>
   <div class="pb">
     <div>
-      <div class="kicker">How solar is billed · Option 3, and the three compared</div>
-      <h1 class="title">Net billing: <em>the same wiring, settled in rupees</em></h1>
-      <p class="lede">Net billing, also called net feed-in, is wired like net metering: solar serves the building first and the surplus goes out. The difference is the settlement. Imports are priced at the <b>retail tariff</b>, exports at the lower <b>feed-in tariff</b>, and one is subtracted from the other.</p>
+      <div class="kicker">Billing method 3 of 3 &nbsp;·&nbsp; and the three compared</div>
+      <h1 class="title">Net billing <em>The same wiring as net metering, settled in rupees</em></h1>
+      <p class="lede">Net billing, also called net feed-in, is wired like net metering: solar serves the building first and the surplus goes out. But imports are priced at the <b>retail tariff</b>, exports at the lower <b>feed-in tariff</b>, and one amount is subtracted from the other.</p>
     </div>
 
-    <div class="row" style="align-items:stretch">
-      <div class="fig" style="flex:1.25">
-        <div class="fig-title">Where the units go · same home</div>
-        <svg viewBox="0 0 440 206" role="img" aria-label="Net billing flow: of the plant's 360 units, 140 are used in the building and 220 are exported at 3 rupees each, worth 660 rupees. The building imports 360 units at 7 rupees each, costing 2,520 rupees.">
-          <!-- export band 220 -->
-          <path d="M104 20 H344 L352 42 L344 64 H104 Z" fill="#1F9D62" opacity=".88"/>
-          <!-- self-use band 140 -->
-          <path d="M104 64 C140 64 136 100 170 100 L170 128 C136 128 140 92 104 92 Z" fill="#F5A300" opacity=".88"/>
-          <!-- import band 360 -->
-          <path d="M352 116 C300 116 296 128 186 128 L178 164 L186 200 C296 200 300 188 352 188 Z" fill="#0B63CE" opacity=".88"/>
-          <!-- nodes -->
-          <rect x="96" y="20" width="8" height="72" rx="2" fill="#0A2540"/>
-          <rect x="170" y="100" width="8" height="100" rx="2" fill="#0A2540"/>
-          <rect x="352" y="20" width="8" height="168" rx="2" fill="#0A2540"/>
-          <!-- band text -->
-          <text x="222" y="39" text-anchor="middle" class="bt on-dark">220 units out</text>
-          <text x="222" y="53" text-anchor="middle" class="bt on-dark">× ₹3 = ₹660</text>
-          <text x="272" y="160" text-anchor="middle" class="bt on-dark">360 units in</text>
-          <text x="272" y="174" text-anchor="middle" class="bt on-dark">× ₹7 = ₹2,520</text>
-          <!-- labels -->
-          <text x="88" y="38" text-anchor="end" class="lbl-b">Solar plant</text>
-          <text x="88" y="50" text-anchor="end" class="lbl-s">3 kW · 360 units</text>
-          <text x="88" y="84" text-anchor="end" class="lbl c-solar">140 used directly</text>
-          <text x="162" y="150" text-anchor="end" class="lbl-b">The building</text>
-          <text x="162" y="162" text-anchor="end" class="lbl-s">uses 500 units</text>
-          <text x="368" y="100" class="lbl-b">Grid</text>
-          <text x="368" y="112" class="lbl-s">via a two-</text>
-          <text x="368" y="122" class="lbl-s">way meter</text>
+    <div class="row">
+      <div class="fig" style="flex:1.22">
+        <div class="fig-title">Exhibit 1 &nbsp;·&nbsp; One month, priced <span>Units (kWh) and ₹</span></div>
+        <svg viewBox="0 0 400 184" role="img" aria-label="Flow diagram for one month under net billing. The plant generates 360 units: 140 are used directly and 220 are exported at 3 rupees, worth 660 rupees. The grid supplies 360 units at 7 rupees, costing 2,520 rupees. The building uses 500 units.">
+          <!-- 0.2 px per unit -->
+          <path class="band f-export" d="M96 10 C204 10 204 10 312 10 L312 54 C204 54 204 54 96 54 Z"/>
+          <path class="band f-solar"  d="M96 54 C204 54 204 76 312 76 L312 104 C204 104 204 82 96 82 Z"/>
+          <path class="band f-grid"   d="M96 100 C204 100 204 104 312 104 L312 176 C204 176 204 172 96 172 Z"/>
+          <rect class="f-solar" x="90" y="10" width="6" height="72"/>
+          <rect class="f-grid" x="90" y="100" width="6" height="72"/>
+          <rect class="f-export" x="312" y="10" width="6" height="44"/>
+          <rect class="f-ink" x="312" y="76" width="6" height="100"/>
+          <text x="82" y="36" text-anchor="end" class="cap">Solar plant</text>
+          <text x="82" y="54" text-anchor="end" class="num">360</text>
+          <text x="82" y="65" text-anchor="end" class="lbl-s">units generated</text>
+          <text x="82" y="124" text-anchor="end" class="cap">Grid</text>
+          <text x="82" y="142" text-anchor="end" class="num">360</text>
+          <text x="82" y="153" text-anchor="end" class="lbl-s">units imported</text>
+          <text x="326" y="24" class="cap">To the grid</text>
+          <text x="326" y="42" class="num">220</text>
+          <text x="326" y="53" class="lbl-s">units exported</text>
+          <text x="326" y="116" class="cap">The building</text>
+          <text x="326" y="134" class="num">500</text>
+          <text x="326" y="145" class="lbl-s">units used</text>
+          <text x="110" y="30" class="lbl">220 exported</text>
+          <text x="110" y="42" class="lbl-s c-export">× ₹3 = ₹660 credited</text>
+          <text x="204" y="85" text-anchor="middle" class="lbl">140 used directly</text>
+          <text x="110" y="134" class="lbl">360 imported</text>
+          <text x="110" y="146" class="lbl-s c-grid">× ₹7 = ₹2,520 charged</text>
         </svg>
       </div>
-      <div class="card tint" style="flex:1;display:flex;flex-direction:column">
-        <h4>What the bill counts</h4>
-        <h2>Rupees in minus rupees out</h2>
-        <div class="eq" style="margin:2.4mm 0 2.4mm">
-          <div class="t grid" style="background:#fff"><span class="k">Imports</span><span class="n">₹2,520</span><span class="u">360 × ₹7</span></div>
-          <span class="op">−</span>
-          <div class="t export" style="background:#fff"><span class="k">Exports</span><span class="n">₹660</span><span class="u">220 × ₹3</span></div>
-          <span class="op">=</span>
-          <div class="t total"><span class="k">Bill</span><span class="n">₹1,860</span><span class="u">a month</span></div>
+      <div class="stack" style="flex:1;gap:3mm">
+        <div class="card top">
+          <h4>What the bill counts</h4>
+          <h2>Rupees in minus rupees out</h2>
+          <div class="eq" style="margin-top:3mm">
+            <div class="t grid"><span class="k">Imports</span><span class="n">₹2,520</span><span class="u">360 × ₹7</span></div>
+            <span class="op">−</span>
+            <div class="t export"><span class="k">Exports</span><span class="n">₹660</span><span class="u">220 × ₹3</span></div>
+            <span class="op">=</span>
+            <div class="t total"><span class="k">Bill</span><span class="n">₹1,860</span><span class="u">a month</span></div>
+          </div>
         </div>
-        <p class="small">Under net metering each exported unit cancels a unit worth ₹7. Under net billing it earns only the feed-in rate, ₹3 here, so the same plant saves less.</p>
+        <p class="small">Under net metering an exported unit cancels a unit worth ₹7. Under net billing it earns the feed-in rate, ₹3 here, so the same plant saves less, and every unit used directly is worth more than one exported.</p>
       </div>
     </div>
 
-    <div class="fig">
-      <div class="head-row" style="justify-content:space-between;margin-bottom:1.6mm">
-        <div class="fig-title" style="margin:0">The three compared · monthly bill for the same home and plant</div>
-        <div class="legend"><span><i class="bill"></i>Monthly bill</span><span><i class="save"></i>Lower than with no solar</span></div>
+    <div class="row">
+      <div class="fig plain" style="flex:1">
+        <div class="fig-title">Exhibit 2 &nbsp;·&nbsp; The monthly bill <span>₹, illustrative</span></div>
+        <svg viewBox="0 0 340 176" role="img" aria-label="Bar chart of the monthly bill: no solar 3,500 rupees; gross metering 2,420 rupees; net billing 1,860 rupees; net metering 980 rupees.">
+            <!-- x: 0..4000 rupees over 100..330 (0.0575 px per rupee) -->
+            <g class="gridline"><path d="M157.5 4V160M215 4V160M272.5 4V160M330 4V160"/></g>
+            <rect class="f-none" x="100" y="10" width="201.25" height="22"/>
+            <text x="92" y="20" text-anchor="end" class="lbl">No solar</text><text x="92" y="30" text-anchor="end" class="lbl-s">500 × ₹7</text>
+            <text x="296.25" y="25" text-anchor="end" class="num-b">₹3,500</text>
+            <rect class="f-ink" x="100" y="49" width="139.15" height="22"/>
+            <text x="92" y="59" text-anchor="end" class="lbl">Gross metering</text><text x="92" y="69" text-anchor="end" class="lbl-s">₹3,500 − ₹1,080</text>
+            <text x="244.15" y="60" class="num-b">₹2,420</text>
+            <text x="244.15" y="70" class="lbl-s c-export">₹1,080 less</text>
+            <rect class="f-ink" x="100" y="88" width="106.95" height="22"/>
+            <text x="92" y="98" text-anchor="end" class="lbl">Net billing</text><text x="92" y="108" text-anchor="end" class="lbl-s">₹2,520 − ₹660</text>
+            <text x="211.95" y="99" class="num-b">₹1,860</text>
+            <text x="211.95" y="109" class="lbl-s c-export">₹1,640 less</text>
+            <rect class="f-ink" x="100" y="127" width="56.35" height="22"/>
+            <text x="92" y="137" text-anchor="end" class="lbl">Net metering</text><text x="92" y="147" text-anchor="end" class="lbl-s">140 × ₹7</text>
+            <text x="161.35" y="138" class="num-b">₹980</text>
+            <text x="161.35" y="148" class="lbl-s c-export">₹2,520 less</text>
+            <path class="axis" d="M100 160H330"/>
+            <path class="axis" d="M100 4V160"/>
+            <g class="tick" text-anchor="middle"><text x="100" y="171">₹0</text><text x="157.5" y="171">1,000</text><text x="215" y="171">2,000</text><text x="272.5" y="171">3,000</text><text x="330" y="171" text-anchor="end">4,000</text></g>
+          </svg>
       </div>
-      <svg viewBox="0 0 680 168" role="img" aria-label="Bar chart of the monthly bill: no solar 3,500 rupees; gross metering 2,420 rupees; net billing 1,860 rupees; net metering 980 rupees.">
-        <!-- x scale: 0 -> 160, 4000 -> 650 (0.1225 px per rupee) -->
-        <g stroke="#D9E2EC" stroke-width="1">
-          <path d="M160 10 V142"/><path d="M282.5 10 V142"/><path d="M405 10 V142"/><path d="M527.5 10 V142"/><path d="M650 10 V142"/>
-        </g>
-        <g text-anchor="middle" class="ax">
-          <text x="160" y="154">₹0</text><text x="282.5" y="154">₹1,000</text><text x="405" y="154">₹2,000</text><text x="527.5" y="154">₹3,000</text><text x="650" y="154">₹4,000</text>
-        </g>
-        <!-- row 1: no solar -->
-        <text x="148" y="24" text-anchor="end" class="lbl-b">No solar</text>
-        <text x="148" y="35" text-anchor="end" class="lbl-s">500 units × ₹7</text>
-        <rect x="160" y="14" width="428.75" height="22" rx="2" fill="#5B6B7F"/>
-        <text x="580" y="28.5" text-anchor="end" class="bt on-dark">₹3,500</text>
-        <!-- row 2: gross -->
-        <text x="148" y="56" text-anchor="end" class="lbl-b">Gross metering</text>
-        <text x="148" y="67" text-anchor="end" class="lbl-s">₹3,500 − ₹1,080</text>
-        <rect x="160" y="46" width="296.45" height="22" rx="2" fill="#0A2540"/>
-        <rect x="458.45" y="46" width="130.3" height="22" rx="2" fill="#D3EFDF"/>
-        <text x="448" y="60.5" text-anchor="end" class="bt on-dark">₹2,420</text>
-        <text x="523.6" y="60.5" text-anchor="middle" class="bt c-export">₹1,080 less</text>
-        <!-- row 3: net billing -->
-        <text x="148" y="88" text-anchor="end" class="lbl-b">Net billing</text>
-        <text x="148" y="99" text-anchor="end" class="lbl-s">₹2,520 − ₹660</text>
-        <rect x="160" y="78" width="227.85" height="22" rx="2" fill="#0A2540"/>
-        <rect x="389.85" y="78" width="198.9" height="22" rx="2" fill="#D3EFDF"/>
-        <text x="379" y="92.5" text-anchor="end" class="bt on-dark">₹1,860</text>
-        <text x="489.3" y="92.5" text-anchor="middle" class="bt c-export">₹1,640 less</text>
-        <!-- row 4: net metering -->
-        <text x="148" y="120" text-anchor="end" class="lbl-b">Net metering</text>
-        <text x="148" y="131" text-anchor="end" class="lbl-s">140 units × ₹7</text>
-        <rect x="160" y="110" width="120.05" height="22" rx="2" fill="#0A2540"/>
-        <rect x="282.05" y="110" width="306.7" height="22" rx="2" fill="#D3EFDF"/>
-        <text x="272" y="124.5" text-anchor="end" class="bt on-dark">₹980</text>
-        <text x="435.4" y="124.5" text-anchor="middle" class="bt c-export">₹2,520 less</text>
-        <path d="M160 10 V142" stroke="#0A2540" stroke-width="1.2"/>
-      </svg>
+      <div class="fig plain" style="flex:1">
+        <div class="fig-title">Exhibit 3 &nbsp;·&nbsp; Bill and self-use <span>₹, illustrative</span></div>
+        <svg viewBox="0 0 340 176" role="img" aria-label="Line chart of the monthly bill against the share of solar used directly, from 0 to 100 percent. No solar stays at 3,500 rupees, gross metering at 2,420 rupees and net metering at 980 rupees. Net billing falls in a straight line from 2,420 rupees at 0 percent to 980 rupees at 100 percent; this home, using 39 percent directly, pays 1,860 rupees.">
+            <!-- x: 0..100% over 40..330; y: 0..4000 rupees over 150..10 (0.035 px per rupee); net billing = 2,420 - 4 x units used directly -->
+            <g class="gridline"><path d="M40 115.0H330M40 80.0H330M40 45.0H330M40 10.0H330"/></g>
+            <g class="tick" text-anchor="end"><text x="34" y="152.5">₹0</text><text x="34" y="117.5">1,000</text><text x="34" y="82.5">2,000</text><text x="34" y="47.5">3,000</text><text x="34" y="12.5">4,000</text></g>
+            <path class="series" d="M40 27.5H330" style="stroke:#9AA8B8;stroke-dasharray:3 2.5"/>
+            <path class="series s-ink" d="M40 65.3H330" style="stroke-width:1.4;opacity:.55"/>
+            <path class="series s-ink" d="M40 115.7H330"/>
+            <path class="series s-grid" d="M40 65.3L330 115.7"/>
+            <path class="guide" d="M152.78 88.4V150"/>
+            <circle cx="152.78" cy="84.9" r="3" fill="#fff" class="s-grid" stroke-width="1.6"/>
+            <text x="330" y="23.5" text-anchor="end" class="lbl-s">No solar ₹3,500</text>
+            <text x="330" y="61.3" text-anchor="end" class="lbl-s">Gross metering ₹2,420</text>
+            <text x="330" y="126.7" text-anchor="end" class="lbl">Net metering ₹980</text>
+            <text x="266" y="98.6" class="lbl c-grid">Net billing</text>
+            <text x="159.8" y="78.9" class="lbl-s">This home: 39% used directly, ₹1,860</text>
+            <path class="axis" d="M40 150H330"/>
+            <g class="tick" text-anchor="middle"><text x="40" y="161">0%</text><text x="112.5" y="161">25%</text><text x="185" y="161">50%</text><text x="257.5" y="161">75%</text><text x="330" y="161" text-anchor="end">100%</text></g>
+            <text x="185" y="173" text-anchor="middle" class="lbl-s">Share of the plant's output used directly in the building</text>
+          </svg>
+      </div>
     </div>
 
     <table class="cmp">
       <tr><th></th><th>Net metering</th><th>Net billing</th><th>Gross metering</th></tr>
-      <tr><td>Meters</td><td>One two-way meter</td><td>One two-way meter</td><td>Two: a solar (generation) meter and the consumption meter</td></tr>
+      <tr><td>Meters</td><td>One two-way meter</td><td>One two-way meter</td><td>Two: solar meter and consumption meter</td></tr>
       <tr><td>Where solar goes first</td><td>Into the building</td><td>Into the building</td><td>Straight to the grid</td></tr>
-      <tr><td>An exported unit is worth</td><td>One unit off the bill, at the retail rate</td><td>The feed-in tariff, usually lower</td><td>The feed-in tariff, for every unit made</td></tr>
-      <tr><td>The bill is based on</td><td>Units imported minus units exported</td><td>₹ of imports minus ₹ of exports</td><td>All use at the retail rate; all solar paid at the feed-in tariff</td></tr>
-      <tr><td>Typically suits</td><td>Anyone who uses a good share of their solar themselves</td><td>Loads above net-metering limits, where the state sets it so</td><td>Large roofs with little daytime use, investors, plants above net-metering limits</td></tr>
-      <tr class="tot"><td>Example bill</td><td>₹980</td><td>₹1,860</td><td>₹2,420</td></tr>
-    </table>
+      <tr><td>An exported unit is worth</td><td>A unit off the bill, at the retail rate</td><td>The feed-in tariff, usually lower</td><td>The feed-in tariff, for every unit</td></tr>
+      <tr><td>The bill is based on</td><td>Units in minus units out</td><td>₹ in minus ₹ out</td><td>All use at retail, less all solar at feed-in</td></tr>
+      <tr><td>Typically suits</td><td>Sites that use much of their solar on site</td><td>Loads above net-metering limits, where offered</td><td>Large roofs with low daytime use; investors</td></tr>
+      <tr class="tot"><td>Example bill a month</td><td>₹980</td><td>₹1,860</td><td>₹2,420</td></tr>
+          </table>
 
-    <div class="card grey grow">
-      <h4 style="color:var(--muted)">Read the comparison with care</h4>
-      <ul class="dots small cols-2" style="display:grid;gap:1.2mm 6mm;margin-top:1.6mm">
-        <li>Rates are illustrative: ₹7 a unit from the grid, ₹3 a unit for exports.</li>
-        <li>Real tariffs have slabs and fixed charges, so real bills differ.</li>
-        <li>The result depends on how much solar the building uses directly.</li>
-        <li>Which methods are on offer, and at what size, is set by your State Electricity Regulatory Commission. Confirm current rules with your DISCOM before you decide.</li>
-      </ul>
+    <div class="callout note">
+      <p class="tiny"><b>Reading this comparison.</b> Rates are illustrative: ₹7 a unit from the grid, ₹3 for exports. Real tariffs have slabs and fixed charges, and export rates are set by each state. The result depends on how much solar the building uses directly. Which methods are offered, and up to what size, is set by your State Electricity Regulatory Commission. Confirm current rules with your DISCOM before you decide.</p>
     </div>
   </div>
   <footer class="pf"><span>{{FOOT}}</span><span class="pn">{{PN}}</span></footer>

@@ -1,185 +1,160 @@
 <section class="page" data-sec="basics">
   <style>
-    .p02-who { display: flex; align-items: center; gap: 4mm; padding: 2.4mm 4.4mm; }
-    .p02-who h4 { flex: none; width: 22mm; line-height: 1.3; }
-    .p02-who-list { flex: 1; display: grid; grid-template-columns: repeat(7, 1fr); gap: 1.6mm; }
-    .p02-who-list > div { display: flex; flex-direction: column; align-items: center; gap: 1mm; text-align: center;
-      font-family: var(--head); font-weight: 700; font-size: 6.6pt; line-height: 1.2; color: var(--ink); }
-    .p02-who-list svg { width: 8.6mm; height: 8.6mm; display: block; }
-
-    .p02-map { position: relative; display: flex; flex-direction: column; gap: 1.4mm; padding-left: 0; }
-    .p02-map::before { content: ""; position: absolute; left: 5.4mm; top: 4mm; bottom: 8mm; width: 0; border-left: .7mm dashed #9FB3C8; }
-    .p02-here { position: relative; display: flex; align-items: center; gap: 2.4mm; margin-bottom: .4mm; }
-    .p02-here .p02-pin { width: 11mm; height: 11mm; border-radius: 50%; background: var(--navy); color: #fff; display: flex; align-items: center; justify-content: center;
-      font-family: var(--head); font-weight: 800; font-size: 9pt; flex: none; box-shadow: 0 0 0 1.2mm #fff; }
-    .p02-here b { font-family: var(--head); font-size: 8.2pt; }
-    .p02-here span.tiny { margin-left: 1mm; }
-
-    .p02-line { position: relative; display: grid; grid-template-columns: 50mm 1fr; align-items: start; --c: var(--cyan); --ct: var(--t-cyan); --ci: #007A9C; }
-    .p02-line.c2 { --c: var(--blue); --ct: var(--t-blue); --ci: #0B55B0; }
-    .p02-line.c3 { --c: var(--green); --ct: var(--t-green); --ci: var(--green-ink); }
-    .p02-line.c4 { --c: var(--gold); --ct: var(--t-gold); --ci: var(--gold-ink); }
-    .p02-ch { position: relative; z-index: 1; display: flex; align-items: center; gap: 2.4mm; background: var(--ct); border-radius: 3mm; padding: 1.8mm 2.6mm 1.8mm 0; height: 13mm; }
-    .p02-ch .p02-no { width: 11mm; height: 11mm; border-radius: 50%; background: var(--c); color: #fff; flex: none; display: flex; align-items: center; justify-content: center;
-      box-shadow: 0 0 0 1.2mm #fff; margin-left: -.0mm; }
-    .p02-line.c4 .p02-ch .p02-no { color: var(--navy); }
-    .p02-ch .p02-no svg { width: 7mm; height: 7mm; }
-    .p02-ch .p02-k { font-family: var(--head); font-weight: 800; font-size: 6pt; letter-spacing: .12em; text-transform: uppercase; color: var(--ci); display: block; }
-    .p02-ch b { font-family: var(--head); font-size: 8.6pt; line-height: 1.12; display: block; }
-
-    .p02-track { position: relative; display: grid; grid-template-columns: repeat(5, 1fr); padding-top: 1.6mm; }
-    .p02-track::before { content: ""; position: absolute; left: -2mm; top: 6.1mm; height: 1.5mm; border-radius: 1mm; background: var(--c); width: var(--len, 80%); }
-    .p02-st { position: relative; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 1.1mm; padding: 0 .3mm; }
-    .p02-st .p02-dot { width: 9.6mm; height: 9.6mm; border-radius: 50%; background: #fff; border: .9mm solid var(--c); display: flex; align-items: center; justify-content: center;
-      font-family: var(--head); font-weight: 800; font-size: 8.4pt; color: var(--ink); }
-    .p02-st .p02-t { font-family: var(--body); font-weight: 700; font-size: 7.4pt; line-height: 1.18; color: var(--text); }
-    .p02-end { display: flex; align-items: center; padding: 2.4mm 0 0 2mm; font-size: 7.4pt; line-height: 1.3; color: var(--muted); font-style: italic; grid-column: span 3; }
-
-    .p02-eq .t .n { font-size: 13pt; }
-    .p02-defs { display: flex; flex-direction: column; gap: 2.2mm; justify-content: space-between; }
-    .p02-def { display: flex; gap: 2.6mm; align-items: flex-start; }
-    .p02-term { flex: none; width: 12mm; font-family: var(--head); font-weight: 800; font-size: 12pt; line-height: 1; color: var(--accent-ink); padding-top: .4mm; }
+    .p02-who { display: flex; align-items: center; gap: 0; border-top: .25mm solid var(--line); border-bottom: .25mm solid var(--line); padding: 2.2mm 0; }
+    .p02-who h4 { flex: none; width: 24mm; }
+    .p02-who > div { flex: 1; display: flex; align-items: center; justify-content: center; gap: 1.6mm; font-family: var(--head); font-weight: 600; font-size: 6.6pt; line-height: 1.2; color: var(--ink); border-left: .25mm solid var(--line-2); padding: 0 1mm; }
+    .p02-who svg { width: 4.6mm; height: 4.6mm; flex: none; color: var(--navy-2); }
+    .p02-toc { display: grid; grid-template-columns: 1fr 1fr; gap: 4.6mm 6mm; }
+    .p02-ch { border-top: .6mm solid var(--c); --c: #0C9BBE; --ci: #08748F; }
+    .p02-ch.c2 { --c: #1257C9; --ci: #0F4AAB; } .p02-ch.c3 { --c: #17855A; --ci: #0F6645; } .p02-ch.c4 { --c: #E0A106; --ci: #8A5F00; }
+    .p02-hd { display: flex; align-items: baseline; gap: 3mm; padding: 2.2mm 0 1.6mm; border-bottom: .25mm solid var(--ink); }
+    .p02-hd .p02-no { font-family: var(--head); font-weight: 300; font-size: 19pt; line-height: 1; color: var(--ci); letter-spacing: -.02em; }
+    .p02-hd h2 { flex: 1; font-size: 10.4pt; }
+    .p02-hd .p02-pp { font-family: var(--head); font-weight: 600; font-size: 6.6pt; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
+    .p02-ch ol { list-style: none; }
+    .p02-ch li { display: flex; gap: 3mm; align-items: baseline; padding: 1.25mm 0; border-bottom: .25mm solid var(--line-2); font-size: 8.4pt; line-height: 1.3; color: var(--text); }
+    .p02-ch li b { flex: none; width: 6mm; font-family: var(--head); font-weight: 700; font-size: 8pt; color: var(--ci); font-variant-numeric: tabular-nums; }
+    .p02-defs .eq .t .n { font-size: 15pt; white-space: nowrap; } .p02-defs .eq .t .u { white-space: nowrap; }
   </style>
-  <header class="ph"><span class="sec">The basics &nbsp;·&nbsp; Start here</span><img src="{{LOGO}}" alt="Ray2Volt"></header>
+  <header class="ph"><span class="sec">The basics &nbsp;/&nbsp; Start here</span><img src="{{LOGO}}" alt="Ray2Volt"></header>
   <div class="pb">
     <div>
-      <div class="kicker">Welcome · How to use this guide</div>
-      <h1 class="title">Start here: <em>solar and green energy, in plain words</em></h1>
-      <p class="lede">This guide explains how solar power works, how it shows up on your electricity bill, how larger users can buy green power from elsewhere, and how a plant can be owned and paid for. <b>No prior knowledge is assumed:</b> every term is explained where it first appears.</p>
+      <div class="kicker">Introduction</div>
+      <h1 class="title">Start here <em>A plain-English guide to solar and green energy</em></h1>
+      <p class="lede">This guide explains how solar power works, how it appears on an electricity bill, how larger users can buy green power from elsewhere, and how a plant can be owned and paid for. <b>No prior knowledge is assumed:</b> each term is explained where it first appears.</p>
     </div>
 
-    <div class="card grey p02-who">
-      <h4>Written for anyone</h4>
-      <div class="p02-who-list">
-        <div><svg viewBox="0 0 64 64"><use href="#i-house-solar"/></svg>Households</div>
-        <div><svg viewBox="0 0 64 64"><use href="#i-apartment"/></svg>Apartment communities</div>
-        <div><svg viewBox="0 0 64 64"><use href="#i-shop"/></svg>Shops and offices</div>
-        <div><svg viewBox="0 0 64 64"><use href="#i-factory"/></svg>Factories</div>
-        <div><svg viewBox="0 0 64 64"><use href="#i-farm"/></svg>Farmers</div>
-        <div><svg viewBox="0 0 64 64"><use href="#i-solarfarm"/></svg>Landowners</div>
-        <div><svg viewBox="0 0 64 64"><use href="#i-investor"/></svg>Investors</div>
+    <div class="p02-who">
+      <h4>Written for</h4>
+      <div><svg viewBox="0 0 64 64"><use href="#i-house"/></svg>Households</div>
+      <div><svg viewBox="0 0 64 64"><use href="#i-apartment"/></svg>Apartment communities</div>
+      <div><svg viewBox="0 0 64 64"><use href="#i-shop"/></svg>Shops and offices</div>
+      <div><svg viewBox="0 0 64 64"><use href="#i-factory"/></svg>Factories</div>
+      <div><svg viewBox="0 0 64 64"><use href="#i-farm"/></svg>Farmers</div>
+      <div><svg viewBox="0 0 64 64"><use href="#i-solarfarm"/></svg>Landowners</div>
+      <div><svg viewBox="0 0 64 64"><use href="#i-investor"/></svg>Investors</div>
+    </div>
+
+    <div>
+      <div class="fig-title" style="margin-bottom:2.6mm">Contents &nbsp;·&nbsp; Four chapters <span>Page numbers</span></div>
+      <svg viewBox="0 0 680 46" role="img" aria-label="The 18 pages of the guide: page 1 cover, page 2 start here, pages 3 to 6 the basics, 7 to 10 how solar is billed, 11 and 12 green power from elsewhere, 13 to 17 money and decisions, page 18 back cover.">
+        <rect x="0.6" y="4" width="36.6" height="20" fill="#CCD5E0"/>
+        <text x="18.9" y="17" text-anchor="middle" class="lbl" style="fill:#0B1F3A">01</text>
+        <rect x="38.4" y="4" width="36.6" height="20" fill="#0B1F3A"/>
+        <text x="56.7" y="17" text-anchor="middle" class="lbl" style="fill:#fff">02</text>
+        <rect x="76.2" y="4" width="36.6" height="20" fill="#0C9BBE"/>
+        <text x="94.4" y="17" text-anchor="middle" class="lbl" style="fill:#fff">03</text>
+        <rect x="113.9" y="4" width="36.6" height="20" fill="#0C9BBE"/>
+        <text x="132.2" y="17" text-anchor="middle" class="lbl" style="fill:#fff">04</text>
+        <rect x="151.7" y="4" width="36.6" height="20" fill="#0C9BBE"/>
+        <text x="170.0" y="17" text-anchor="middle" class="lbl" style="fill:#fff">05</text>
+        <rect x="189.5" y="4" width="36.6" height="20" fill="#0C9BBE"/>
+        <text x="207.8" y="17" text-anchor="middle" class="lbl" style="fill:#fff">06</text>
+        <rect x="227.3" y="4" width="36.6" height="20" fill="#1257C9"/>
+        <text x="245.6" y="17" text-anchor="middle" class="lbl" style="fill:#fff">07</text>
+        <rect x="265.0" y="4" width="36.6" height="20" fill="#1257C9"/>
+        <text x="283.3" y="17" text-anchor="middle" class="lbl" style="fill:#fff">08</text>
+        <rect x="302.8" y="4" width="36.6" height="20" fill="#1257C9"/>
+        <text x="321.1" y="17" text-anchor="middle" class="lbl" style="fill:#fff">09</text>
+        <rect x="340.6" y="4" width="36.6" height="20" fill="#1257C9"/>
+        <text x="358.9" y="17" text-anchor="middle" class="lbl" style="fill:#fff">10</text>
+        <rect x="378.4" y="4" width="36.6" height="20" fill="#17855A"/>
+        <text x="396.7" y="17" text-anchor="middle" class="lbl" style="fill:#fff">11</text>
+        <rect x="416.2" y="4" width="36.6" height="20" fill="#17855A"/>
+        <text x="434.4" y="17" text-anchor="middle" class="lbl" style="fill:#fff">12</text>
+        <rect x="453.9" y="4" width="36.6" height="20" fill="#E0A106"/>
+        <text x="472.2" y="17" text-anchor="middle" class="lbl" style="fill:#0B1F3A">13</text>
+        <rect x="491.7" y="4" width="36.6" height="20" fill="#E0A106"/>
+        <text x="510.0" y="17" text-anchor="middle" class="lbl" style="fill:#0B1F3A">14</text>
+        <rect x="529.5" y="4" width="36.6" height="20" fill="#E0A106"/>
+        <text x="547.8" y="17" text-anchor="middle" class="lbl" style="fill:#0B1F3A">15</text>
+        <rect x="567.3" y="4" width="36.6" height="20" fill="#E0A106"/>
+        <text x="585.6" y="17" text-anchor="middle" class="lbl" style="fill:#0B1F3A">16</text>
+        <rect x="605.0" y="4" width="36.6" height="20" fill="#E0A106"/>
+        <text x="623.3" y="17" text-anchor="middle" class="lbl" style="fill:#0B1F3A">17</text>
+        <rect x="642.8" y="4" width="36.6" height="20" fill="#CCD5E0"/>
+        <text x="661.1" y="17" text-anchor="middle" class="lbl" style="fill:#0B1F3A">18</text>
+        <path d="M0.6 29V32H37.2V29" fill="none" stroke="#93A1B3" stroke-width=".8"/>
+        <path d="M38.4 29V32H75.0V29" fill="none" stroke="#93A1B3" stroke-width=".8"/>
+        <path d="M76.2 29V32H226.1V29" fill="none" stroke="#93A1B3" stroke-width=".8"/>
+        <text x="76.2" y="43" class="cap" style="fill:#0B1F3A">The basics</text>
+        <path d="M227.3 29V32H377.2V29" fill="none" stroke="#93A1B3" stroke-width=".8"/>
+        <text x="227.3" y="43" class="cap" style="fill:#0B1F3A">Billing</text>
+        <path d="M378.4 29V32H452.7V29" fill="none" stroke="#93A1B3" stroke-width=".8"/>
+        <text x="378.4" y="43" class="cap" style="fill:#0B1F3A">Open access</text>
+        <path d="M453.9 29V32H641.6V29" fill="none" stroke="#93A1B3" stroke-width=".8"/>
+        <text x="453.9" y="43" class="cap" style="fill:#0B1F3A">Money and decisions</text>
+        <path d="M642.8 29V32H679.4V29" fill="none" stroke="#93A1B3" stroke-width=".8"/>
+      </svg>
+      <div class="p02-toc" style="margin-top:3.4mm">
+        <div class="p02-ch c1">
+          <div class="p02-hd"><span class="p02-no">01</span><h2>The basics</h2></div>
+          <ol><li><b>03</b>Green energy: what it is and why it matters</li><li><b>04</b>How solar makes electricity</li><li><b>05</b>On-grid, off-grid and hybrid systems</li><li><b>06</b>Behind the meter</li></ol>
+        </div>
+        <div class="p02-ch c2">
+          <div class="p02-hd"><span class="p02-no">02</span><h2>How solar is billed</h2></div>
+          <ol><li><b>07</b>Net metering</li><li><b>08</b>Gross metering</li><li><b>09</b>Net billing, and the three compared</li><li><b>10</b>Sharing solar: group and virtual net metering</li></ol>
+        </div>
+        <div class="p02-ch c3">
+          <div class="p02-hd"><span class="p02-no">03</span><h2>Buying green power from elsewhere</h2></div>
+          <ol><li><b>11</b>Open access</li><li><b>12</b>Open access routes, charges and banking</li></ol>
+          <p class="tiny" style="margin-top:1.8mm">Typically viable for consumers with large, steady daytime demand.</p>
+        </div>
+        <div class="p02-ch c4">
+          <div class="p02-hd"><span class="p02-no">04</span><h2>Money and decisions</h2></div>
+          <ol><li><b>13</b>Ways to own a solar plant</li><li><b>14</b>Paying for it: subsidy, loans and tax</li><li><b>15</b>Which route fits you?</li><li><b>16</b>Going solar step by step, and Andhra Pradesh at a glance</li><li><b>17</b>Glossary</li></ol>
+        </div>
       </div>
     </div>
 
-    <div class="fig">
-      <div class="fig-title">What's inside · a map of this guide</div>
-      <div class="p02-map">
-        <div class="p02-here"><span class="p02-pin">02</span><b>You are here: Start here</b><span class="tiny">Follow the four lines in order, or jump straight to the page you need.</span></div>
-
-        <div class="p02-line c1">
-          <div class="p02-ch"><span class="p02-no">1</span>
-            <span><span class="p02-k">Chapter 1</span><b>The basics</b></span></div>
-          <div class="p02-track" style="--len:calc(70% + 2mm)">
-            <div class="p02-st"><span class="p02-dot">03</span><span class="p02-t">Green energy</span></div>
-            <div class="p02-st"><span class="p02-dot">04</span><span class="p02-t">How solar makes electricity</span></div>
-            <div class="p02-st"><span class="p02-dot">05</span><span class="p02-t">On-grid, off-grid and hybrid systems</span></div>
-            <div class="p02-st"><span class="p02-dot">06</span><span class="p02-t">Behind the meter</span></div>
-          </div>
-        </div>
-
-        <div class="p02-line c2">
-          <div class="p02-ch"><span class="p02-no">2</span>
-            <span><span class="p02-k">Chapter 2</span><b>How solar is billed</b></span></div>
-          <div class="p02-track" style="--len:calc(70% + 2mm)">
-            <div class="p02-st"><span class="p02-dot">07</span><span class="p02-t">Net metering</span></div>
-            <div class="p02-st"><span class="p02-dot">08</span><span class="p02-t">Gross metering</span></div>
-            <div class="p02-st"><span class="p02-dot">09</span><span class="p02-t">Net billing, and the three compared</span></div>
-            <div class="p02-st"><span class="p02-dot">10</span><span class="p02-t">Sharing solar: group and virtual net metering</span></div>
-          </div>
-        </div>
-
-        <div class="p02-line c3">
-          <div class="p02-ch"><span class="p02-no">3</span>
-            <span><span class="p02-k">Chapter 3</span><b>Buying green power from elsewhere</b></span></div>
-          <div class="p02-track" style="--len:calc(30% + 2mm)">
-            <div class="p02-st"><span class="p02-dot">11</span><span class="p02-t">Open access</span></div>
-            <div class="p02-st"><span class="p02-dot">12</span><span class="p02-t">Open access routes, charges and banking</span></div>
-            <div class="p02-end">Typically viable for consumers with large, steady daytime demand.</div>
-          </div>
-        </div>
-
-        <div class="p02-line c4">
-          <div class="p02-ch"><span class="p02-no">4</span>
-            <span><span class="p02-k">Chapter 4</span><b>Money and decisions</b></span></div>
-          <div class="p02-track" style="--len:calc(90% + 2mm)">
-            <div class="p02-st"><span class="p02-dot">13</span><span class="p02-t">Ways to own a solar plant</span></div>
-            <div class="p02-st"><span class="p02-dot">14</span><span class="p02-t">Paying for it: subsidy, loans and tax</span></div>
-            <div class="p02-st"><span class="p02-dot">15</span><span class="p02-t">Which route fits you?</span></div>
-            <div class="p02-st"><span class="p02-dot">16</span><span class="p02-t" style="margin:0 -2.4mm">Going solar step by step · Andhra Pradesh at a glance</span></div>
-            <div class="p02-st"><span class="p02-dot">17</span><span class="p02-t">Glossary</span></div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="card tint grow">
-      <h4>Two words you need</h4>
-      <h2>kW is how fast power flows. A unit (kWh) is how much you use.</h2>
-      <div class="row" style="margin-top:2.6mm; align-items:stretch">
-        <div style="flex:1.12">
-          <svg viewBox="0 0 330 132" role="img" aria-label="Three charts of power against time. 1,000 watts for 1 hour, 2,000 watts for 30 minutes and 500 watts for 2 hours each enclose the same area: 1 unit of energy." style="display:block;width:100%;height:auto">
-            <path d="M34 84.0H118" stroke="#D9E2EC" stroke-width="0.6"/>
-            <path d="M34 64H118" stroke="#D9E2EC" stroke-width="1"/>
-            <path d="M34 44.0H118" stroke="#D9E2EC" stroke-width="0.6"/>
-            <path d="M34 24H118" stroke="#D9E2EC" stroke-width="1"/>
-            <path d="M54.0 20V104" stroke="#D9E2EC" stroke-width="0.6"/>
-            <path d="M74 20V104" stroke="#D9E2EC" stroke-width="1"/>
-            <path d="M94.0 20V104" stroke="#D9E2EC" stroke-width="0.6"/>
-            <path d="M114 20V104" stroke="#D9E2EC" stroke-width="1"/>
-            <rect x="34" y="64" width="40" height="40" fill="#00A9D6" fill-opacity=".22" stroke="#007A9C" stroke-width="1.6"/>
-            <text x="54.0" y="87.0" text-anchor="middle" class="lbl" style="fill:#007A9C">1 unit</text>
-            <path d="M34 20V104H120" fill="none" stroke="#0A2540" stroke-width="1.2"/>
-            <text x="34" y="114" text-anchor="middle" class="lbl-s">0 h</text>
-            <text x="74" y="114" text-anchor="middle" class="lbl-s">1 h</text>
-            <text x="114" y="114" text-anchor="middle" class="lbl-s">2 h</text>
-            <text x="34" y="13" class="lbl">1,000 W <tspan class="lbl-s">for 1 hour</tspan></text>
-            <path d="M136 84.0H220" stroke="#D9E2EC" stroke-width="0.6"/>
-            <path d="M136 64H220" stroke="#D9E2EC" stroke-width="1"/>
-            <path d="M136 44.0H220" stroke="#D9E2EC" stroke-width="0.6"/>
-            <path d="M136 24H220" stroke="#D9E2EC" stroke-width="1"/>
-            <path d="M156.0 20V104" stroke="#D9E2EC" stroke-width="0.6"/>
-            <path d="M176 20V104" stroke="#D9E2EC" stroke-width="1"/>
-            <path d="M196.0 20V104" stroke="#D9E2EC" stroke-width="0.6"/>
-            <path d="M216 20V104" stroke="#D9E2EC" stroke-width="1"/>
-            <rect x="136" y="24" width="20.0" height="80" fill="#00A9D6" fill-opacity=".22" stroke="#007A9C" stroke-width="1.6"/>
-            <text x="161.0" y="67.0" class="lbl" style="fill:#007A9C">1 unit</text>
-            <path d="M136 20V104H222" fill="none" stroke="#0A2540" stroke-width="1.2"/>
-            <text x="136" y="114" text-anchor="middle" class="lbl-s">0 h</text>
-            <text x="176" y="114" text-anchor="middle" class="lbl-s">1 h</text>
-            <text x="216" y="114" text-anchor="middle" class="lbl-s">2 h</text>
-            <text x="136" y="13" class="lbl">2,000 W <tspan class="lbl-s">for ½ hour</tspan></text>
-            <path d="M238 84.0H322" stroke="#D9E2EC" stroke-width="0.6"/>
-            <path d="M238 64H322" stroke="#D9E2EC" stroke-width="1"/>
-            <path d="M238 44.0H322" stroke="#D9E2EC" stroke-width="0.6"/>
-            <path d="M238 24H322" stroke="#D9E2EC" stroke-width="1"/>
-            <path d="M258.0 20V104" stroke="#D9E2EC" stroke-width="0.6"/>
-            <path d="M278 20V104" stroke="#D9E2EC" stroke-width="1"/>
-            <path d="M298.0 20V104" stroke="#D9E2EC" stroke-width="0.6"/>
-            <path d="M318 20V104" stroke="#D9E2EC" stroke-width="1"/>
-            <rect x="238" y="84.0" width="80" height="20.0" fill="#00A9D6" fill-opacity=".22" stroke="#007A9C" stroke-width="1.6"/>
-            <text x="278.0" y="79.0" text-anchor="middle" class="lbl" style="fill:#007A9C">1 unit</text>
-            <path d="M238 20V104H324" fill="none" stroke="#0A2540" stroke-width="1.2"/>
-            <text x="238" y="114" text-anchor="middle" class="lbl-s">0 h</text>
-            <text x="278" y="114" text-anchor="middle" class="lbl-s">1 h</text>
-            <text x="318" y="114" text-anchor="middle" class="lbl-s">2 h</text>
-            <text x="238" y="13" class="lbl">500 W <tspan class="lbl-s">for 2 hours</tspan></text>
-            <text x="30" y="106.5" text-anchor="end" class="lbl-s">0 kW</text>
-            <text x="30" y="66.5" text-anchor="end" class="lbl-s">1 kW</text>
-            <text x="30" y="26.5" text-anchor="end" class="lbl-s">2 kW</text>
-            <text x="34" y="128" class="lbl-s">Height = power (kW) · width = time (hours) · area = energy (units)</text>
-          </svg>
-        </div>
-        <div class="p02-defs" style="flex:1">
-          <div class="p02-def"><span class="p02-term">kW</span><p class="small"><b>Kilowatt: a rate.</b> How fast power flows, like a car’s speed. A plant’s <b>size</b> is quoted in kW (often kWp).</p></div>
-          <div class="p02-def"><span class="p02-term">kWh</span><p class="small"><b>Kilowatt-hour: an amount.</b> Energy made or used, like distance driven. 1 kWh is the <b>“unit”</b> on your bill.</p></div>
-          <div class="eq p02-eq">
-            <div class="t" style="background:#fff"><span class="k" style="color:var(--accent-ink)">Power</span><span class="n">1 kW</span><span class="u">1,000 W</span></div>
-            <span class="op">×</span>
-            <div class="t" style="background:#fff"><span class="k" style="color:var(--accent-ink)">Time</span><span class="n">1 hour</span><span class="u">running</span></div>
-            <span class="op">=</span>
-            <div class="t total"><span class="k">Energy</span><span class="n">1 unit</span><span class="u">1 kWh</span></div>
-          </div>
-          <p class="tiny">Example: a 3 kW plant is its size. The roughly 12 units it makes on a typical day in Andhra Pradesh is its output.</p>
+    <div class="fig grow" style="display:flex;flex-direction:column">
+      <div class="fig-title">Exhibit 1 &nbsp;·&nbsp; Two words you need: kW and kWh <span>Power × time = energy</span></div>
+      <svg viewBox="0 0 680 144" role="img" aria-label="Left: three charts of power against time. 1,000 watts for 1 hour, 2,000 watts for half an hour and 500 watts for 2 hours enclose the same area, 1 unit of energy. Right: an illustrative 3 kW solar plant on a clear day, peaking at about 1.8 kW, with the area under its curve about 12 units.">
+          <g class="gridline"><path d="M30 95.0H118"/><path d="M30 74.0H118"/><path d="M30 53.0H118"/><path d="M30 32.0H118"/><path d="M51.0 32V116"/><path d="M72.0 32V116"/><path d="M93.0 32V116"/><path d="M114.0 32V116"/></g>
+          <rect x="30" y="74.0" width="42.0" height="42.0" class="f-ink" opacity=".14"/>
+          <rect x="30" y="74.0" width="42.0" height="42.0" fill="none" class="s-ink" stroke-width="1.1"/>
+          <text x="51" y="99" text-anchor="middle" class="lbl">1 unit</text>
+          <path class="axis" d="M30 32V116H120"/>
+          <g class="tick" text-anchor="middle"><text x="30" y="126">0 h</text><text x="72" y="126">1 h</text><text x="114" y="126">2 h</text></g>
+          <text x="30" y="18" class="lbl">1,000 W</text><text x="30" y="27" class="lbl-s">for 1 hour</text>
+          <g class="gridline"><path d="M136 95.0H224"/><path d="M136 74.0H224"/><path d="M136 53.0H224"/><path d="M136 32.0H224"/><path d="M157.0 32V116"/><path d="M178.0 32V116"/><path d="M199.0 32V116"/><path d="M220.0 32V116"/></g>
+          <rect x="136" y="32.0" width="21.0" height="84.0" class="f-ink" opacity=".14"/>
+          <rect x="136" y="32.0" width="21.0" height="84.0" fill="none" class="s-ink" stroke-width="1.1"/>
+          <text x="161" y="76" class="lbl">1 unit</text>
+          <path class="axis" d="M136 32V116H226"/>
+          <g class="tick" text-anchor="middle"><text x="136" y="126">0 h</text><text x="178" y="126">1 h</text><text x="220" y="126">2 h</text></g>
+          <text x="136" y="18" class="lbl">2,000 W</text><text x="136" y="27" class="lbl-s">for ½ hour</text>
+          <g class="gridline"><path d="M242 95.0H330"/><path d="M242 74.0H330"/><path d="M242 53.0H330"/><path d="M242 32.0H330"/><path d="M263.0 32V116"/><path d="M284.0 32V116"/><path d="M305.0 32V116"/><path d="M326.0 32V116"/></g>
+          <rect x="242" y="95.0" width="84.0" height="21.0" class="f-ink" opacity=".14"/>
+          <rect x="242" y="95.0" width="84.0" height="21.0" fill="none" class="s-ink" stroke-width="1.1"/>
+          <text x="284" y="89" text-anchor="middle" class="lbl">1 unit</text>
+          <path class="axis" d="M242 32V116H332"/>
+          <g class="tick" text-anchor="middle"><text x="242" y="126">0 h</text><text x="284" y="126">1 h</text><text x="326" y="126">2 h</text></g>
+          <text x="242" y="18" class="lbl">500 W</text><text x="242" y="27" class="lbl-s">for 2 hours</text>
+          <g class="tick" text-anchor="end"><text x="26" y="118.5">0 kW</text><text x="26" y="76.5">1 kW</text><text x="26" y="34.5">2 kW</text></g>
+          <text x="30" y="140" class="lbl-s">Same area, same energy: each box is 1 kW × 1 hour = 1 unit.</text>
+          <g class="gridline"><path d="M392 95.0H676"/><path d="M392 74.0H676"/><path d="M392 53.0H676"/><path d="M392 32.0H676"/></g>
+          <path class="f-solar" opacity=".3" d="M392.0 116.0 L394.0 116.0 L396.1 116.0 L398.1 116.0 L400.1 116.0 L402.1 116.0 L404.2 116.0 L406.2 116.0 L408.2 116.0 L410.3 116.0 L412.3 116.0 L414.3 115.7 L416.3 115.1 L418.4 114.3 L420.4 113.4 L422.4 112.4 L424.5 111.3 L426.5 110.1 L428.5 108.8 L430.5 107.5 L432.6 106.1 L434.6 104.6 L436.6 103.0 L438.7 101.4 L440.7 99.8 L442.7 98.1 L444.7 96.4 L446.8 94.7 L448.8 92.9 L450.8 91.1 L452.9 89.3 L454.9 87.5 L456.9 85.7 L458.9 83.8 L461.0 82.0 L463.0 80.1 L465.0 78.3 L467.1 76.5 L469.1 74.7 L471.1 72.9 L473.1 71.1 L475.2 69.4 L477.2 67.6 L479.2 65.9 L481.3 64.3 L483.3 62.7 L485.3 61.1 L487.3 59.5 L489.4 58.0 L491.4 56.6 L493.4 55.2 L495.5 53.8 L497.5 52.5 L499.5 51.3 L501.5 50.1 L503.6 49.0 L505.6 47.9 L507.6 46.9 L509.7 46.0 L511.7 45.1 L513.7 44.3 L515.7 43.6 L517.8 43.0 L519.8 42.4 L521.8 41.9 L523.9 41.5 L525.9 41.1 L527.9 40.9 L529.9 40.7 L532.0 40.6 L534.0 40.5 L536.0 40.6 L538.1 40.7 L540.1 40.9 L542.1 41.1 L544.1 41.5 L546.2 41.9 L548.2 42.4 L550.2 43.0 L552.3 43.6 L554.3 44.3 L556.3 45.1 L558.3 46.0 L560.4 46.9 L562.4 47.9 L564.4 49.0 L566.5 50.1 L568.5 51.3 L570.5 52.5 L572.5 53.8 L574.6 55.2 L576.6 56.6 L578.6 58.0 L580.7 59.5 L582.7 61.1 L584.7 62.7 L586.7 64.3 L588.8 65.9 L590.8 67.6 L592.8 69.4 L594.9 71.1 L596.9 72.9 L598.9 74.7 L600.9 76.5 L603.0 78.3 L605.0 80.1 L607.0 82.0 L609.1 83.8 L611.1 85.7 L613.1 87.5 L615.1 89.3 L617.2 91.1 L619.2 92.9 L621.2 94.7 L623.3 96.4 L625.3 98.1 L627.3 99.8 L629.3 101.4 L631.4 103.0 L633.4 104.6 L635.4 106.1 L637.5 107.5 L639.5 108.8 L641.5 110.1 L643.5 111.3 L645.6 112.4 L647.6 113.4 L649.6 114.3 L651.7 115.1 L653.7 115.7 L655.7 116.0 L657.7 116.0 L659.8 116.0 L661.8 116.0 L663.8 116.0 L665.9 116.0 L667.9 116.0 L669.9 116.0 L671.9 116.0 L674.0 116.0 L676.0 116.0 L676 116 L392 116Z"/>
+          <path class="series s-solar" d="M392.0 116.0 L394.0 116.0 L396.1 116.0 L398.1 116.0 L400.1 116.0 L402.1 116.0 L404.2 116.0 L406.2 116.0 L408.2 116.0 L410.3 116.0 L412.3 116.0 L414.3 115.7 L416.3 115.1 L418.4 114.3 L420.4 113.4 L422.4 112.4 L424.5 111.3 L426.5 110.1 L428.5 108.8 L430.5 107.5 L432.6 106.1 L434.6 104.6 L436.6 103.0 L438.7 101.4 L440.7 99.8 L442.7 98.1 L444.7 96.4 L446.8 94.7 L448.8 92.9 L450.8 91.1 L452.9 89.3 L454.9 87.5 L456.9 85.7 L458.9 83.8 L461.0 82.0 L463.0 80.1 L465.0 78.3 L467.1 76.5 L469.1 74.7 L471.1 72.9 L473.1 71.1 L475.2 69.4 L477.2 67.6 L479.2 65.9 L481.3 64.3 L483.3 62.7 L485.3 61.1 L487.3 59.5 L489.4 58.0 L491.4 56.6 L493.4 55.2 L495.5 53.8 L497.5 52.5 L499.5 51.3 L501.5 50.1 L503.6 49.0 L505.6 47.9 L507.6 46.9 L509.7 46.0 L511.7 45.1 L513.7 44.3 L515.7 43.6 L517.8 43.0 L519.8 42.4 L521.8 41.9 L523.9 41.5 L525.9 41.1 L527.9 40.9 L529.9 40.7 L532.0 40.6 L534.0 40.5 L536.0 40.6 L538.1 40.7 L540.1 40.9 L542.1 41.1 L544.1 41.5 L546.2 41.9 L548.2 42.4 L550.2 43.0 L552.3 43.6 L554.3 44.3 L556.3 45.1 L558.3 46.0 L560.4 46.9 L562.4 47.9 L564.4 49.0 L566.5 50.1 L568.5 51.3 L570.5 52.5 L572.5 53.8 L574.6 55.2 L576.6 56.6 L578.6 58.0 L580.7 59.5 L582.7 61.1 L584.7 62.7 L586.7 64.3 L588.8 65.9 L590.8 67.6 L592.8 69.4 L594.9 71.1 L596.9 72.9 L598.9 74.7 L600.9 76.5 L603.0 78.3 L605.0 80.1 L607.0 82.0 L609.1 83.8 L611.1 85.7 L613.1 87.5 L615.1 89.3 L617.2 91.1 L619.2 92.9 L621.2 94.7 L623.3 96.4 L625.3 98.1 L627.3 99.8 L629.3 101.4 L631.4 103.0 L633.4 104.6 L635.4 106.1 L637.5 107.5 L639.5 108.8 L641.5 110.1 L643.5 111.3 L645.6 112.4 L647.6 113.4 L649.6 114.3 L651.7 115.1 L653.7 115.7 L655.7 116.0 L657.7 116.0 L659.8 116.0 L661.8 116.0 L663.8 116.0 L665.9 116.0 L667.9 116.0 L669.9 116.0 L671.9 116.0 L674.0 116.0 L676.0 116.0"/>
+          <path class="axis" d="M392 32V116H676"/>
+          <g class="tick" text-anchor="end"><text x="388" y="118.5">0 kW</text><text x="388" y="76.5">1 kW</text><text x="388" y="34.5">2 kW</text></g>
+          <g class="tick" text-anchor="middle"><text x="412.3" y="126">6 am</text><text x="534.0" y="126">Noon</text><text x="655.7" y="126">6 pm</text></g>
+          <circle cx="534.0" cy="40.5" r="2.2" fill="#fff" class="s-solar" stroke-width="1.3"/>
+          <path class="guide" d="M538.0 40.5H586.7"/>
+          <text x="590.8" y="43.0" class="lbl c-solar">Peak rate ≈ 1.8 kW</text>
+          <text x="534.0" y="100.0" text-anchor="middle" class="lbl">Area ≈ 12 units</text>
+          <text x="392" y="18" class="lbl">A 3 kW plant on a clear day</text><text x="392" y="27" class="lbl-s">height = rate (kW) · area = amount (units)</text>
+          <path d="M352 6V142" class="gridline"/>
+        </svg>
+      <div class="row p02-defs" style="margin-top:3mm;align-items:flex-start">
+        <div class="card top"><h3>kW · a rate</h3><p class="small">A kilowatt is how fast power flows at a moment, like a car’s speed. A plant’s <b>size</b> is quoted in kW (often written kWp).</p></div>
+        <div class="card top"><h3>kWh · an amount</h3><p class="small">A kilowatt-hour is energy made or used over time, like distance driven. 1 kWh is the <b>“unit”</b> on a bill.</p></div>
+        <div class="eq" style="flex:1.15">
+          <div class="t"><span class="k">Power</span><span class="n">1 kW</span><span class="u">1,000 W</span></div>
+          <span class="op">×</span>
+          <div class="t"><span class="k">Time</span><span class="n">1 h</span><span class="u">one hour</span></div>
+          <span class="op">=</span>
+          <div class="t total"><span class="k">Energy</span><span class="n">1</span><span class="u">unit</span></div>
         </div>
       </div>
     </div>

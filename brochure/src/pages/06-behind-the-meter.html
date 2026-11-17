@@ -1,134 +1,138 @@
 <section class="page" data-sec="basics">
-  <style>
-    .p06 .p06-side { display: flex; flex-direction: column; gap: 1.4mm; }
-    .p06 .p06-side h3 { display: flex; align-items: center; gap: 2mm; }
-    .p06 .p06-side h3 i { width: 2.4mm; height: 2.4mm; border-radius: 50%; display: inline-block; flex: none; }
-    .p06 .p06-cards .card { padding: 3.4mm 4mm; }
-    .p06 .p06-cards svg { display: block; width: 100%; height: auto; margin-top: 2mm; }
-  </style>
-  <header class="ph"><span class="sec">The basics &nbsp;·&nbsp; Behind the meter</span><img src="{{LOGO}}" alt="Ray2Volt"></header>
+  <header class="ph"><span class="sec">The basics &nbsp;/&nbsp; Behind the meter</span><img src="{{LOGO}}" alt="Ray2Volt"></header>
   <div class="pb p06">
     <div>
       <div class="kicker">Solar basics · Where a plant sits</div>
-      <h1 class="title">Behind the meter: <em>which side of the meter is the plant on?</em></h1>
-      <p class="lede">The <b>utility meter</b> is the DISCOM's meter at your connection, where the public network ends and your premises begin. A plant on <b>your side</b> of it is “behind the meter”: its power is used on the spot. A plant on the <b>network's side</b> is “in front of the meter”: its power must travel to reach anyone.</p>
+      <h1 class="title">Behind the meter <em>Which side of the meter is the plant on?</em></h1>
+      <p class="lede">The <b>utility meter</b> marks where the DISCOM's network ends and a consumer's premises begin. A plant on the consumer's side is <b>behind the meter</b>: its power is used where it is made. A plant on the network's side is <b>in front of the meter</b>: its power must travel to reach anyone.</p>
     </div>
 
     <div class="fig">
-      <div class="fig-title">One meter, two sides</div>
-      <svg viewBox="0 0 680 262" role="img" aria-label="Schematic split by the utility meter. Behind the meter, on the consumer's side: rooftop solar feeds the building's own load directly and charges a battery, which supplies the load later. In front of the meter, on the grid's side: a solar park or open-access plant feeds the transmission network and the local distribution network, paying charges and losing some power along the way, before power reaches consumers through their meters.">
-        <!-- zones -->
-        <rect x="0" y="0" width="326" height="262" rx="6" fill="#FFF8E6"/>
-        <rect x="354" y="0" width="326" height="262" rx="6" fill="#EAF2FC"/>
-        <text x="14" y="20" class="lbl-b">Behind the meter</text>
-        <text x="14" y="32" class="lbl-s">The consumer's side · power used where it is made</text>
-        <text x="666" y="20" text-anchor="end" class="lbl-b">In front of the meter</text>
-        <text x="666" y="32" text-anchor="end" class="lbl-s">The network's side · power travels to reach users</text>
-
-        <!-- dividing line + meter -->
-        <path d="M340 4V96M340 172V258" stroke="#0A2540" stroke-width="1.4" stroke-dasharray="5 4"/>
-        <rect x="302" y="96" width="76" height="76" rx="6" fill="#fff" stroke="#0A2540" stroke-width="2"/>
-        <rect x="312" y="106" width="56" height="16" rx="2" fill="#0A2540"/>
-        <text x="340" y="117.5" text-anchor="middle" class="lbl-s" style="fill:#5FD0EC;font-weight:800;letter-spacing:1px">0 4 2 7 1</text>
-        <text x="340" y="141" text-anchor="middle" class="lbl">Utility</text>
-        <text x="340" y="152" text-anchor="middle" class="lbl">meter</text>
-        <text x="340" y="164" text-anchor="middle" class="lbl-s">the dividing line</text>
-
-        <!-- behind the meter -->
-        <rect x="18" y="52" width="104" height="32" rx="3" fill="#fff" stroke="#0A2540" stroke-width="1.1"/><rect x="18" y="52" width="3.5" height="32" fill="#F5A300"/>
-        <text x="71" y="65.5" text-anchor="middle" class="lbl">Rooftop solar</text><text x="71" y="76" text-anchor="middle" class="lbl-s">or a zero-export plant</text>
-        <rect x="160" y="118" width="110" height="32" rx="3" fill="#fff" stroke="#0A2540" stroke-width="1.1"/><rect x="160" y="118" width="3.5" height="32" fill="#0A2540"/>
-        <text x="216" y="131.5" text-anchor="middle" class="lbl">Building's own load</text><text x="216" y="142" text-anchor="middle" class="lbl-s">lights, pumps, machines</text>
-        <rect x="18" y="186" width="104" height="32" rx="3" fill="#fff" stroke="#0A2540" stroke-width="1.1"/><rect x="18" y="186" width="3.5" height="32" fill="#6B5BD2"/>
-        <text x="71" y="199.5" text-anchor="middle" class="lbl">Battery</text><text x="71" y="210" text-anchor="middle" class="lbl-s">home or commercial</text>
-        <path class="flow solar" style="stroke-width:2.2" d="M124 68H200V114"/>
-        <text x="160" y="62" text-anchor="middle" class="lbl-s c-solar" style="font-weight:800">used first</text>
-        <path class="flow store" style="stroke-width:2.2" d="M58 86V182"/>
-        <text x="64" y="132" class="lbl-s c-store">stores midday</text><text x="64" y="141" class="lbl-s c-store">surplus</text>
-        <path class="flow store" style="stroke-width:2.2" d="M124 202H232V154"/>
-        <text x="178" y="214" text-anchor="middle" class="lbl-s c-store">used in the evening</text>
-        <path class="flow export" style="stroke-width:2.2" d="M272 127H297"/>
-        <path class="flow grid" style="stroke-width:2.2" d="M300 141H275"/>
-        <text x="14" y="246" class="lbl" style="font-size:8px">No network to cross: no network charges, no losses</text>
-
-        <!-- front of the meter -->
-        <rect x="560" y="52" width="106" height="32" rx="3" fill="#fff" stroke="#0A2540" stroke-width="1.1"/><rect x="560" y="52" width="3.5" height="32" fill="#F5A300"/>
-        <text x="614" y="65.5" text-anchor="middle" class="lbl">Solar park</text><text x="614" y="76" text-anchor="middle" class="lbl-s">or open-access plant</text>
-        <rect x="560" y="118" width="106" height="32" rx="3" fill="#fff" stroke="#0A2540" stroke-width="1.1"/><rect x="560" y="118" width="3.5" height="32" fill="#0B63CE"/>
-        <text x="614" y="131.5" text-anchor="middle" class="lbl">Transmission</text><text x="614" y="142" text-anchor="middle" class="lbl-s">high-voltage lines</text>
-        <rect x="412" y="118" width="102" height="32" rx="3" fill="#fff" stroke="#0A2540" stroke-width="1.1"/><rect x="412" y="118" width="3.5" height="32" fill="#0B63CE"/>
-        <text x="464" y="131.5" text-anchor="middle" class="lbl">Distribution</text><text x="464" y="142" text-anchor="middle" class="lbl-s">the DISCOM's network</text>
-        <rect x="412" y="186" width="102" height="32" rx="3" fill="#fff" stroke="#0A2540" stroke-width="1.1"/><rect x="412" y="186" width="3.5" height="32" fill="#0A2540"/>
-        <text x="464" y="199.5" text-anchor="middle" class="lbl">Other consumers</text><text x="464" y="210" text-anchor="middle" class="lbl-s">each through a meter</text>
-        <path class="flow solar" style="stroke-width:2.2" d="M612 86V114"/>
-        <path class="flow grid" style="stroke-width:2.2" d="M558 134H519"/>
-        <path class="flow grid" style="stroke-width:2.2" d="M410 134H383"/>
-        <path class="flow grid" style="stroke-width:2.2" d="M464 152V182"/>
-        <text x="537" y="164" text-anchor="middle" class="lbl-s c-cost" style="font-weight:800">charges</text>
-        <text x="537" y="173" text-anchor="middle" class="lbl-s c-cost" style="font-weight:800">+ losses</text>
-        <path d="M537 140V154" stroke="#D9453D" stroke-width="1.2" stroke-dasharray="2 2"/>
-        <text x="666" y="246" text-anchor="end" class="lbl" style="font-size:8px">Every route crosses the network and pays for the journey</text>
+      <div class="fig-title">Exhibit 1 &nbsp;·&nbsp; The meter as the boundary <span>Schematic</span></div>
+      <svg viewBox="0 0 680 198" role="img" aria-label="Schematic divided by the utility meter. Behind the meter, on the consumer's side: rooftop solar or a zero-export plant serves the building loads first, and charges a battery at midday that serves the loads in the evening; surplus can leave and grid power can enter through the meter. In front of the meter, on the grid side: a solar park or open-access plant feeds high-voltage transmission lines and the DISCOM's distribution network, paying charges and losing some power on the way, before reaching consumers through their meters.">
+        <!-- boundary -->
+        <path d="M340 0V74M340 118V198" stroke="#0B1F3A" stroke-width="1.4"/>
+        <text x="0" y="8" class="cap">Consumer's side</text><text x="0" y="22" class="lbl-b">Behind the meter</text>
+        <text x="680" y="8" text-anchor="end" class="cap">Grid side</text><text x="680" y="22" text-anchor="end" class="lbl-b">In front of the meter</text>
+        <!-- nodes -->
+        <g>
+          <rect class="node" x="0" y="38" width="112" height="36" rx="2"/><use href="#i-panel" x="5" y="45.5" width="21" height="21"/>
+          <text x="31" y="53.5" class="lbl">Rooftop solar</text><text x="31" y="65" class="lbl-s">or zero-export plant</text>
+          <rect class="node" x="0" y="140" width="112" height="36" rx="2"/><use href="#i-battery" x="5" y="147.5" width="21" height="21"/>
+          <text x="31" y="155.5" class="lbl">Battery</text><text x="31" y="167" class="lbl-s">home or commercial</text>
+          <rect class="node" x="160" y="78" width="110" height="36" rx="2"/><use href="#i-plug" x="165" y="85.5" width="21" height="21"/>
+          <text x="191" y="93.5" class="lbl">Building loads</text><text x="191" y="105" class="lbl-s">served first</text>
+          <rect class="node em" x="290" y="74" width="100" height="44" rx="2" style="stroke-width:1.6"/><use href="#i-meter" x="296" y="85.5" width="21" height="21"/>
+          <text x="323" y="93.5" class="lbl">Utility meter</text><text x="323" y="105" class="lbl-s">the boundary</text>
+          <rect class="node" x="410" y="78" width="112" height="36" rx="2"/><use href="#i-transformer" x="415" y="85.5" width="21" height="21"/>
+          <text x="441" y="93.5" class="lbl">Distribution</text><text x="441" y="105" class="lbl-s">DISCOM network</text>
+          <rect class="node" x="568" y="78" width="112" height="36" rx="2"/><use href="#i-pylon" x="573" y="85.5" width="21" height="21"/>
+          <text x="599" y="93.5" class="lbl">Transmission</text><text x="599" y="105" class="lbl-s">high-voltage lines</text>
+          <rect class="node" x="568" y="140" width="112" height="36" rx="2"/><use href="#i-solarfarm" x="573" y="147.5" width="21" height="21"/>
+          <text x="599" y="155.5" class="lbl">Solar park</text><text x="599" y="167" class="lbl-s">or open-access plant</text>
+          <rect class="node" x="410" y="140" width="112" height="36" rx="2"/><use href="#i-people" x="415" y="147.5" width="21" height="21"/>
+          <text x="441" y="155.5" class="lbl">Other consumers</text><text x="441" y="167" class="lbl-s">each through a meter</text>
+        </g>
+        <!-- consumer side flows -->
+        <path class="flow solar" d="M112 56H215V76"/>
+        <text x="164" y="50" text-anchor="middle" class="cap c-solar">Used first</text>
+        <path class="flow store" d="M24 74V138"/>
+        <text x="30" y="104" class="lbl-s c-store">midday</text><text x="30" y="113" class="lbl-s c-store">surplus</text>
+        <path class="flow store" d="M112 158H215V116"/>
+        <text x="164" y="170" text-anchor="middle" class="lbl-s c-store">evening use</text>
+        <path class="flow export" d="M270 90H288"/>
+        <path class="flow grid" d="M290 104H272"/>
+        <!-- grid side flows -->
+        <path class="flow export" d="M390 90H408"/>
+        <path class="flow grid" d="M410 104H392"/>
+        <path class="flow grid" d="M568 96H524"/>
+        <path class="flow solar" d="M624 140V116"/>
+        <path class="flow grid" d="M466 114V138"/>
+        <text x="545" y="111" text-anchor="middle" class="cap c-cost">Charges</text>
+        <text x="545" y="120" text-anchor="middle" class="cap c-cost">+ losses</text>
+        <!-- side notes -->
+        <text x="0" y="194" class="lbl c-export">Used on site: no network charges, no losses</text>
+        <text x="680" y="194" text-anchor="end" class="lbl c-cost">Carried by the network: charges and losses apply</text>
       </svg>
-      <div class="legend" style="margin-top:2.4mm"><span><i></i>Solar power</span><span><i class="store"></i>Battery storage</span><span><i class="export"></i>Surplus sent out</span><span><i class="grid"></i>Power carried by the grid</span><span><i class="money"></i>Network charges and losses</span></div>
+      <div class="legend" style="margin-top:3mm"><span><i class="ln"></i>Solar power</span><span><i class="ln store"></i>Battery charging and discharging</span><span><i class="ln export"></i>Surplus sent out</span><span><i class="ln grid"></i>Power carried by the grid</span></div>
     </div>
 
-    <div class="cols-2">
-      <div class="card gold p06-side">
-        <h3><i style="background:var(--gold)"></i>Why behind the meter is worth more per unit</h3>
-        <p class="small">Each unit (kilowatt-hour) used directly is one unit you do not buy from the DISCOM at the <b>retail tariff</b>, the full price per unit on your bill. It never touches the network, so no transmission or wheeling charges apply and nothing is lost in the wires.</p>
+    <div class="row">
+      <div class="fig plain" style="flex:1.2">
+        <div class="fig-title">Exhibit 2 &nbsp;·&nbsp; What a unit pays for <span>Schematic</span></div>
+        <svg viewBox="0 0 400 108" role="img" aria-label="Schematic stacked bars, not to scale. A unit bought from the DISCOM covers generation, transmission, distribution, losses and other supply costs. A unit of rooftop solar used on site covers only the cost of the plant itself; no network charges or losses are incurred.">
+          <text x="0" y="8" class="cap">A unit bought from the DISCOM</text>
+          <rect class="f-grid" x="0" y="14" width="128" height="18"/>
+          <rect class="f-cost" opacity=".85" x="129" y="14" width="56" height="18"/>
+          <rect class="f-cost" opacity=".6" x="186" y="14" width="68" height="18"/>
+          <rect class="f-cost" opacity=".35" x="255" y="14" width="40" height="18"/>
+          <rect class="f-none" x="296" y="14" width="44" height="18"/>
+          <g class="tick" text-anchor="middle"><text x="64" y="43">Generation</text><text x="157" y="43">Transmission</text><text x="220" y="43">Distribution</text><text x="275" y="43">Losses</text><text x="318" y="43">Other</text></g>
+          <text x="346" y="26.5" class="lbl">Retail</text><text x="346" y="35" class="lbl-s">tariff</text>
+          <text x="0" y="64" class="cap">A unit of rooftop solar used on site</text>
+          <rect class="f-solar" x="0" y="70" width="128" height="18"/>
+          <rect x="129.5" y="70.5" width="210" height="17" fill="none" stroke="#17855A" stroke-width=".8" stroke-dasharray="3 2"/>
+          <text x="234.5" y="82.5" text-anchor="middle" class="lbl c-export">Not incurred: no network, no losses</text>
+          <g class="tick" text-anchor="middle"><text x="64" y="99">Your own plant's cost</text></g>
+        </svg>
+        <p class="fig-cap">Not to scale: shares vary by state, tariff category and voltage. Network charges are set by each State Electricity Regulatory Commission.</p>
       </div>
-      <div class="card blue p06-side">
-        <h3><i style="background:var(--blue)"></i>Why front-of-meter power costs more to deliver</h3>
-        <p class="small">It has to travel: over high-voltage transmission lines, through the DISCOM's local network (“wheeling”), then through the buyer's meter. Some power is lost on the way, and the network owners charge for carrying it. Rates are set by each State Electricity Regulatory Commission.</p>
+      <div class="card top" style="flex:1">
+        <h4>Why the side matters</h4>
+        <h2>A unit used on site replaces a unit bought at the full price</h2>
+        <p class="small">Each unit (kilowatt-hour) used directly is one unit not bought from the DISCOM at the <b>retail tariff</b>, the full price per unit on the bill. It never enters the network, so no transmission or wheeling (local network) charges apply and nothing is lost in the wires.</p>
+        <p class="small">Front-of-the-meter power has to travel, so it pays for the journey: network charges, plus losses along the way.</p>
       </div>
     </div>
 
-    <div class="cols-2 p06-cards">
-      <div class="card">
+    <div class="row">
+      <div class="fig" style="flex:1.2">
+        <div class="fig-title">Exhibit 3 &nbsp;·&nbsp; A battery’s day <span>Illustrative</span></div>
+        <svg viewBox="0 0 400 146" role="img" aria-label="Illustrative chart of one day. Solar output peaks at midday above the building's use; the surplus charges a battery. After about 4 pm solar falls below the building's use and the battery supplies the evening peak until it is empty, after which the grid supplies the building.">
+<g class="gridline"><path d="M30 36H390M30 66H390M30 96H390"/></g>
+<path class="f-grid" opacity=".3" d="M30.0 112.4 L33.8 112.4 L37.5 112.4 L41.3 112.4 L45.0 112.4 L48.8 112.4 L52.5 112.4 L56.3 112.4 L60.0 112.4 L63.8 112.4 L67.5 112.4 L71.3 112.4 L75.0 112.4 L78.8 112.4 L82.5 112.4 L86.3 112.4 L90.0 112.4 L93.8 112.4 L97.5 112.3 L101.3 112.3 L105.0 112.2 L108.8 111.9 L112.5 111.4 L116.3 110.5 L120.0 109.0 L123.8 106.9 L127.5 104.2 L131.3 101.2 L135.0 98.4 L138.8 96.3 L142.5 95.4 L146.3 95.9 L150.0 97.3 L153.8 99.2 L157.5 100.8 L161.3 101.5 L165.0 101.2 L168.8 100.3 L172.5 99.3 L176.3 98.4 L180.0 97.7 L183.8 97.3 L187.5 97.1 L191.3 96.9 L195.0 96.8 L198.8 96.8 L202.5 96.7 L206.3 96.7 L210.0 96.7 L213.8 96.7 L217.5 96.7 L221.3 96.7 L225.0 96.7 L228.8 96.7 L232.5 96.7 L236.3 96.7 L240.0 96.7 L243.8 96.7 L247.5 96.7 L251.3 96.8 L255.0 96.8 L258.8 96.9 L262.5 97.0 L266.3 97.2 L270.0 97.6 L273.8 98.3 L277.5 99.4 L281.3 100.7 L285.0 102.2 L288.8 103.3 L292.5 103.4 L296.3 102.3 L300.0 100.1 L303.8 96.9 L307.5 92.9 L311.3 88.5 L315.0 84.0 L318.8 79.9 L322.5 76.6 L326.3 74.5 L330.0 73.7 L333.8 74.5 L337.5 76.6 L341.3 79.9 L345.0 84.1 L348.8 88.6 L352.5 93.2 L356.3 97.5 L360.0 101.3 L363.8 104.4 L367.5 106.9 L371.3 108.7 L375.0 110.0 L378.8 110.9 L382.5 111.5 L386.3 111.9 L390.0 112.1 L390.0 128 L30.0 128 Z"/>
+<path fill="#fff" d="M30.0 128.0 L33.8 128.0 L37.5 128.0 L41.3 128.0 L45.0 128.0 L48.8 128.0 L52.5 128.0 L56.3 128.0 L60.0 128.0 L63.8 128.0 L67.5 128.0 L71.3 128.0 L75.0 128.0 L78.8 128.0 L82.5 128.0 L86.3 128.0 L90.0 128.0 L93.8 128.0 L97.5 128.0 L101.3 128.0 L105.0 128.0 L108.8 128.0 L112.5 128.0 L116.3 128.0 L120.0 128.0 L123.8 126.5 L127.5 123.9 L131.3 120.5 L135.0 116.5 L138.8 112.1 L142.5 107.3 L146.3 102.3 L150.0 97.3 L153.8 99.2 L157.5 100.8 L161.3 101.5 L165.0 101.2 L168.8 100.3 L172.5 99.3 L176.3 98.4 L180.0 97.7 L183.8 97.3 L187.5 97.1 L191.3 96.9 L195.0 96.8 L198.8 96.8 L202.5 96.7 L206.3 96.7 L210.0 96.7 L213.8 96.7 L217.5 96.7 L221.3 96.7 L225.0 96.7 L228.8 96.7 L232.5 96.7 L236.3 96.7 L240.0 96.7 L243.8 96.7 L247.5 96.7 L251.3 96.8 L255.0 96.8 L258.8 96.9 L262.5 97.0 L266.3 97.2 L270.0 97.6 L273.8 102.3 L277.5 107.3 L281.3 112.1 L285.0 116.5 L288.8 120.5 L292.5 123.9 L296.3 126.5 L300.0 128.0 L303.8 128.0 L307.5 128.0 L311.3 128.0 L315.0 128.0 L318.8 128.0 L322.5 128.0 L326.3 128.0 L330.0 128.0 L333.8 128.0 L337.5 128.0 L341.3 128.0 L345.0 128.0 L348.8 128.0 L352.5 128.0 L356.3 128.0 L360.0 128.0 L363.8 128.0 L367.5 128.0 L371.3 128.0 L375.0 128.0 L378.8 128.0 L382.5 128.0 L386.3 128.0 L390.0 128.0 L390.0 128 L30.0 128 Z"/><path class="f-solar" opacity=".55" d="M30.0 128.0 L33.8 128.0 L37.5 128.0 L41.3 128.0 L45.0 128.0 L48.8 128.0 L52.5 128.0 L56.3 128.0 L60.0 128.0 L63.8 128.0 L67.5 128.0 L71.3 128.0 L75.0 128.0 L78.8 128.0 L82.5 128.0 L86.3 128.0 L90.0 128.0 L93.8 128.0 L97.5 128.0 L101.3 128.0 L105.0 128.0 L108.8 128.0 L112.5 128.0 L116.3 128.0 L120.0 128.0 L123.8 126.5 L127.5 123.9 L131.3 120.5 L135.0 116.5 L138.8 112.1 L142.5 107.3 L146.3 102.3 L150.0 97.3 L153.8 99.2 L157.5 100.8 L161.3 101.5 L165.0 101.2 L168.8 100.3 L172.5 99.3 L176.3 98.4 L180.0 97.7 L183.8 97.3 L187.5 97.1 L191.3 96.9 L195.0 96.8 L198.8 96.8 L202.5 96.7 L206.3 96.7 L210.0 96.7 L213.8 96.7 L217.5 96.7 L221.3 96.7 L225.0 96.7 L228.8 96.7 L232.5 96.7 L236.3 96.7 L240.0 96.7 L243.8 96.7 L247.5 96.7 L251.3 96.8 L255.0 96.8 L258.8 96.9 L262.5 97.0 L266.3 97.2 L270.0 97.6 L273.8 102.3 L277.5 107.3 L281.3 112.1 L285.0 116.5 L288.8 120.5 L292.5 123.9 L296.3 126.5 L300.0 128.0 L303.8 128.0 L307.5 128.0 L311.3 128.0 L315.0 128.0 L318.8 128.0 L322.5 128.0 L326.3 128.0 L330.0 128.0 L333.8 128.0 L337.5 128.0 L341.3 128.0 L345.0 128.0 L348.8 128.0 L352.5 128.0 L356.3 128.0 L360.0 128.0 L363.8 128.0 L367.5 128.0 L371.3 128.0 L375.0 128.0 L378.8 128.0 L382.5 128.0 L386.3 128.0 L390.0 128.0 L390.0 128 L30.0 128 Z"/>
+<path fill="#fff" d="M273.8 98.3 L277.5 99.4 L281.3 100.7 L285.0 102.2 L288.8 103.3 L292.5 103.4 L296.3 102.3 L300.0 100.1 L303.8 96.9 L307.5 92.9 L311.3 88.5 L315.0 84.0 L318.8 79.9 L322.5 76.6 L326.3 74.5 L330.0 73.7 L333.8 74.5 L337.5 76.6 L341.3 79.9 L345.0 84.1 L348.8 88.6 L352.5 93.2 L356.3 97.5 L360.0 101.3 L363.8 104.4 L367.5 106.9 L367.5 128.0 L363.8 128.0 L360.0 128.0 L356.3 128.0 L352.5 128.0 L348.8 128.0 L345.0 128.0 L341.3 128.0 L337.5 128.0 L333.8 128.0 L330.0 128.0 L326.3 128.0 L322.5 128.0 L318.8 128.0 L315.0 128.0 L311.3 128.0 L307.5 128.0 L303.8 128.0 L300.0 128.0 L296.3 126.5 L292.5 123.9 L288.8 120.5 L285.0 116.5 L281.3 112.1 L277.5 107.3 L273.8 102.3 Z"/><path class="f-store" opacity=".5" d="M273.8 98.3 L277.5 99.4 L281.3 100.7 L285.0 102.2 L288.8 103.3 L292.5 103.4 L296.3 102.3 L300.0 100.1 L303.8 96.9 L307.5 92.9 L311.3 88.5 L315.0 84.0 L318.8 79.9 L322.5 76.6 L326.3 74.5 L330.0 73.7 L333.8 74.5 L337.5 76.6 L341.3 79.9 L345.0 84.1 L348.8 88.6 L352.5 93.2 L356.3 97.5 L360.0 101.3 L363.8 104.4 L367.5 106.9 L367.5 128.0 L363.8 128.0 L360.0 128.0 L356.3 128.0 L352.5 128.0 L348.8 128.0 L345.0 128.0 L341.3 128.0 L337.5 128.0 L333.8 128.0 L330.0 128.0 L326.3 128.0 L322.5 128.0 L318.8 128.0 L315.0 128.0 L311.3 128.0 L307.5 128.0 L303.8 128.0 L300.0 128.0 L296.3 126.5 L292.5 123.9 L288.8 120.5 L285.0 116.5 L281.3 112.1 L277.5 107.3 L273.8 102.3 Z"/>
+<path class="f-store" opacity=".5" d="M150.0 97.1 L153.8 91.8 L157.5 86.5 L161.3 81.2 L165.0 76.0 L168.8 71.0 L172.5 66.2 L176.3 61.7 L180.0 57.6 L183.8 53.8 L187.5 50.4 L191.3 47.5 L195.0 45.0 L198.8 43.1 L202.5 41.7 L206.3 40.9 L210.0 40.6 L213.8 40.9 L217.5 41.7 L221.3 43.1 L225.0 45.0 L228.8 47.5 L232.5 50.4 L236.3 53.8 L240.0 57.6 L243.8 61.7 L247.5 66.2 L251.3 71.0 L255.0 76.0 L258.8 81.2 L262.5 86.5 L266.3 91.8 L270.0 97.1 L273.8 102.3 L273.8 98.3 L270.0 97.6 L266.3 97.2 L262.5 97.0 L258.8 96.9 L255.0 96.8 L251.3 96.8 L247.5 96.7 L243.8 96.7 L240.0 96.7 L236.3 96.7 L232.5 96.7 L228.8 96.7 L225.0 96.7 L221.3 96.7 L217.5 96.7 L213.8 96.7 L210.0 96.7 L206.3 96.7 L202.5 96.7 L198.8 96.8 L195.0 96.8 L191.3 96.9 L187.5 97.1 L183.8 97.3 L180.0 97.7 L176.3 98.4 L172.5 99.3 L168.8 100.3 L165.0 101.2 L161.3 101.5 L157.5 100.8 L153.8 99.2 L150.0 97.3 Z"/>
+<path class="series s-ink" d="M30.0 112.4 L33.8 112.4 L37.5 112.4 L41.3 112.4 L45.0 112.4 L48.8 112.4 L52.5 112.4 L56.3 112.4 L60.0 112.4 L63.8 112.4 L67.5 112.4 L71.3 112.4 L75.0 112.4 L78.8 112.4 L82.5 112.4 L86.3 112.4 L90.0 112.4 L93.8 112.4 L97.5 112.3 L101.3 112.3 L105.0 112.2 L108.8 111.9 L112.5 111.4 L116.3 110.5 L120.0 109.0 L123.8 106.9 L127.5 104.2 L131.3 101.2 L135.0 98.4 L138.8 96.3 L142.5 95.4 L146.3 95.9 L150.0 97.3 L153.8 99.2 L157.5 100.8 L161.3 101.5 L165.0 101.2 L168.8 100.3 L172.5 99.3 L176.3 98.4 L180.0 97.7 L183.8 97.3 L187.5 97.1 L191.3 96.9 L195.0 96.8 L198.8 96.8 L202.5 96.7 L206.3 96.7 L210.0 96.7 L213.8 96.7 L217.5 96.7 L221.3 96.7 L225.0 96.7 L228.8 96.7 L232.5 96.7 L236.3 96.7 L240.0 96.7 L243.8 96.7 L247.5 96.7 L251.3 96.8 L255.0 96.8 L258.8 96.9 L262.5 97.0 L266.3 97.2 L270.0 97.6 L273.8 98.3 L277.5 99.4 L281.3 100.7 L285.0 102.2 L288.8 103.3 L292.5 103.4 L296.3 102.3 L300.0 100.1 L303.8 96.9 L307.5 92.9 L311.3 88.5 L315.0 84.0 L318.8 79.9 L322.5 76.6 L326.3 74.5 L330.0 73.7 L333.8 74.5 L337.5 76.6 L341.3 79.9 L345.0 84.1 L348.8 88.6 L352.5 93.2 L356.3 97.5 L360.0 101.3 L363.8 104.4 L367.5 106.9 L371.3 108.7 L375.0 110.0 L378.8 110.9 L382.5 111.5 L386.3 111.9 L390.0 112.1"/>
+<path class="series s-solar" d="M30.0 128.0 L33.8 128.0 L37.5 128.0 L41.3 128.0 L45.0 128.0 L48.8 128.0 L52.5 128.0 L56.3 128.0 L60.0 128.0 L63.8 128.0 L67.5 128.0 L71.3 128.0 L75.0 128.0 L78.8 128.0 L82.5 128.0 L86.3 128.0 L90.0 128.0 L93.8 128.0 L97.5 128.0 L101.3 128.0 L105.0 128.0 L108.8 128.0 L112.5 128.0 L116.3 128.0 L120.0 128.0 L123.8 126.5 L127.5 123.9 L131.3 120.5 L135.0 116.5 L138.8 112.1 L142.5 107.3 L146.3 102.3 L150.0 97.1 L153.8 91.8 L157.5 86.5 L161.3 81.2 L165.0 76.0 L168.8 71.0 L172.5 66.2 L176.3 61.7 L180.0 57.6 L183.8 53.8 L187.5 50.4 L191.3 47.5 L195.0 45.0 L198.8 43.1 L202.5 41.7 L206.3 40.9 L210.0 40.6 L213.8 40.9 L217.5 41.7 L221.3 43.1 L225.0 45.0 L228.8 47.5 L232.5 50.4 L236.3 53.8 L240.0 57.6 L243.8 61.7 L247.5 66.2 L251.3 71.0 L255.0 76.0 L258.8 81.2 L262.5 86.5 L266.3 91.8 L270.0 97.1 L273.8 102.3 L277.5 107.3 L281.3 112.1 L285.0 116.5 L288.8 120.5 L292.5 123.9 L296.3 126.5 L300.0 128.0 L303.8 128.0 L307.5 128.0 L311.3 128.0 L315.0 128.0 L318.8 128.0 L322.5 128.0 L326.3 128.0 L330.0 128.0 L333.8 128.0 L337.5 128.0 L341.3 128.0 L345.0 128.0 L348.8 128.0 L352.5 128.0 L356.3 128.0 L360.0 128.0 L363.8 128.0 L367.5 128.0 L371.3 128.0 L375.0 128.0 L378.8 128.0 L382.5 128.0 L386.3 128.0 L390.0 128.0"/>
+<path class="axis" d="M30 128H390"/>
+<g class="guide"><path d="M120 128V24M300 128V24"/></g>
+<g class="tick" text-anchor="middle"><text x="30" y="140">12 am</text><text x="120" y="140">6 am</text><text x="210" y="140">Noon</text><text x="300" y="140">6 pm</text><text x="390" y="140" text-anchor="end">12 am</text></g>
+<text x="210" y="76" text-anchor="middle" class="lbl c-store">Battery charges</text>
+<text x="210" y="118" text-anchor="middle" class="lbl">Solar used directly</text>
+<text x="322" y="114" text-anchor="middle" class="lbl c-store">Battery</text><text x="322" y="123" text-anchor="middle" class="lbl-s c-store">supplies</text>
+<text x="72" y="123" text-anchor="middle" class="lbl c-grid">Grid</text>
+<text x="250" y="45" class="lbl-s c-solar">Solar output</text>
+<text x="330" y="64" text-anchor="middle" class="lbl-s">Building's use</text>
+<text x="30" y="14" class="tick">Power (kW)</text>
+        </svg>
+        <p class="fig-cap">The midday surplus charges the battery, which then covers the evening peak until it is empty; the grid supplies the rest.</p>
+      </div>
+      <div class="card top" style="flex:1">
         <h4>Zero export</h4>
         <h2>Solar that never leaves the building</h2>
-        <svg viewBox="0 0 330 74" role="img" aria-label="Zero-export schematic: solar feeds the building's load; a reverse-power relay at the meter blocks any flow towards the grid.">
-          <rect x="2" y="16" width="70" height="30" rx="3" fill="#fff" stroke="#0A2540" stroke-width="1.1"/><rect x="2" y="16" width="3.5" height="30" fill="#F5A300"/>
-          <text x="38" y="34.5" text-anchor="middle" class="lbl">Solar</text>
-          <rect x="94" y="16" width="70" height="30" rx="3" fill="#fff" stroke="#0A2540" stroke-width="1.1"/><rect x="94" y="16" width="3.5" height="30" fill="#0A2540"/>
-          <text x="130" y="34.5" text-anchor="middle" class="lbl">Load</text>
-          <rect x="186" y="16" width="70" height="30" rx="3" fill="#FDECEA" stroke="#D9453D" stroke-width="1.4"/>
-          <text x="221" y="29" text-anchor="middle" class="lbl">Reverse-</text><text x="221" y="39.5" text-anchor="middle" class="lbl">power relay</text>
-          <rect x="284" y="16" width="44" height="30" rx="3" fill="#fff" stroke="#0A2540" stroke-width="1.1"/><rect x="284" y="16" width="3.5" height="30" fill="#0B63CE"/>
-          <text x="307" y="34.5" text-anchor="middle" class="lbl">Grid</text>
-          <path class="flow solar" style="stroke-width:2" d="M74 31H89"/>
-          <path class="flow grid" style="stroke-width:2" d="M184 31H169"/>
-          <path d="M258 31H282" stroke="#1F9D62" stroke-width="2" stroke-dasharray="3 3"/>
-          <circle cx="270" cy="31" r="6" fill="#D9453D"/><path d="M267.6 28.6l4.8 4.8M272.4 28.6l-4.8 4.8" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/>
-          <text x="270" y="60" text-anchor="middle" class="lbl-s c-cost" style="font-weight:800">nothing flows out</text>
-          <text x="130" y="60" text-anchor="middle" class="lbl-s">grid tops up as usual</text>
+        <svg viewBox="0 0 332 62" role="img" aria-label="Zero-export schematic: solar feeds the building loads; grid power can still come in through a reverse-power relay, but any flow out to the grid is blocked." style="display:block;width:100%;margin-top:2.6mm">
+          <rect class="node" x="1" y="8" width="60" height="30" rx="2"/><text x="31" y="26" text-anchor="middle" class="lbl">Solar</text>
+          <rect class="node" x="83" y="8" width="60" height="30" rx="2"/><text x="113" y="26" text-anchor="middle" class="lbl">Loads</text>
+          <rect class="node em" x="165" y="8" width="76" height="30" rx="2" style="stroke:#C2463C"/><text x="203" y="21" text-anchor="middle" class="lbl">Reverse-</text><text x="203" y="31" text-anchor="middle" class="lbl">power relay</text>
+          <rect class="node" x="271" y="8" width="60" height="30" rx="2"/><text x="301" y="26" text-anchor="middle" class="lbl">Grid</text>
+          <path class="flow solar" d="M61 23H81"/>
+          <path class="flow grid" d="M165 30H145"/>
+          <path class="flow grid" d="M271 30H243"/>
+          <path d="M241 16H271" stroke="#17855A" stroke-width="1.6" stroke-dasharray="3 2"/>
+          <path d="M252.5 11.5l7 9M259.5 11.5l-7 9" stroke="#C2463C" stroke-width="1.5" stroke-linecap="round"/>
+          <text x="203" y="52" text-anchor="middle" class="lbl-s">stops any outflow</text>
+          <text x="301" y="52" text-anchor="middle" class="lbl-s c-cost">no export</text>
+          <text x="113" y="52" text-anchor="middle" class="lbl-s">grid tops up</text>
         </svg>
-        <p class="small" style="margin-top:1.6mm">A <b>reverse-power relay</b> watches the connection and stops any power flowing out to the grid. Chosen where the building uses nearly all its solar in the day, or where export arrangements are not wanted. In Andhra Pradesh, zero-export behind-the-meter systems follow a simplified intimation process.</p>
-      </div>
-      <div class="card">
-        <h4>Behind-the-meter batteries</h4>
-        <h2>Midday sunshine, used in the evening</h2>
-        <svg viewBox="0 0 300 112" role="img" aria-label="Illustrative day: solar output peaks at midday, above the building's load; the surplus charges a battery, which then supplies the evening peak.">
-          <g stroke="#D9E2EC" stroke-width=".8"><path d="M34 28H294M34 60H294M99 22V92M164 22V92M229 22V92"/></g>
-          <path fill="#F5A300" fill-opacity=".28" d="M34.0 92.0L99.0 92.0L104.4 89.5L109.8 84.6L115.3 78.2L120.7 70.9L126.1 63.1L131.5 55.2L136.9 47.8L142.3 41.2L147.8 35.6L153.2 31.5L158.6 28.9L164.0 28.0L169.4 28.9L174.8 31.5L180.3 35.6L185.7 41.2L191.1 47.8L196.5 55.2L201.9 63.1L207.3 70.9L212.8 78.2L218.2 84.6L223.6 89.5L229.0 92.0L294.0 92L34.0 92Z"/>
-          <path fill="#6B5BD2" fill-opacity=".55" d="M126.1 63.1L131.5 55.2L136.9 47.8L142.3 41.2L147.8 35.6L153.2 31.5L158.6 28.9L164.0 28.0L169.4 28.9L174.8 31.5L180.3 35.6L185.7 41.2L191.1 47.8L196.5 55.2L201.9 63.1L201.9 69.2L196.5 69.0L191.1 69.0L185.7 69.0L180.3 69.0L174.8 69.0L169.4 69.0L164.0 69.0L158.6 69.0L153.2 69.0L147.8 69.2L142.3 69.9L136.9 71.4L131.5 73.4L126.1 73.3Z"/>
-          <path fill="#6B5BD2" fill-opacity=".55" d="M207.3 69.7L212.8 71.1L218.2 73.5L223.6 74.5L229.0 72.1L234.4 66.9L239.8 61.0L245.3 56.9L250.7 56.5L256.1 60.0L261.5 65.9L266.9 72.0L272.3 76.7L277.8 79.5L283.2 80.9L288.6 81.5L288.6 92.0L229.0 92.0L223.6 89.5L218.2 84.6L212.8 78.2L207.3 70.9Z"/>
-          <path fill="none" stroke="#F5A300" stroke-width="1.6" d="M34.0 92.0L99.0 92.0L104.4 89.5L109.8 84.6L115.3 78.2L120.7 70.9L126.1 63.1L131.5 55.2L136.9 47.8L142.3 41.2L147.8 35.6L153.2 31.5L158.6 28.9L164.0 28.0L169.4 28.9L174.8 31.5L180.3 35.6L185.7 41.2L191.1 47.8L196.5 55.2L201.9 63.1L207.3 70.9L212.8 78.2L218.2 84.6L223.6 89.5L229.0 92.0L294.0 92.0"/>
-          <path fill="none" stroke="#0A2540" stroke-width="1.6" d="M34.0 81.8L82.8 81.8L88.2 81.7L93.6 81.3L99.0 79.8L104.4 76.2L109.8 71.3L115.3 68.7L120.7 70.4L126.1 73.3L131.5 73.4L136.9 71.4L142.3 69.9L147.8 69.2L153.2 69.0L196.5 69.0L201.9 69.2L207.3 69.7L212.8 71.1L218.2 73.5L223.6 74.5L229.0 72.1L234.4 66.9L239.8 61.0L245.3 56.9L250.7 56.5L256.1 60.0L261.5 65.9L266.9 72.0L272.3 76.7L277.8 79.5L283.2 80.9L288.6 81.5L294.0 81.7"/>
-          <path d="M34 92H294" stroke="#0A2540" stroke-width="1"/>
-          <g class="lbl-s" text-anchor="middle"><text x="34" y="103">00:00</text><text x="99" y="103">06:00</text><text x="164" y="103">12:00</text><text x="229" y="103">18:00</text><text x="294" y="103" text-anchor="end">24:00</text></g>
-          <text x="164" y="52" text-anchor="middle" class="lbl-s on-dark" style="font-weight:800;fill:#fff">charges</text>
-          <text x="252" y="50" text-anchor="middle" class="lbl-s c-store" style="font-weight:800">battery supplies</text>
-          <text x="96" y="16" class="lbl-s c-solar" style="font-weight:800">Solar output</text>
-          <text x="34" y="16" class="lbl-s" style="font-weight:800;fill:#0A2540">Load —</text>
-        </svg>
-        <p class="small" style="margin-top:1.4mm">A battery on your side of the meter stores surplus solar at midday and releases it in the evening, so more of each day's solar is used on site. Illustrative shapes, not to scale.</p>
+        <p class="small" style="margin-top:2mm">A <b>reverse-power relay</b> detects power starting to flow out to the grid and stops it. Zero export suits buildings that use nearly all their solar in the day, or owners who do not want an export arrangement. In Andhra Pradesh, zero-export behind-the-meter systems follow a simplified intimation process.</p>
       </div>
     </div>
 
     <div class="callout note grow">
       <h4>Where this leads</h4>
-      <p class="small">The billing methods on the next pages (<b>net metering, gross metering and net billing</b>) are about what happens when behind-the-meter solar sends power <b>out</b> through the meter. <b>Open access</b> (page 11) is about front-of-the-meter power: buying from a plant elsewhere and having it carried to you over the network.</p>
+      <p class="small">The billing methods on the next pages (<b>net metering, gross metering and net billing</b>) deal with behind-the-meter solar that sends power <b>out</b> through the meter. <b>Open access</b> (page 11) deals with front-of-the-meter power: buying from a plant elsewhere and having the network carry it to you. Confirm current rules with your DISCOM before you decide.</p>
     </div>
   </div>
   <footer class="pf"><span>{{FOOT}}</span><span class="pn">{{PN}}</span></footer>
