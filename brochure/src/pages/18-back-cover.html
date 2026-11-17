@@ -1,0 +1,70 @@
+<section class="page p18" data-sec="guide">
+  <style>
+    .p18 .pb { padding-top: 4mm; }
+    .p18 .svc .badge { background: #fff; }
+    .p18 .how { display: grid; grid-template-columns: repeat(5, 1fr); gap: 0; counter-reset: h; }
+    .p18 .how div { counter-increment: h; position: relative; padding: 0 2.4mm 0 0; font-size: 8.2pt; line-height: 1.34; }
+    .p18 .how div::before { content: counter(h); display: flex; align-items: center; justify-content: center; width: 6.4mm; height: 6.4mm; border-radius: 50%; background: var(--navy); color: #fff; font-family: var(--head); font-weight: 800; font-size: 8pt; margin-bottom: 1.8mm; position: relative; z-index: 1; }
+    .p18 .how div::after { content: ""; position: absolute; left: 6.4mm; right: 0; top: 3mm; height: .5mm; background: var(--line); }
+    .p18 .how div:last-child::after { display: none; }
+    .p18 .how b { display: block; font-family: var(--head); font-size: 8.4pt; }
+    .p18 .contact { background: linear-gradient(135deg, #0A2540 0%, #0E4C8A 100%); border-radius: 5mm; padding: 8mm 9mm; color: #D6E4F2; display: flex; gap: 8mm; align-items: stretch; position: relative; overflow: hidden; }
+    .p18 .contact::after { content: ""; position: absolute; right: -28mm; top: -34mm; width: 90mm; height: 90mm; border-radius: 50%; background: radial-gradient(circle, rgba(255,197,61,.5) 0%, rgba(255,197,61,0) 68%); }
+    .p18 .contact h2 { color: #fff; font-size: 19pt; letter-spacing: -.01em; }
+    .p18 .contact .mail { font-family: var(--head); font-weight: 800; font-size: 15pt; color: var(--gold-2); margin-top: 4mm; letter-spacing: -.005em; }
+    .p18 .contact .who { font-family: var(--head); font-weight: 700; font-size: 8.4pt; letter-spacing: .14em; text-transform: uppercase; color: #fff; margin-top: 1.6mm; }
+    .p18 .stamp { flex: none; width: 62mm; border: .4mm dashed rgba(255,255,255,.55); border-radius: 3mm; padding: 3mm 3.4mm; font-family: var(--head); font-weight: 700; font-size: 6.6pt; letter-spacing: .14em; text-transform: uppercase; color: #B7CCE2; position: relative; z-index: 1; min-height: 34mm; }
+  </style>
+  <header class="ph"><span class="sec">About us</span><img src="{{LOGO}}" alt="Ray2Volt"></header>
+  <div class="pb">
+    <div>
+      <div class="kicker">Who wrote this guide</div>
+      <h1 class="title">Ray2Volt Solar: <em>from first question to switched-on plant</em></h1>
+      <p class="lede">Ray2Volt Solar Private Limited designs, installs and looks after solar power plants for homes, businesses and industry, and structures solar projects for investors. We wrote this guide because a good decision starts with understanding the options, whoever you choose to work with.</p>
+    </div>
+
+    <div class="cols-3 svc">
+      <div class="card tint" style="--accent-tint:var(--t-cyan)">
+        <div class="head-row"><span class="badge"><svg viewBox="0 0 64 64"><use href="#i-house-solar"/></svg></span><h3>Homes and housing communities</h3></div>
+        <p class="small" style="margin-top:2mm">On-grid and hybrid rooftop systems, with help through the PM Surya Ghar application, net-meter paperwork and bank loan documents.</p>
+      </div>
+      <div class="card tint" style="--accent-tint:var(--t-blue)">
+        <div class="head-row"><span class="badge"><svg viewBox="0 0 64 64"><use href="#i-factory"/></svg></span><h3>Commercial and industrial</h3></div>
+        <p class="small" style="margin-top:2mm">Rooftop and ground-mounted plants for shops, offices, institutions and factories, on a purchase (CAPEX) or pay-per-unit (OPEX) basis.</p>
+      </div>
+      <div class="card tint" style="--accent-tint:var(--t-gold)">
+        <div class="head-row"><span class="badge"><svg viewBox="0 0 64 64"><use href="#i-investor"/></svg></span><h3>Investors and RESCO projects</h3></div>
+        <p class="small" style="margin-top:2mm">Solar plants built on a customer's premises and funded by investors, with the power sold under a long-term agreement.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <h4 style="margin-bottom:3mm">What we take care of</h4>
+      <div class="how">
+        <div><b>Study</b>Site visit, roof or land check and a look at your electricity bills.</div>
+        <div><b>Design</b>A system sized to your use, with a clear proposal and savings estimate.</div>
+        <div><b>Approvals</b>DISCOM applications, metering, and subsidy or loan paperwork.</div>
+        <div><b>Build</b>Supply, installation, testing and commissioning.</div>
+        <div><b>Care</b>Monitoring, cleaning guidance, maintenance and warranty support.</div>
+      </div>
+    </div>
+
+    <div class="contact">
+      <div style="flex:1;position:relative;z-index:1">
+        <h4 style="color:var(--gold-2)">Talk to us</h4>
+        <h2 style="margin-top:1.6mm">Questions about anything in this guide?</h2>
+        <p style="margin-top:2.4mm;max-width:88mm">Send us your latest electricity bill and tell us what you are trying to achieve. We will explain which options apply to you, in plain language and without obligation.</p>
+        <div class="mail">sales@ray2voltsolar.com</div>
+        <div class="who">Ray2Volt Solar Private Limited</div>
+      </div>
+      <div class="stamp">Shared with you by</div>
+    </div>
+
+    <div class="card grey grow" style="display:flex;flex-direction:column;justify-content:center">
+      <h4 style="color:var(--navy-2)">About the information in this guide</h4>
+      <p class="small" style="margin-top:1.4mm">This guide is for general education. It describes rules, schemes and typical practice in India as understood in November 2026. Electricity regulations differ from state to state and are revised often; subsidy schemes, loan terms and tax rules also change. Worked examples use illustrative rates and are not estimates for any particular consumer. Nothing here is financial, legal or tax advice, or an offer of any investment or loan. Before deciding, confirm current rules with your electricity distribution company, your bank and your chartered accountant, and ask for a written proposal specific to your site.</p>
+      <p class="tiny" style="margin-top:1.6mm">Based on published material from the Ministry of New and Renewable Energy, the Ministry of Power, the Central Electricity Authority, the Andhra Pradesh Electricity Regulatory Commission, the Reserve Bank of India and the PM Surya Ghar national portal. © 2026 Ray2Volt Solar Private Limited.</p>
+    </div>
+  </div>
+  <footer class="pf"><span>{{FOOT}}</span><span class="pn">{{PN}}</span></footer>
+</section>

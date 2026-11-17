@@ -1,0 +1,86 @@
+<section class="page p01" data-sec="basics">
+  <style>
+    .p01 { background: #fff; }
+    .p01 .top { padding: 20mm 18mm 0; flex: none; }
+    .p01 .logo { height: 11.5mm; display: block; }
+    .p01 .co { font-family: var(--head); font-weight: 700; font-size: 7.6pt; letter-spacing: .2em; text-transform: uppercase; color: var(--muted); margin-top: 3mm; }
+    .p01 .ttl { margin-top: 24mm; }
+    .p01 .eyebrow { display: inline-flex; align-items: center; gap: 3mm; font-family: var(--head); font-weight: 800; font-size: 8.6pt; letter-spacing: .2em; text-transform: uppercase; color: #007A9C; }
+    .p01 .eyebrow::before { content: ""; width: 14mm; height: 1.4mm; border-radius: 1mm; background: linear-gradient(90deg, var(--gold), var(--cyan)); }
+    .p01 h1 { font-size: 47pt; font-weight: 800; letter-spacing: -.03em; line-height: 1.02; margin-top: 5mm; color: var(--navy); }
+    .p01 h1 span { background: linear-gradient(90deg, #0B63CE 0%, #00A9D6 100%); -webkit-background-clip: text; background-clip: text; color: transparent; }
+    .p01 .sub { font-size: 13.4pt; line-height: 1.42; color: var(--text); max-width: 150mm; margin-top: 7mm; }
+    .p01 .chips { margin-top: 8mm; gap: 2mm; max-width: 165mm; }
+    .p01 .chip { font-size: 7.8pt; padding: 1.6mm 3.6mm; background: #fff; border: .35mm solid var(--line); color: var(--navy-2); }
+    .p01 .art { margin-top: auto; position: relative; flex: none; }
+    .p01 .art svg { display: block; width: 100%; height: auto; }
+    .p01 .strip { position: absolute; left: 18mm; right: 18mm; bottom: 8mm; display: flex; justify-content: space-between; align-items: flex-end; font-family: var(--head); font-weight: 600; font-size: 7.4pt; letter-spacing: .08em; color: #B7CCE2; }
+    .p01 .strip b { color: #fff; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; font-size: 7.6pt; }
+  </style>
+  <div class="top">
+    <img class="logo" src="{{LOGO}}" alt="Ray2Volt">
+    <div class="co">Ray2Volt Solar Private Limited</div>
+    <div class="ttl">
+      <div class="eyebrow">A plain-language guide</div>
+      <h1>Solar &amp; Green Energy, <span>Explained</span></h1>
+      <p class="sub">What green energy is, how solar power is metered and billed, how it can be owned and paid for, and how to tell which route fits your situation. No technical background needed.</p>
+      <div class="chips">
+        <span class="chip">Green energy</span><span class="chip">Net metering</span><span class="chip">Gross metering</span><span class="chip">Net billing</span><span class="chip">Behind the meter</span><span class="chip">Open access</span><span class="chip">Captive &amp; group captive</span><span class="chip">CAPEX &amp; OPEX</span><span class="chip">Subsidy, loans &amp; tax</span>
+      </div>
+    </div>
+  </div>
+  <div class="art">
+    <svg viewBox="0 0 794 470" role="img" aria-label="Illustration: the sun rising behind a town with rooftop solar, a factory, transmission towers and a field of solar panels.">
+      <defs>
+        <linearGradient id="c-sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0A2540"/><stop offset="1" stop-color="#0E4C8A"/></linearGradient>
+        <radialGradient id="c-glow" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#FFC53D" stop-opacity=".55"/><stop offset="1" stop-color="#FFC53D" stop-opacity="0"/></radialGradient>
+        <clipPath id="c-clip"><path d="M0 46 Q397 -30 794 46 V470 H0 Z"/></clipPath>
+      </defs>
+      <g clip-path="url(#c-clip)">
+        <rect width="794" height="470" fill="url(#c-sky)"/>
+        <!-- sun -->
+        <circle cx="560" cy="318" r="290" fill="url(#c-glow)"/>
+        <g fill="none" stroke="#FFC53D"><circle cx="560" cy="318" r="150" opacity=".35"/><circle cx="560" cy="318" r="196" opacity=".2"/><circle cx="560" cy="318" r="246" opacity=".1"/></g>
+        <circle cx="560" cy="318" r="108" fill="url(#g-sun)"/>
+        <!-- far hills -->
+        <path d="M0 330 Q120 286 250 322 T520 316 T794 300 V470 H0 Z" fill="#0B3A6B"/>
+        <!-- pylons + wires in front of sun -->
+        <g fill="none" stroke="#0A2540" stroke-width="2.400" stroke-linecap="round" stroke-linejoin="round">
+          <g id="c-py"><path d="M508 224h18l14 116M508 224l-14 116M486 244h62M492 266h50M504 244l28 22M530 244l-28 22M500 266l34 34M534 266l-34 34M497 300h40M497 300l43 40M537 300l-43 40"/></g>
+          <use href="#c-py" x="150" y="14"/>
+          <path d="M486 244 Q560 280 636 258M548 244 Q622 280 698 258M492 266 Q566 300 642 280"/>
+        </g>
+        <path d="M548 244 Q470 262 392 226M698 258 Q750 276 794 262" fill="none" stroke="#5FD0EC" stroke-width="1.600" opacity=".7"/>
+        <!-- ground -->
+        <path d="M0 352 Q200 330 420 344 T794 336 V470 H0 Z" fill="#072038"/>
+        <!-- house -->
+        <g>
+          <rect x="62" y="296" width="96" height="56" fill="#fff"/>
+          <path d="M50 300 L110 252 L170 300 Z" fill="#5FD0EC"/>
+          <path d="M116 262 L160 297 L146 297 L104 264 Z" fill="url(#g-panel)" stroke="#fff" stroke-width="1.200"/>
+          <rect x="100" y="318" width="20" height="34" fill="#0B63CE"/><rect x="72" y="310" width="18" height="16" fill="#BFE6F5"/><rect x="130" y="310" width="18" height="16" fill="#BFE6F5"/>
+        </g>
+        <!-- apartment -->
+        <g>
+          <rect x="190" y="226" width="76" height="126" fill="#EAF4FE"/>
+          <g stroke="url(#g-panel)" stroke-width="6" stroke-linecap="round"><path d="M196 223 L216 212M222 223 L242 212M248 223 L262 215"/></g>
+          <g fill="#00A9D6"><rect x="200" y="240" width="14" height="14"/><rect x="221" y="240" width="14" height="14"/><rect x="242" y="240" width="14" height="14"/><rect x="200" y="264" width="14" height="14"/><rect x="221" y="264" width="14" height="14"/><rect x="242" y="264" width="14" height="14"/><rect x="200" y="288" width="14" height="14"/><rect x="242" y="288" width="14" height="14"/><rect x="200" y="312" width="14" height="14"/><rect x="221" y="312" width="14" height="14"/><rect x="242" y="312" width="14" height="14"/></g>
+          <rect x="221" y="288" width="14" height="14" fill="#FFC53D"/>
+        </g>
+        <!-- factory -->
+        <g>
+          <rect x="402" y="258" width="16" height="50" fill="#9FB3C8"/>
+          <path d="M296 352 V300 L330 280 V300 L364 280 V300 L398 280 V300 H432 V352 Z" fill="#fff"/>
+          <g stroke="url(#g-panel)" stroke-width="5" stroke-linecap="round"><path d="M300 296 L326 281M334 296 L360 281M368 296 L394 281"/></g>
+          <g fill="#BFE6F5"><rect x="308" y="316" width="20" height="14"/><rect x="340" y="316" width="20" height="14"/><rect x="372" y="316" width="20" height="14"/><rect x="404" y="316" width="20" height="14"/></g>
+        </g>
+        <!-- solar field, foreground -->
+        <g id="c-row" transform="translate(0,-30)">
+          <g id="c-pan"><path d="M18 440 L34 392 H110 L94 440 Z" fill="url(#g-panel)" stroke="#8CC4F7" stroke-width="1.200"/><path d="M43 440 L59 392M69 440 L85 392M26 416 H102" stroke="#8CC4F7" stroke-width="1" fill="none"/></g>
+          <use href="#c-pan" x="86"/><use href="#c-pan" x="172"/><use href="#c-pan" x="258"/><use href="#c-pan" x="344"/><use href="#c-pan" x="430"/><use href="#c-pan" x="516"/><use href="#c-pan" x="602"/><use href="#c-pan" x="688"/><use href="#c-pan" x="-86"/>
+        </g>
+      </g>
+    </svg>
+    <div class="strip"><b>Homes · Businesses · Industry · Investors</b><span>November 2026 edition</span></div>
+  </div>
+</section>

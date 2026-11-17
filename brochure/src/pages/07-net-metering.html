@@ -1,0 +1,112 @@
+<section class="page" data-sec="metering">
+  <header class="ph"><span class="sec">Metering &nbsp;·&nbsp; Net metering</span><img src="{{LOGO}}" alt="Ray2Volt"></header>
+  <div class="pb">
+    <div>
+      <div class="kicker">How solar is billed · Option 1</div>
+      <h1 class="title">Net metering: <em>one meter that counts both ways</em></h1>
+      <p class="lede">Your solar plant powers your building first. Whatever you don't use at that moment flows out to the grid, and whatever you still need comes in from it. A single two-way meter keeps count, and you pay only for the <b>difference</b> — the “net”.</p>
+    </div>
+
+    <div class="fig">
+      <div class="fig-title">How the power flows</div>
+      <svg viewBox="0 0 680 262" role="img" aria-label="Net metering power flow: solar feeds the home first, surplus is exported through a two-way meter, and the grid supplies the home when solar is not enough.">
+        <rect x="0" y="232" width="680" height="30" rx="6" class="ground"/>
+        <!-- sun -->
+        <use href="#i-sun" x="22" y="10" width="84" height="84"/>
+        <path class="flow solar dash" style="stroke-width:2" d="M104 66 L152 92"/>
+        <path class="flow solar dash" style="stroke-width:2" d="M108 54 L212 88"/>
+                <!-- building -->
+        <rect x="140" y="118" width="190" height="114" fill="#fff" stroke="#0A2540" stroke-width="2.6"/>
+        <rect x="132" y="109" width="206" height="11" rx="2.500" fill="#0A2540"/>
+        <rect x="152" y="132" width="166" height="88" rx="5" fill="#F1F7FD"/>
+        <!-- roof panels (side view) -->
+        <g stroke="#7C8FA5" stroke-width="2.400" stroke-linecap="round"><path d="M186 109V93M246 109V93M306 109V93"/></g>
+        <g stroke="url(#g-panel)" stroke-width="7.500" stroke-linecap="round"><path d="M152 106 L196 84"/><path d="M212 106 L256 84"/><path d="M272 106 L316 84"/></g>
+        <text x="262" y="70" class="lbl">Rooftop solar panels</text>
+        <!-- inverter + loads -->
+        <use href="#i-inverter" x="270" y="138" width="40" height="40"/>
+        <text x="290" y="190" text-anchor="middle" class="lbl-s">Inverter</text>
+        <use href="#i-bulb" x="160" y="142" width="30" height="30"/>
+        <use href="#i-plug" x="196" y="142" width="30" height="30"/>
+        <text x="193" y="190" text-anchor="middle" class="lbl-s">Your lights &amp; appliances</text>
+        <path class="flow solar" d="M300 120 V136"/>
+        <path class="flow solar" d="M268 158 H236"/>
+        <!-- meter -->
+        <rect x="438" y="196" width="12" height="36" fill="#B9C7D6"/>
+        <use href="#i-meter-bi" x="404" y="118" width="80" height="80"/>
+        <text x="444" y="108" text-anchor="middle" class="lbl-b">Two-way “net” meter</text>
+        <!-- pylon -->
+        <use href="#i-pylon" x="552" y="104" width="124" height="128"/>
+        <text x="614" y="96" text-anchor="middle" class="lbl-b">Electricity grid</text>
+        <!-- flows house <-> meter <-> grid -->
+        <path class="flow export" d="M334 147 H408"/>
+        <path class="flow export" d="M482 147 H566"/>
+        <path class="flow grid" d="M566 181 H484"/>
+        <path class="flow grid" d="M408 181 H336"/>
+        <text x="524" y="139" text-anchor="middle" class="lbl c-export">EXPORT</text>
+        <text x="524" y="198" text-anchor="middle" class="lbl c-grid">IMPORT</text>
+        <!-- numbered markers -->
+        <g font-size="9" font-weight="800" text-anchor="middle">
+          <circle cx="252" cy="143" r="8.500" fill="#F5A300"/><text x="252" y="146.300" fill="#0A2540">1</text>
+          <circle cx="371" cy="133" r="8.500" fill="#1F9D62"/><text x="371" y="136.300" class="on-dark">2</text>
+          <circle cx="371" cy="196" r="8.500" fill="#0B63CE"/><text x="371" y="199.300" class="on-dark">3</text>
+        </g>
+        <text x="20" y="251" class="lbl-s">Sunny hours: solar is usually more than you need</text>
+        <text x="660" y="251" text-anchor="end" class="lbl-s">Evenings, nights, cloudy days: the grid tops you up</text>
+      </svg>
+      <div class="cols-3 small" style="margin-top:2.6mm">
+        <div class="head-row" style="align-items:flex-start"><span class="chip gold" style="background:var(--gold);color:var(--navy)">1</span><span><b>Solar first.</b> Sunlight becomes electricity and runs your own lights and machines.</span></div>
+        <div class="head-row" style="align-items:flex-start"><span class="chip" style="background:var(--green);color:#fff">2</span><span><b>Surplus out.</b> Extra solar flows to the grid. The meter records it as <b>export</b>.</span></div>
+        <div class="head-row" style="align-items:flex-start"><span class="chip" style="background:var(--blue);color:#fff">3</span><span><b>Top-up in.</b> When solar is not enough, grid power comes in as <b>import</b>.</span></div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="card" style="flex:1.05">
+        <h4>A worked example · one month</h4>
+        <h2>Where the power went</h2>
+        <p class="small muted" style="margin-bottom:2.6mm">A home that uses 500 units a month, with a 3 kW rooftop plant producing about 360 units.</p>
+        <div class="bars">
+          <div>
+            <div class="bar-l">The home's 500 units of use <span>came from…</span></div>
+            <div class="bar"><i class="solar" style="flex:140">140 solar</i><i class="grid" style="flex:360">360 from the grid</i></div>
+          </div>
+          <div>
+            <div class="bar-l">The plant's 360 units of solar <span>went to…</span></div>
+            <div class="bar" style="width:72%"><i class="solar" style="flex:140">140 home</i><i class="export" style="flex:220">220 to the grid</i></div>
+          </div>
+        </div>
+        <p class="tiny" style="margin-top:2.4mm">1 unit = 1 kilowatt-hour (kWh). The 140 units used directly never pass through the meter at all.</p>
+      </div>
+      <div class="card tint" style="flex:1">
+        <h4>What the bill counts</h4>
+        <h2>Import minus export</h2>
+        <div class="eq" style="margin:2.6mm 0 2.4mm">
+          <div class="t grid" style="background:#fff"><span class="k">Import</span><span class="n">360</span><span class="u">units in</span></div>
+          <span class="op">−</span>
+          <div class="t export" style="background:#fff"><span class="k">Export</span><span class="n">220</span><span class="u">units out</span></div>
+          <span class="op">=</span>
+          <div class="t total"><span class="k">You pay for</span><span class="n">140</span><span class="u">units</span></div>
+        </div>
+        <p class="small">Without solar this home would be billed for all <b>500 units</b>. With net metering it is billed for <b>140</b>. Each exported unit cancels one imported unit at the full retail rate, which is why net metering usually gives the biggest saving per unit.</p>
+      </div>
+    </div>
+
+    <div class="cols-3 grow">
+      <div class="card top">
+        <h3>If you export more than you import</h3>
+        <p class="small">The surplus is not lost. Depending on your state, it is carried forward as credit to the next bill or paid to you at a rate fixed by the state regulator, usually lower than the retail tariff.</p>
+      </div>
+      <div class="card top">
+        <h3>Limits to know</h3>
+        <p class="small">Every State Electricity Regulatory Commission sets its own size limits, settlement period and surplus rate. Plant size is normally capped by your sanctioned load. In Andhra Pradesh, new net-metered systems can be up to 500 kW, settled monthly.</p>
+      </div>
+      <div class="card top">
+        <h3>Usually suits</h3>
+        <p class="small" style="margin-bottom:2mm">Anyone who uses a good share of their solar power themselves.</p>
+        <div class="chips"><span class="chip">Homes</span><span class="chip">Apartments</span><span class="chip">Shops</span><span class="chip">Offices</span><span class="chip">Schools</span><span class="chip">Hospitals</span><span class="chip">Small industry</span></div>
+      </div>
+    </div>
+  </div>
+  <footer class="pf"><span>{{FOOT}}</span><span class="pn">{{PN}}</span></footer>
+</section>
