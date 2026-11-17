@@ -1,0 +1,169 @@
+<section class="page p14" data-sec="money">
+  <style>
+    .p14 svg .grid-l { stroke: #E9EDF2; stroke-width: .8; }
+    .p14 svg .axis { stroke: #627287; stroke-width: .9; }
+    .p14 svg .ax { font-size: 7.5px; font-weight: 600; fill: #627287; }
+    .p14 svg .cap { font-size: 7.5px; font-weight: 700; letter-spacing: .08em; fill: #1F3A5F; }
+    .p14 svg .inb { font-size: 7.5px; font-weight: 700; fill: #fff; }
+    .p14 svg .box { fill: #fff; stroke: #0B1F3A; stroke-width: 1; }
+    .p14 .asof { display: flex; gap: 3mm; align-items: baseline; margin-top: 3mm; padding: 1.8mm 3mm; border: .25mm solid var(--gold); border-radius: var(--r); background: var(--t-gold); font-size: 8pt; color: var(--ink); }
+    .p14 .asof b { font-family: var(--head); font-size: 6.6pt; letter-spacing: .14em; text-transform: uppercase; color: var(--gold-ink); white-space: nowrap; }
+    .p14 .sg { display: grid; grid-template-columns: 1.22fr 1fr; gap: 5mm; align-items: start; }
+    .p14 .gst { display: flex; height: 5.4mm; gap: .4mm; margin: 1.4mm 0 1mm; }
+    .p14 .gst i { font-style: normal; font-family: var(--head); font-weight: 600; font-size: 6.6pt; display: flex; align-items: center; padding: 0 1.8mm; white-space: nowrap; color: #fff; }
+    .p14 .sec-h { display: flex; align-items: baseline; justify-content: space-between; border-bottom: .25mm solid var(--line); padding-bottom: 1.6mm; margin-bottom: 2.6mm; }
+  </style>
+  <header class="ph"><span class="sec">Money &nbsp;·&nbsp; Subsidy, loans &amp; tax</span><img src="{{LOGO}}" alt="Ray2Volt"></header>
+  <div class="pb">
+    <div>
+      <div class="kicker">Paying for solar · Help that exists</div>
+      <h1 class="title">Paying for it: <em>subsidy, loans and tax</em></h1>
+      <p class="lede">Homes can get a central government subsidy and a bank loan on easy terms. Businesses cannot get the home subsidy, but can borrow and may save on tax. Here is what is available today.</p>
+      <p class="asof"><b>As of November 2026</b><span>Schemes and rates change. Confirm with your bank and the official portal, pmsuryaghar.gov.in, before you decide.</span></p>
+    </div>
+
+    <div class="fig">
+      <div class="fig-title">PM Surya Ghar: Muft Bijli Yojana <span>Central subsidy for home rooftop solar</span></div>
+      <div class="sg">
+        <svg viewBox="0 0 380 214" role="img" aria-label="Step chart of the central subsidy by plant size: 1 kW gets 30,000 rupees, 2 kW gets 60,000 rupees, 3 kW gets 78,000 rupees, and 4 kW or more stays at the 78,000 rupee maximum.">
+          <text x="0" y="10" class="cap">SUBSIDY BY PLANT SIZE · INDIVIDUAL HOMES</text>
+          <!-- gridlines: scale 120px = ₹78,000 -->
+          <path class="grid-l" d="M52 139.2 H376 M52 108.5 H376 M52 77.7 H376 M52 46.9 H376"/>
+          <g class="ax" text-anchor="end">
+            <text x="46" y="173">₹0</text><text x="46" y="142">₹20,000</text><text x="46" y="111">₹40,000</text><text x="46" y="80">₹60,000</text><text x="46" y="49">₹80,000</text>
+          </g>
+          <!-- 1 kW -->
+          <rect x="70" y="123.8" width="56" height="46.2" fill="#17855A"/>
+          <text x="98" y="150" text-anchor="middle" class="inb">₹30,000</text>
+          <!-- 2 kW -->
+          <rect x="146" y="123.8" width="56" height="46.2" fill="#17855A"/>
+          <rect x="146" y="77.7" width="56" height="45.6" fill="#17855A"/>
+          <text x="174" y="150" text-anchor="middle" class="inb">₹30,000</text>
+          <text x="174" y="104" text-anchor="middle" class="inb">₹30,000</text>
+          <!-- 3 kW -->
+          <rect x="222" y="123.8" width="56" height="46.2" fill="#17855A"/>
+          <rect x="222" y="77.7" width="56" height="45.6" fill="#17855A"/>
+          <rect x="222" y="50" width="56" height="27.2" fill="#6DBB98"/>
+          <text x="250" y="150" text-anchor="middle" class="inb">₹30,000</text>
+          <text x="250" y="104" text-anchor="middle" class="inb">₹30,000</text>
+          <text x="250" y="66.5" text-anchor="middle" class="inb" style="fill:#0B1F3A">₹18,000</text>
+          <!-- 4 kW+ : capped -->
+          <rect x="298.5" y="50.5" width="55" height="119.5" fill="#EEF6F2" stroke="#17855A" stroke-dasharray="3 2"/>
+          <text x="326" y="104" text-anchor="middle" class="ax">no further</text>
+          <text x="326" y="114" text-anchor="middle" class="ax">increase</text>
+          <!-- step line over bar tops -->
+          <path d="M70 123.8 H126 M146 77.7 H202 M222 50 H354" stroke="#0B1F3A" stroke-width="1.2" fill="none"/>
+          <path d="M126 123.8 H146 V77.7 M202 77.7 H222 V50" stroke="#0B1F3A" stroke-width=".8" stroke-dasharray="2 2" fill="none"/>
+          <!-- totals -->
+          <text x="98" y="117" text-anchor="middle" class="lbl-b">₹30,000</text>
+          <text x="174" y="71" text-anchor="middle" class="lbl-b">₹60,000</text>
+          <text x="250" y="43" text-anchor="middle" class="lbl-b">₹78,000</text>
+          <text x="326" y="43" text-anchor="middle" class="lbl-b c-export">maximum</text>
+          <path class="axis" d="M52 170 H376"/>
+          <g class="lbl" text-anchor="middle"><text x="98" y="183">1 kW</text><text x="174" y="183">2 kW</text><text x="250" y="183">3 kW</text><text x="326" y="183">4 kW or more</text></g>
+          <!-- key -->
+          <rect x="52" y="198" width="10" height="7" fill="#17855A"/><text x="66" y="204.5" class="ax">₹30,000 per kW for the first 2 kW</text>
+          <rect x="220" y="198" width="10" height="7" fill="#6DBB98"/><text x="234" y="204.5" class="ax">₹18,000 for the third kW</text>
+        </svg>
+        <div class="small">
+          <h3>Conditions</h3>
+          <ul class="ticks" style="margin-top:1.4mm">
+            <li>A residential electricity connection</li>
+            <li>A grid-connected rooftop system</li>
+            <li>Made-in-India panels from the government’s approved list</li>
+            <li>Installed by a registered vendor</li>
+          </ul>
+          <p style="margin-top:2.4mm"><b>Housing societies and resident welfare associations:</b> ₹18,000 per kW for common facilities, including EV charging, up to 500 kW (at 3 kW per house).</p>
+          <p class="callout warn" style="margin-top:2.4mm"><b>Homes only.</b> The subsidy is not for commercial or industrial connections such as shops, offices and factories.</p>
+        </div>
+      </div>
+      <svg viewBox="0 0 680 66" role="img" aria-label="How the subsidy reaches the applicant: apply on the national portal, a registered vendor installs the plant, inspection and net meter, then the subsidy is paid into the applicant's bank account." style="margin-top:3mm">
+        <text x="0" y="9" class="cap">HOW THE MONEY REACHES THE APPLICANT</text>
+        <g>
+          <rect class="box" x="0.5" y="20.5" width="151" height="44" rx="3"/>
+          <text x="12" y="38" class="lbl-b c-solar">1</text><text x="26" y="38" class="lbl">Apply online</text>
+          <text x="26" y="52" class="lbl-s">only on pmsuryaghar.gov.in</text>
+          <rect class="box" x="176.5" y="20.5" width="151" height="44" rx="3"/>
+          <text x="188" y="38" class="lbl-b c-solar">2</text><text x="202" y="38" class="lbl">Vendor installs</text>
+          <text x="202" y="52" class="lbl-s">a registered vendor</text>
+          <rect class="box" x="352.5" y="20.5" width="151" height="44" rx="3"/>
+          <text x="364" y="38" class="lbl-b c-solar">3</text><text x="378" y="38" class="lbl">Inspection, net meter</text>
+          <text x="378" y="52" class="lbl-s">the plant is commissioned</text>
+          <rect x="528.5" y="20.5" width="151" height="44" rx="3" fill="#EEF6F2" stroke="#17855A"/>
+          <text x="540" y="38" class="lbl-b c-export">4</text><text x="554" y="38" class="lbl c-export">Subsidy paid</text>
+          <text x="554" y="52" class="lbl-s">into the applicant’s bank account</text>
+        </g>
+        <g class="flow plain" style="stroke-width:1.4"><path d="M154 42.5 H172"/><path d="M330 42.5 H348"/></g>
+        <path class="flow export" style="stroke-width:1.4" d="M506 42.5 H524"/>
+      </svg>
+      <p class="fig-cap">A central government scheme, currently sanctioned until March 2027. Target: 1 crore households; over 65 lakh homes covered by November 2026.</p>
+    </div>
+
+    <div>
+      <div class="sec-h"><h2>Loans, by type of borrower</h2><span class="tiny">Lenders typically fund about 70–80% of a business project’s cost</span></div>
+      <div class="cols-3 small">
+        <div>
+          <h3>Homes</h3>
+          <ul class="dots" style="margin-top:1.2mm">
+            <li>Public-sector banks: collateral-free loans for systems up to 3 kW (up to about ₹2 lakh); larger loans up to 10 kW</li>
+            <li>Tenure up to 10 years, at a concessional interest rate linked to the RBI repo rate; ask your bank for the current rate</li>
+            <li>Apply through JanSamarth (jansamarth.in), linked from the national portal</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Micro, small and medium enterprises</h3>
+          <ul class="dots" style="margin-top:1.2mm">
+            <li>Term loans from banks and NBFCs (non-bank finance companies)</li>
+            <li>SIDBI rooftop-solar loans for MSMEs</li>
+            <li>CGTMSE credit-guarantee cover for micro and small enterprises, up to ₹10 crore from April 2025</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Larger businesses</h3>
+          <ul class="dots" style="margin-top:1.2mm">
+            <li>Term loans from banks and NBFCs</li>
+            <li>IREDA, a government renewable-energy lender</li>
+            <li>Or no loan at all, through the OPEX / RESCO route on page 13</li>
+          </ul>
+        </div>
+      </div>
+      <p class="callout note box small" style="margin-top:3mm"><b>For lenders · priority sector.</b> Under RBI’s priority sector lending directions (2025), renewable-energy loans to individual households count up to ₹10 lakh per borrower, and loans to renewable power generators up to ₹35 crore.</p>
+    </div>
+
+    <div class="row grow">
+      <div class="card" style="flex:1.12">
+        <h4>For businesses · tax and GST</h4>
+        <div class="cols-2" style="margin-top:2mm;gap:4mm">
+          <div class="stat"><span class="n">40%</span><span class="l">depreciation a year on the written-down value (what is left after earlier years’ claims), under current income-tax rules. Half that if used under 180 days in the first year.</span></div>
+          <div class="stat"><span class="n">5%</span><span class="l">GST on solar panels and solar power generating systems, reduced from 12% in September 2025.</span></div>
+        </div>
+        <p class="small" style="margin-top:2.6mm"><b>Supply-and-install contracts</b> are taxed in two parts:</p>
+        <div class="gst"><i style="flex:70;background:var(--navy-2)">70% as goods · 5%</i><i style="flex:30;background:var(--red)">30% services · 18%</i></div>
+        <p class="small">About <b>8.9% overall</b>. Ask your chartered accountant how it applies to you.</p>
+      </div>
+      <div class="card" style="flex:1">
+        <h4>Payback · illustrative</h4>
+        <svg viewBox="0 0 300 132" role="img" aria-label="Schematic line chart: cumulative savings rise each year and cross the upfront cost line at the payback point; after that, savings exceed the cost. A lower cost after subsidy is crossed earlier. No rupee values." style="display:block;width:100%;margin-top:1.6mm">
+          <path class="grid-l" d="M24 20 H296 M24 46 H296 M24 72 H296 M24 98 H296"/>
+          <path d="M150 52 L290 14 L290 120 L150 120 Z" fill="#EEF6F2"/>
+          <path d="M24 52 H296" stroke="#C2463C" stroke-width="1.4" fill="none"/>
+          <path d="M24 78 H296" stroke="#C2463C" stroke-width="1" stroke-dasharray="3 3" fill="none"/>
+          <path d="M24 120 L290 47.6" stroke="#17855A" stroke-width="2" fill="none"/>
+          <path d="M150 52 V120" stroke="#0B1F3A" stroke-width=".8" stroke-dasharray="2 2"/>
+          <circle cx="150" cy="52" r="3" fill="#0B1F3A"/>
+          <circle cx="111" cy="78" r="2.4" fill="#fff" stroke="#0B1F3A"/>
+          <text x="28" y="47" class="ax" style="fill:#9C342C">Upfront cost</text>
+          <text x="28" y="73" class="ax" style="fill:#9C342C">Cost after subsidy (homes)</text>
+          <text x="156" y="44" class="lbl">Payback point</text>
+          <text x="286" y="40" text-anchor="end" class="ax" style="fill:#0F6645">Cumulative savings</text>
+          <text x="282" y="112" text-anchor="end" class="ax" style="fill:#0F6645">savings beyond cost</text>
+          <path class="axis" d="M24 12 V120 H296"/>
+          <text x="296" y="130" text-anchor="end" class="ax">years →</text>
+          <text x="24" y="130" class="ax">₹ (no scale)</text>
+        </svg>
+        <p class="small" style="margin-top:1.4mm">Payback is often around 3 to 6 years, depending on your tariff, how much of the power you use yourself, and any subsidy.</p>
+      </div>
+    </div>
+  </div>
+  <footer class="pf"><span>{{FOOT}}</span><span class="pn">{{PN}}</span></footer>
+</section>

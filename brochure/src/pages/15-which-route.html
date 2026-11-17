@@ -1,0 +1,230 @@
+<section class="page p15" data-sec="guide">
+  <style>
+    .p15 svg .p15-q { font-size: 8.4px; font-weight: 600; fill: var(--ink); }
+    .p15 svg .p15-on { font-size: 8.8px; font-weight: 700; fill: var(--ink); }
+    .p15 svg .p15-os { font-size: 7.3px; font-weight: 500; fill: var(--muted); }
+    .p15 svg .p15-cap { font-size: 7px; font-weight: 700; letter-spacing: .12em; fill: var(--muted); }
+    .p15 svg .p15-pg { font-size: 8px; font-weight: 700; fill: var(--ink); font-variant-numeric: tabular-nums; }
+    .p15 svg .p15-yn { font-size: 6.8px; font-weight: 700; letter-spacing: .08em; fill: var(--muted); }
+    .p15 svg .p15-ln { fill: none; stroke: #8FA3B8; stroke-width: 1; marker-end: url(#p15-ah); }
+    .p15 svg .p15-ln.n { marker-end: none; }
+    .p15 svg .p15-box { fill: #fff; stroke: #C9D5E2; stroke-width: .8; }
+    .p15 svg .p15-k { fill: var(--ink); }
+    .p15 .p15-leg { display: flex; flex-wrap: wrap; gap: 1mm 4.6mm; font-family: var(--head); font-size: 6.6pt; font-weight: 600; color: var(--muted); margin-top: 2.2mm; align-items: center; }
+    .p15 .p15-leg span { display: inline-flex; align-items: center; gap: 1.4mm; }
+    .p15 .p15-leg i { width: 1.1mm; height: 3.2mm; display: inline-block; }
+    .p15-mxw { display: flex; flex-direction: column; }
+    .p15-mxh { display: flex; align-items: baseline; gap: 3mm; margin-bottom: 1.6mm; }
+    .p15-mx { width: 100%; border-collapse: collapse; table-layout: fixed; flex: 1; }
+    .p15-mx thead th { font-family: var(--head); font-weight: 700; font-size: 6.2pt; line-height: 1.18; color: var(--ink); text-align: center; vertical-align: bottom; padding: 1.4mm .8mm 1.2mm; border-top: .7mm solid var(--line); }
+    .p15-mx thead th:first-child { width: 41mm; border-top: 0; }
+    .p15-mx thead th span { display: block; font-weight: 600; color: var(--muted); margin-top: .5mm; font-variant-numeric: tabular-nums; }
+    .p15-mx thead th.b { border-top-color: var(--cyan); } .p15-mx thead th.m { border-top-color: var(--blue); }
+    .p15-mx thead th.a { border-top-color: var(--green); } .p15-mx thead th.g { border-top-color: var(--gold); }
+    .p15-mx tbody th { font-family: var(--head); font-weight: 700; font-size: 7.4pt; color: var(--ink); text-align: left; white-space: nowrap; }
+    .p15-mx tbody th svg { width: 5mm; height: 5mm; vertical-align: middle; margin-right: 2mm; }
+    .p15-mx tbody th, .p15-mx tbody td { border-top: .25mm solid var(--line); padding: .6mm 0; }
+    .p15-mx tbody tr:last-child th, .p15-mx tbody tr:last-child td { border-bottom: .25mm solid var(--line); }
+    .p15-mx tbody td { text-align: center; vertical-align: middle; }
+    .p15-mx tbody td:nth-child(odd) { background: var(--t-grey); }
+    .p15 i.d, .p15 i.o { display: inline-block; width: 2.6mm; height: 2.6mm; border-radius: 50%; vertical-align: middle; }
+    .p15 i.d { background: var(--navy); } .p15 i.o { border: .35mm solid var(--navy); }
+    .p15-mxf { display: flex; gap: 5mm; margin-top: 1.8mm; font-family: var(--head); font-size: 6.6pt; font-weight: 600; color: var(--muted); align-items: center; }
+    .p15-mxf span { white-space: nowrap; display: inline-flex; align-items: center; gap: 1.4mm; }
+    .p15-mxf .r { margin-left: auto; font-weight: 500; }
+  </style>
+  <header class="ph"><span class="sec">Your guide &nbsp;·&nbsp; Choosing a route</span><img src="{{LOGO}}" alt="Ray2Volt"></header>
+  <div class="pb">
+    <div>
+      <div class="kicker">Putting it together</div>
+      <h1 class="title">Which route <em>fits you?</em></h1>
+      <p class="lede">There is no single right way to go solar. The best route depends on a few plain facts: where a plant could go, when you use power, how much you use and how you want to pay. Answer the questions below, then turn to the pages they point to.</p>
+    </div>
+
+    <div class="fig">
+      <div class="fig-title">From your situation to the pages worth reading</div>
+      <svg viewBox="0 0 680 460" role="img" aria-label="Decision chart. Start: do you have a roof or land you control? If yes: daytime use leads to rooftop net metering, little daytime use to gross metering, wanting nothing exported to zero-export behind the meter, wanting backup to a hybrid system, a plant above the net-metering limit to net billing. If no or not enough: sanctioned load of 100 kW or more leads to open access, shared buildings or several connections to group or virtual net metering, green power with no plant to a green tariff, and wanting to invest to a RESCO plant. Then, for any plant: own money is CAPEX, borrowing is loans and subsidy, nothing up front is OPEX or RESCO.">
+        <defs>
+          <marker id="p15-ah" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse" markerUnits="userSpaceOnUse"><path d="M1 1.5 L9 5 L1 8.5 Z" fill="#8FA3B8"/></marker>
+        </defs>
+
+        <!-- start node -->
+        <rect x="170" y="2" width="340" height="44" rx="4" style="fill:var(--navy)"/>
+        <text x="340" y="18" text-anchor="middle" class="p15-cap" style="fill:var(--gold-2)">START HERE</text>
+        <text x="340" y="35" text-anchor="middle" class="lbl-b on-dark">Do you have a roof or land you control?</text>
+
+        <!-- branch -->
+        <path class="p15-ln n" d="M340 46 V62 M168 62 H512"/>
+        <path class="p15-ln" d="M168 62 V86"/>
+        <path class="p15-ln" d="M512 62 V86"/>
+        <rect x="236" y="55" width="40" height="14" rx="2" fill="#F6FAFE" stroke="#8FA3B8" stroke-width=".8"/>
+        <text x="256" y="64.6" text-anchor="middle" class="p15-yn" style="fill:var(--navy)">YES</text>
+        <rect x="404" y="55" width="40" height="14" rx="2" fill="#F6FAFE" stroke="#8FA3B8" stroke-width=".8"/>
+        <text x="424" y="64.6" text-anchor="middle" class="p15-yn" style="fill:var(--navy)">NO</text>
+
+        <!-- ===== Lane A ===== -->
+        <rect x="0" y="86" width="336" height="264" rx="4" class="p15-box"/>
+        <path d="M0 116 H336" stroke="#D9E2EC" stroke-width=".8"/>
+        <text x="14" y="100" class="lbl">You can host a plant</text>
+        <text x="14" y="110" class="p15-os">on a roof or land you control — ask yourself:</text>
+        <path d="M14 141 V319" stroke="#C9D5E2" stroke-width="1" stroke-dasharray="2 3"/>
+
+        <!-- A1 -->
+        <circle cx="14" cy="141" r="7" class="p15-k"/><text x="14" y="143.8" text-anchor="middle" class="p15-yn" style="fill:#fff">1</text>
+        <text x="28" y="138" class="p15-q">Do you use most of your</text><text x="28" y="148.5" class="p15-q">electricity in the daytime?</text>
+        <path class="p15-ln n" d="M150 141 H160"/>
+        <path class="p15-ln" d="M160 141 H182"/>
+        <path class="p15-ln" d="M160 141 V185 H182"/>
+        <text x="173" y="137" text-anchor="middle" class="p15-yn">YES</text>
+        <text x="156" y="180" text-anchor="end" class="p15-yn">NO</text>
+        <g transform="translate(184,122)">
+          <rect width="146" height="38" rx="3" class="p15-box"/><rect width="2.6" height="38" style="fill:var(--blue)"/>
+          <text x="11" y="16" class="p15-on">Rooftop solar with</text><text x="11" y="27.5" class="p15-on">net metering</text>
+          <text x="137" y="23" text-anchor="end" class="p15-pg">p.07</text>
+        </g>
+        <g transform="translate(184,166)">
+          <rect width="146" height="38" rx="3" class="p15-box"/><rect width="2.6" height="38" style="fill:var(--blue)"/>
+          <text x="11" y="16" class="p15-on">Gross metering</text><text x="11" y="27.5" class="p15-os">sell all the solar you make</text>
+          <text x="137" y="23" text-anchor="end" class="p15-pg">p.08</text>
+        </g>
+
+        <!-- A2 -->
+        <circle cx="14" cy="231" r="7" class="p15-k"/><text x="14" y="233.8" text-anchor="middle" class="p15-yn" style="fill:#fff">2</text>
+        <text x="28" y="228" class="p15-q">Would you rather send</text><text x="28" y="238.5" class="p15-q">nothing to the grid?</text>
+        <path class="p15-ln" d="M150 231 H182"/>
+        <text x="166" y="227" text-anchor="middle" class="p15-yn">YES</text>
+        <g transform="translate(184,212)">
+          <rect width="146" height="38" rx="3" class="p15-box"/><rect width="2.6" height="38" style="fill:var(--cyan)"/>
+          <text x="11" y="16" class="p15-on">Zero-export plant,</text><text x="11" y="27.5" class="p15-on">behind the meter</text>
+          <text x="137" y="23" text-anchor="end" class="p15-pg">p.06</text>
+        </g>
+
+        <!-- A3 -->
+        <circle cx="14" cy="275" r="7" class="p15-k"/><text x="14" y="277.8" text-anchor="middle" class="p15-yn" style="fill:#fff">3</text>
+        <text x="28" y="272" class="p15-q">Do you want backup</text><text x="28" y="282.5" class="p15-q">during power cuts?</text>
+        <path class="p15-ln" d="M150 275 H182"/>
+        <text x="166" y="271" text-anchor="middle" class="p15-yn">YES</text>
+        <g transform="translate(184,256)">
+          <rect width="146" height="38" rx="3" class="p15-box"/><rect width="2.6" height="38" style="fill:var(--cyan)"/>
+          <text x="11" y="16" class="p15-on">Hybrid system</text><text x="11" y="27.5" class="p15-os">solar with a battery</text>
+          <text x="137" y="23" text-anchor="end" class="p15-pg">p.05</text>
+        </g>
+
+        <!-- A4 -->
+        <circle cx="14" cy="319" r="7" class="p15-k"/><text x="14" y="321.8" text-anchor="middle" class="p15-yn" style="fill:#fff">4</text>
+        <text x="28" y="316" class="p15-q">Is the plant above your</text><text x="28" y="326.5" class="p15-q">state’s net-metering limit?</text>
+        <path class="p15-ln" d="M150 319 H182"/>
+        <text x="166" y="315" text-anchor="middle" class="p15-yn">YES</text>
+        <g transform="translate(184,300)">
+          <rect width="146" height="38" rx="3" class="p15-box"/><rect width="2.6" height="38" style="fill:var(--blue)"/>
+          <text x="11" y="16" class="p15-on">Net billing</text><text x="11" y="27.5" class="p15-os">or gross metering</text>
+          <text x="137" y="23" text-anchor="end" class="p15-pg">p.09</text>
+        </g>
+
+        <!-- ===== Lane B ===== -->
+        <rect x="344" y="86" width="336" height="264" rx="4" class="p15-box"/>
+        <path d="M344 116 H680" stroke="#D9E2EC" stroke-width=".8"/>
+        <text x="358" y="100" class="lbl">No roof or land — or not enough</text>
+        <text x="358" y="110" class="p15-os">or you would like to invest — ask yourself:</text>
+        <path d="M358 144 V316" stroke="#C9D5E2" stroke-width="1" stroke-dasharray="2 3"/>
+
+        <!-- B1 -->
+        <circle cx="358" cy="144" r="7" class="p15-k"/><text x="358" y="146.8" text-anchor="middle" class="p15-yn" style="fill:#fff">5</text>
+        <text x="372" y="141" class="p15-q">Is your sanctioned load</text><text x="372" y="151.5" class="p15-q">100 kW or more?</text>
+        <path class="p15-ln" d="M494 144 H526"/>
+        <text x="510" y="140" text-anchor="middle" class="p15-yn">YES</text>
+        <g transform="translate(528,122)">
+          <rect width="146" height="44" rx="3" class="p15-box"/><rect width="2.6" height="44" style="fill:var(--green)"/>
+          <text x="11" y="15" class="p15-on">Open access</text><text x="11" y="26" class="p15-os">captive, group captive</text><text x="11" y="35.5" class="p15-os">or third-party sale</text>
+          <text x="137" y="26" text-anchor="end" class="p15-pg">p.11–12</text>
+        </g>
+
+        <!-- B2 -->
+        <circle cx="358" cy="201" r="7" class="p15-k"/><text x="358" y="203.8" text-anchor="middle" class="p15-yn" style="fill:#fff">6</text>
+        <text x="372" y="193" class="p15-q">Do you share a building,</text><text x="372" y="203.5" class="p15-q">or have several electricity</text><text x="372" y="214" class="p15-q">connections?</text>
+        <path class="p15-ln" d="M494 201 H526"/>
+        <text x="510" y="197" text-anchor="middle" class="p15-yn">YES</text>
+        <g transform="translate(528,179)">
+          <rect width="146" height="44" rx="3" class="p15-box"/><rect width="2.6" height="44" style="fill:var(--blue)"/>
+          <text x="11" y="19" class="p15-on">Group or virtual</text><text x="11" y="30.5" class="p15-on">net metering</text>
+          <text x="137" y="26" text-anchor="end" class="p15-pg">p.10</text>
+        </g>
+
+        <!-- B3 -->
+        <circle cx="358" cy="258" r="7" class="p15-k"/><text x="358" y="260.8" text-anchor="middle" class="p15-yn" style="fill:#fff">7</text>
+        <text x="372" y="255" class="p15-q">Do you want green power</text><text x="372" y="265.5" class="p15-q">with no plant at all?</text>
+        <path class="p15-ln" d="M494 258 H526"/>
+        <text x="510" y="254" text-anchor="middle" class="p15-yn">YES</text>
+        <g transform="translate(528,236)">
+          <rect width="146" height="44" rx="3" class="p15-box"/><rect width="2.6" height="44" style="fill:var(--green)"/>
+          <text x="11" y="19" class="p15-on">Green tariff</text><text x="11" y="30.5" class="p15-os">from your DISCOM</text>
+          <text x="137" y="26" text-anchor="end" class="p15-pg">p.11</text>
+        </g>
+
+        <!-- B4 -->
+        <circle cx="358" cy="316" r="7" class="p15-k"/><text x="358" y="318.8" text-anchor="middle" class="p15-yn" style="fill:#fff">8</text>
+        <text x="372" y="313" class="p15-q">Would you like to invest</text><text x="372" y="323.5" class="p15-q">in a solar plant?</text>
+        <path class="p15-ln" d="M494 316 H526"/>
+        <text x="510" y="312" text-anchor="middle" class="p15-yn">YES</text>
+        <g transform="translate(528,294)">
+          <rect width="146" height="44" rx="3" class="p15-box"/><rect width="2.6" height="44" style="fill:var(--gold)"/>
+          <text x="11" y="19" class="p15-on">Investing in a</text><text x="11" y="30.5" class="p15-on">RESCO plant</text>
+          <text x="137" y="26" text-anchor="end" class="p15-pg">p.13</text>
+        </g>
+
+        <!-- merge to payment -->
+        <path class="p15-ln" d="M168 350 V372"/>
+        <path class="p15-ln" d="M512 350 V372"/>
+
+        <!-- ===== Payment ===== -->
+        <rect x="0" y="372" width="680" height="86" rx="4" style="fill:var(--navy)"/>
+        <circle cx="21" cy="386" r="7" style="fill:var(--gold-2)"/><text x="21" y="388.8" text-anchor="middle" class="p15-yn" style="fill:var(--navy)">9</text>
+        <text x="34" y="389" class="p15-cap" style="fill:var(--gold-2)">THEN, FOR ANY PLANT YOU HOST OR OWN: HOW DO YOU WANT TO PAY?</text>
+        <g transform="translate(14,400)">
+          <rect width="208" height="46" rx="3" fill="#fff"/><rect width="2.6" height="46" style="fill:var(--gold)"/>
+          <text x="11" y="15" class="p15-cap">YOUR OWN MONEY</text>
+          <text x="11" y="29" class="p15-on">CAPEX</text><text x="11" y="39.5" class="p15-os">you buy, own and keep the savings</text>
+          <text x="199" y="29" text-anchor="end" class="p15-pg">p.13</text>
+        </g>
+        <g transform="translate(236,400)">
+          <rect width="208" height="46" rx="3" fill="#fff"/><rect width="2.6" height="46" style="fill:var(--gold)"/>
+          <text x="11" y="15" class="p15-cap">BORROW, OR USE A SUBSIDY</text>
+          <text x="11" y="29" class="p15-on">Loans, subsidy and tax</text><text x="11" y="39.5" class="p15-os">PM Surya Ghar for homes; bank loans</text>
+          <text x="199" y="29" text-anchor="end" class="p15-pg">p.14</text>
+        </g>
+        <g transform="translate(458,400)">
+          <rect width="208" height="46" rx="3" fill="#fff"/><rect width="2.6" height="46" style="fill:var(--gold)"/>
+          <text x="11" y="15" class="p15-cap">NOTHING UP FRONT</text>
+          <text x="11" y="29" class="p15-on">OPEX / RESCO</text><text x="11" y="39.5" class="p15-os">pay per unit; a developer owns the plant</text>
+          <text x="199" y="29" text-anchor="end" class="p15-pg">p.13</text>
+        </g>
+      </svg>
+      <div class="p15-leg">
+        <span style="color:var(--ink)">Edge colour shows the chapter:</span>
+        <span><i style="background:var(--cyan)"></i>Basics</span>
+        <span><i style="background:var(--blue)"></i>Metering</span>
+        <span><i style="background:var(--green)"></i>Open access</span>
+        <span><i style="background:var(--gold)"></i>Money</span>
+        <span style="margin-left:auto">Several answers can be yes: routes can be combined.</span>
+      </div>
+    </div>
+
+    <div class="grow p15-mxw">
+      <div class="p15-mxh"><h4>Typical situations</h4><span class="tiny">Routes people in each situation commonly look at first: a starting point for a conversation, not advice.</span></div>
+      <table class="p15-mx">
+        <thead><tr><th></th><th class="b">Hybrid, battery<span>p.05</span></th><th class="b">Zero export<span>p.06</span></th><th class="m">Net metering<span>p.07</span></th><th class="m">Gross metering<span>p.08</span></th><th class="m">Net billing<span>p.09</span></th><th class="m">Group or virtual<span>p.10</span></th><th class="a">Green tariff<span>p.11</span></th><th class="a">Open access<span>p.11–12</span></th><th class="g">CAPEX<span>p.13</span></th><th class="g">OPEX / RESCO<span>p.13</span></th><th class="g">Subsidy, loans<span>p.14</span></th></tr></thead>
+        <tbody>
+          <tr><th><svg viewBox="0 0 64 64"><use href="#i-house"/></svg>Home</th><td><i class="o"></i></td><td></td><td><i class="d"></i></td><td></td><td></td><td></td><td></td><td></td><td><i class="d"></i></td><td></td><td><i class="d"></i></td></tr>
+          <tr><th><svg viewBox="0 0 64 64"><use href="#i-apartment"/></svg>Apartment community</th><td></td><td></td><td><i class="d"></i></td><td></td><td></td><td><i class="d"></i></td><td></td><td></td><td><i class="d"></i></td><td><i class="o"></i></td><td><i class="d"></i></td></tr>
+          <tr><th><svg viewBox="0 0 64 64"><use href="#i-shop"/></svg>Shop or office</th><td><i class="o"></i></td><td><i class="o"></i></td><td><i class="d"></i></td><td></td><td></td><td></td><td><i class="o"></i></td><td></td><td><i class="d"></i></td><td><i class="o"></i></td><td><i class="o"></i></td></tr>
+          <tr><th><svg viewBox="0 0 64 64"><use href="#i-factory"/></svg>Factory</th><td></td><td><i class="o"></i></td><td><i class="o"></i></td><td></td><td><i class="d"></i></td><td><i class="o"></i></td><td><i class="o"></i></td><td><i class="d"></i></td><td><i class="d"></i></td><td><i class="d"></i></td><td><i class="d"></i></td></tr>
+          <tr><th><svg viewBox="0 0 64 64"><use href="#i-office"/></svg>School, hospital or trust</th><td><i class="o"></i></td><td></td><td><i class="d"></i></td><td></td><td></td><td><i class="d"></i></td><td><i class="o"></i></td><td></td><td><i class="o"></i></td><td><i class="d"></i></td><td><i class="o"></i></td></tr>
+          <tr><th><svg viewBox="0 0 64 64"><use href="#i-farm"/></svg>Farm or open land</th><td></td><td></td><td></td><td><i class="d"></i></td><td></td><td></td><td></td><td><i class="o"></i></td><td><i class="d"></i></td><td><i class="o"></i></td><td><i class="o"></i></td></tr>
+          <tr><th><svg viewBox="0 0 64 64"><use href="#i-investor"/></svg>Investor</th><td></td><td></td><td></td><td><i class="d"></i></td><td></td><td></td><td></td><td><i class="d"></i></td><td></td><td><i class="d"></i></td><td><i class="o"></i></td></tr>
+        </tbody>
+      </table>
+      <div class="p15-mxf"><span><i class="d"></i>Commonly considered</span><span><i class="o"></i>Sometimes considered</span><span class="r">For an investor, open access and OPEX / RESCO mean supplying the power.</span></div>
+    </div>
+  </div>
+  <footer class="pf"><span>{{FOOT}}</span><span class="pn">{{PN}}</span></footer>
+</section>

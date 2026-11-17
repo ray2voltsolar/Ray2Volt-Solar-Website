@@ -1,0 +1,188 @@
+<section class="page" data-sec="basics">
+  <style>
+    .p02-who { display: flex; align-items: center; gap: 4mm; padding: 2.4mm 4.4mm; }
+    .p02-who h4 { flex: none; width: 22mm; line-height: 1.3; }
+    .p02-who-list { flex: 1; display: grid; grid-template-columns: repeat(7, 1fr); gap: 1.6mm; }
+    .p02-who-list > div { display: flex; flex-direction: column; align-items: center; gap: 1mm; text-align: center;
+      font-family: var(--head); font-weight: 700; font-size: 6.6pt; line-height: 1.2; color: var(--ink); }
+    .p02-who-list svg { width: 8.6mm; height: 8.6mm; display: block; }
+
+    .p02-map { position: relative; display: flex; flex-direction: column; gap: 1.4mm; padding-left: 0; }
+    .p02-map::before { content: ""; position: absolute; left: 5.4mm; top: 4mm; bottom: 8mm; width: 0; border-left: .7mm dashed #9FB3C8; }
+    .p02-here { position: relative; display: flex; align-items: center; gap: 2.4mm; margin-bottom: .4mm; }
+    .p02-here .p02-pin { width: 11mm; height: 11mm; border-radius: 50%; background: var(--navy); color: #fff; display: flex; align-items: center; justify-content: center;
+      font-family: var(--head); font-weight: 800; font-size: 9pt; flex: none; box-shadow: 0 0 0 1.2mm #fff; }
+    .p02-here b { font-family: var(--head); font-size: 8.2pt; }
+    .p02-here span.tiny { margin-left: 1mm; }
+
+    .p02-line { position: relative; display: grid; grid-template-columns: 50mm 1fr; align-items: start; --c: var(--cyan); --ct: var(--t-cyan); --ci: #007A9C; }
+    .p02-line.c2 { --c: var(--blue); --ct: var(--t-blue); --ci: #0B55B0; }
+    .p02-line.c3 { --c: var(--green); --ct: var(--t-green); --ci: var(--green-ink); }
+    .p02-line.c4 { --c: var(--gold); --ct: var(--t-gold); --ci: var(--gold-ink); }
+    .p02-ch { position: relative; z-index: 1; display: flex; align-items: center; gap: 2.4mm; background: var(--ct); border-radius: 3mm; padding: 1.8mm 2.6mm 1.8mm 0; height: 13mm; }
+    .p02-ch .p02-no { width: 11mm; height: 11mm; border-radius: 50%; background: var(--c); color: #fff; flex: none; display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 0 0 1.2mm #fff; margin-left: -.0mm; }
+    .p02-line.c4 .p02-ch .p02-no { color: var(--navy); }
+    .p02-ch .p02-no svg { width: 7mm; height: 7mm; }
+    .p02-ch .p02-k { font-family: var(--head); font-weight: 800; font-size: 6pt; letter-spacing: .12em; text-transform: uppercase; color: var(--ci); display: block; }
+    .p02-ch b { font-family: var(--head); font-size: 8.6pt; line-height: 1.12; display: block; }
+
+    .p02-track { position: relative; display: grid; grid-template-columns: repeat(5, 1fr); padding-top: 1.6mm; }
+    .p02-track::before { content: ""; position: absolute; left: -2mm; top: 6.1mm; height: 1.5mm; border-radius: 1mm; background: var(--c); width: var(--len, 80%); }
+    .p02-st { position: relative; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 1.1mm; padding: 0 .3mm; }
+    .p02-st .p02-dot { width: 9.6mm; height: 9.6mm; border-radius: 50%; background: #fff; border: .9mm solid var(--c); display: flex; align-items: center; justify-content: center;
+      font-family: var(--head); font-weight: 800; font-size: 8.4pt; color: var(--ink); }
+    .p02-st .p02-t { font-family: var(--body); font-weight: 700; font-size: 7.4pt; line-height: 1.18; color: var(--text); }
+    .p02-end { display: flex; align-items: center; padding: 2.4mm 0 0 2mm; font-size: 7.4pt; line-height: 1.3; color: var(--muted); font-style: italic; grid-column: span 3; }
+
+    .p02-eq .t .n { font-size: 13pt; }
+    .p02-defs { display: flex; flex-direction: column; gap: 2.2mm; justify-content: space-between; }
+    .p02-def { display: flex; gap: 2.6mm; align-items: flex-start; }
+    .p02-term { flex: none; width: 12mm; font-family: var(--head); font-weight: 800; font-size: 12pt; line-height: 1; color: var(--accent-ink); padding-top: .4mm; }
+  </style>
+  <header class="ph"><span class="sec">The basics &nbsp;·&nbsp; Start here</span><img src="{{LOGO}}" alt="Ray2Volt"></header>
+  <div class="pb">
+    <div>
+      <div class="kicker">Welcome · How to use this guide</div>
+      <h1 class="title">Start here: <em>solar and green energy, in plain words</em></h1>
+      <p class="lede">This guide explains how solar power works, how it shows up on your electricity bill, how larger users can buy green power from elsewhere, and how a plant can be owned and paid for. <b>No prior knowledge is assumed:</b> every term is explained where it first appears.</p>
+    </div>
+
+    <div class="card grey p02-who">
+      <h4>Written for anyone</h4>
+      <div class="p02-who-list">
+        <div><svg viewBox="0 0 64 64"><use href="#i-house-solar"/></svg>Households</div>
+        <div><svg viewBox="0 0 64 64"><use href="#i-apartment"/></svg>Apartment communities</div>
+        <div><svg viewBox="0 0 64 64"><use href="#i-shop"/></svg>Shops and offices</div>
+        <div><svg viewBox="0 0 64 64"><use href="#i-factory"/></svg>Factories</div>
+        <div><svg viewBox="0 0 64 64"><use href="#i-farm"/></svg>Farmers</div>
+        <div><svg viewBox="0 0 64 64"><use href="#i-solarfarm"/></svg>Landowners</div>
+        <div><svg viewBox="0 0 64 64"><use href="#i-investor"/></svg>Investors</div>
+      </div>
+    </div>
+
+    <div class="fig">
+      <div class="fig-title">What's inside · a map of this guide</div>
+      <div class="p02-map">
+        <div class="p02-here"><span class="p02-pin">02</span><b>You are here: Start here</b><span class="tiny">Follow the four lines in order, or jump straight to the page you need.</span></div>
+
+        <div class="p02-line c1">
+          <div class="p02-ch"><span class="p02-no">1</span>
+            <span><span class="p02-k">Chapter 1</span><b>The basics</b></span></div>
+          <div class="p02-track" style="--len:calc(70% + 2mm)">
+            <div class="p02-st"><span class="p02-dot">03</span><span class="p02-t">Green energy</span></div>
+            <div class="p02-st"><span class="p02-dot">04</span><span class="p02-t">How solar makes electricity</span></div>
+            <div class="p02-st"><span class="p02-dot">05</span><span class="p02-t">On-grid, off-grid and hybrid systems</span></div>
+            <div class="p02-st"><span class="p02-dot">06</span><span class="p02-t">Behind the meter</span></div>
+          </div>
+        </div>
+
+        <div class="p02-line c2">
+          <div class="p02-ch"><span class="p02-no">2</span>
+            <span><span class="p02-k">Chapter 2</span><b>How solar is billed</b></span></div>
+          <div class="p02-track" style="--len:calc(70% + 2mm)">
+            <div class="p02-st"><span class="p02-dot">07</span><span class="p02-t">Net metering</span></div>
+            <div class="p02-st"><span class="p02-dot">08</span><span class="p02-t">Gross metering</span></div>
+            <div class="p02-st"><span class="p02-dot">09</span><span class="p02-t">Net billing, and the three compared</span></div>
+            <div class="p02-st"><span class="p02-dot">10</span><span class="p02-t">Sharing solar: group and virtual net metering</span></div>
+          </div>
+        </div>
+
+        <div class="p02-line c3">
+          <div class="p02-ch"><span class="p02-no">3</span>
+            <span><span class="p02-k">Chapter 3</span><b>Buying green power from elsewhere</b></span></div>
+          <div class="p02-track" style="--len:calc(30% + 2mm)">
+            <div class="p02-st"><span class="p02-dot">11</span><span class="p02-t">Open access</span></div>
+            <div class="p02-st"><span class="p02-dot">12</span><span class="p02-t">Open access routes, charges and banking</span></div>
+            <div class="p02-end">Typically viable for consumers with large, steady daytime demand.</div>
+          </div>
+        </div>
+
+        <div class="p02-line c4">
+          <div class="p02-ch"><span class="p02-no">4</span>
+            <span><span class="p02-k">Chapter 4</span><b>Money and decisions</b></span></div>
+          <div class="p02-track" style="--len:calc(90% + 2mm)">
+            <div class="p02-st"><span class="p02-dot">13</span><span class="p02-t">Ways to own a solar plant</span></div>
+            <div class="p02-st"><span class="p02-dot">14</span><span class="p02-t">Paying for it: subsidy, loans and tax</span></div>
+            <div class="p02-st"><span class="p02-dot">15</span><span class="p02-t">Which route fits you?</span></div>
+            <div class="p02-st"><span class="p02-dot">16</span><span class="p02-t" style="margin:0 -2.4mm">Going solar step by step · Andhra Pradesh at a glance</span></div>
+            <div class="p02-st"><span class="p02-dot">17</span><span class="p02-t">Glossary</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card tint grow">
+      <h4>Two words you need</h4>
+      <h2>kW is how fast power flows. A unit (kWh) is how much you use.</h2>
+      <div class="row" style="margin-top:2.6mm; align-items:stretch">
+        <div style="flex:1.12">
+          <svg viewBox="0 0 330 132" role="img" aria-label="Three charts of power against time. 1,000 watts for 1 hour, 2,000 watts for 30 minutes and 500 watts for 2 hours each enclose the same area: 1 unit of energy." style="display:block;width:100%;height:auto">
+            <path d="M34 84.0H118" stroke="#D9E2EC" stroke-width="0.6"/>
+            <path d="M34 64H118" stroke="#D9E2EC" stroke-width="1"/>
+            <path d="M34 44.0H118" stroke="#D9E2EC" stroke-width="0.6"/>
+            <path d="M34 24H118" stroke="#D9E2EC" stroke-width="1"/>
+            <path d="M54.0 20V104" stroke="#D9E2EC" stroke-width="0.6"/>
+            <path d="M74 20V104" stroke="#D9E2EC" stroke-width="1"/>
+            <path d="M94.0 20V104" stroke="#D9E2EC" stroke-width="0.6"/>
+            <path d="M114 20V104" stroke="#D9E2EC" stroke-width="1"/>
+            <rect x="34" y="64" width="40" height="40" fill="#00A9D6" fill-opacity=".22" stroke="#007A9C" stroke-width="1.6"/>
+            <text x="54.0" y="87.0" text-anchor="middle" class="lbl" style="fill:#007A9C">1 unit</text>
+            <path d="M34 20V104H120" fill="none" stroke="#0A2540" stroke-width="1.2"/>
+            <text x="34" y="114" text-anchor="middle" class="lbl-s">0 h</text>
+            <text x="74" y="114" text-anchor="middle" class="lbl-s">1 h</text>
+            <text x="114" y="114" text-anchor="middle" class="lbl-s">2 h</text>
+            <text x="34" y="13" class="lbl">1,000 W <tspan class="lbl-s">for 1 hour</tspan></text>
+            <path d="M136 84.0H220" stroke="#D9E2EC" stroke-width="0.6"/>
+            <path d="M136 64H220" stroke="#D9E2EC" stroke-width="1"/>
+            <path d="M136 44.0H220" stroke="#D9E2EC" stroke-width="0.6"/>
+            <path d="M136 24H220" stroke="#D9E2EC" stroke-width="1"/>
+            <path d="M156.0 20V104" stroke="#D9E2EC" stroke-width="0.6"/>
+            <path d="M176 20V104" stroke="#D9E2EC" stroke-width="1"/>
+            <path d="M196.0 20V104" stroke="#D9E2EC" stroke-width="0.6"/>
+            <path d="M216 20V104" stroke="#D9E2EC" stroke-width="1"/>
+            <rect x="136" y="24" width="20.0" height="80" fill="#00A9D6" fill-opacity=".22" stroke="#007A9C" stroke-width="1.6"/>
+            <text x="161.0" y="67.0" class="lbl" style="fill:#007A9C">1 unit</text>
+            <path d="M136 20V104H222" fill="none" stroke="#0A2540" stroke-width="1.2"/>
+            <text x="136" y="114" text-anchor="middle" class="lbl-s">0 h</text>
+            <text x="176" y="114" text-anchor="middle" class="lbl-s">1 h</text>
+            <text x="216" y="114" text-anchor="middle" class="lbl-s">2 h</text>
+            <text x="136" y="13" class="lbl">2,000 W <tspan class="lbl-s">for ½ hour</tspan></text>
+            <path d="M238 84.0H322" stroke="#D9E2EC" stroke-width="0.6"/>
+            <path d="M238 64H322" stroke="#D9E2EC" stroke-width="1"/>
+            <path d="M238 44.0H322" stroke="#D9E2EC" stroke-width="0.6"/>
+            <path d="M238 24H322" stroke="#D9E2EC" stroke-width="1"/>
+            <path d="M258.0 20V104" stroke="#D9E2EC" stroke-width="0.6"/>
+            <path d="M278 20V104" stroke="#D9E2EC" stroke-width="1"/>
+            <path d="M298.0 20V104" stroke="#D9E2EC" stroke-width="0.6"/>
+            <path d="M318 20V104" stroke="#D9E2EC" stroke-width="1"/>
+            <rect x="238" y="84.0" width="80" height="20.0" fill="#00A9D6" fill-opacity=".22" stroke="#007A9C" stroke-width="1.6"/>
+            <text x="278.0" y="79.0" text-anchor="middle" class="lbl" style="fill:#007A9C">1 unit</text>
+            <path d="M238 20V104H324" fill="none" stroke="#0A2540" stroke-width="1.2"/>
+            <text x="238" y="114" text-anchor="middle" class="lbl-s">0 h</text>
+            <text x="278" y="114" text-anchor="middle" class="lbl-s">1 h</text>
+            <text x="318" y="114" text-anchor="middle" class="lbl-s">2 h</text>
+            <text x="238" y="13" class="lbl">500 W <tspan class="lbl-s">for 2 hours</tspan></text>
+            <text x="30" y="106.5" text-anchor="end" class="lbl-s">0 kW</text>
+            <text x="30" y="66.5" text-anchor="end" class="lbl-s">1 kW</text>
+            <text x="30" y="26.5" text-anchor="end" class="lbl-s">2 kW</text>
+            <text x="34" y="128" class="lbl-s">Height = power (kW) · width = time (hours) · area = energy (units)</text>
+          </svg>
+        </div>
+        <div class="p02-defs" style="flex:1">
+          <div class="p02-def"><span class="p02-term">kW</span><p class="small"><b>Kilowatt: a rate.</b> How fast power flows, like a car’s speed. A plant’s <b>size</b> is quoted in kW (often kWp).</p></div>
+          <div class="p02-def"><span class="p02-term">kWh</span><p class="small"><b>Kilowatt-hour: an amount.</b> Energy made or used, like distance driven. 1 kWh is the <b>“unit”</b> on your bill.</p></div>
+          <div class="eq p02-eq">
+            <div class="t" style="background:#fff"><span class="k" style="color:var(--accent-ink)">Power</span><span class="n">1 kW</span><span class="u">1,000 W</span></div>
+            <span class="op">×</span>
+            <div class="t" style="background:#fff"><span class="k" style="color:var(--accent-ink)">Time</span><span class="n">1 hour</span><span class="u">running</span></div>
+            <span class="op">=</span>
+            <div class="t total"><span class="k">Energy</span><span class="n">1 unit</span><span class="u">1 kWh</span></div>
+          </div>
+          <p class="tiny">Example: a 3 kW plant is its size. The roughly 12 units it makes on a typical day in Andhra Pradesh is its output.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer class="pf"><span>{{FOOT}}</span><span class="pn">{{PN}}</span></footer>
+</section>

@@ -1,0 +1,149 @@
+<section class="page p08" data-sec="metering">
+  <style>
+    .p08 .eq .t .n { font-size: 17pt; }
+  </style>
+  <header class="ph"><span class="sec">How solar is billed &nbsp;/&nbsp; Gross metering</span><img src="{{LOGO}}" alt="Ray2Volt"></header>
+  <div class="pb">
+    <div>
+      <div class="kicker">Billing method 2 of 3</div>
+      <h1 class="title">Gross metering <em>Sell everything, buy everything</em></h1>
+      <p class="lede">Every unit the solar plant generates is sold to the DISCOM, your local electricity distribution company, through a meter of its own. Every unit the building uses is bought from the grid as before. The two are settled <b>separately</b>: one is a bill, the other is income.</p>
+    </div>
+
+    <div class="fig">
+      <div class="fig-title">Exhibit 1 &nbsp;·&nbsp; How a gross-metered plant is connected <span>Schematic</span></div>
+      <svg viewBox="0 0 680 150" role="img" aria-label="Schematic with two separate paths. Solar array to inverter to a solar generation meter to the grid: all generation is exported. Grid to the consumption meter to the main board to the building loads: all use is imported. There is no connection between the inverter and the building's main board.">
+        <g>
+          <rect class="node" x="6" y="8" width="112" height="46" rx="2"/><use href="#i-panel" x="14" y="20" width="21" height="21"/>
+          <text x="42" y="28" class="lbl">Solar array</text><text x="42" y="40" class="lbl-s">makes DC power</text>
+          <rect class="node" x="148" y="8" width="112" height="46" rx="2"/><use href="#i-inverter" x="156" y="20" width="21" height="21"/>
+          <text x="184" y="28" class="lbl">Inverter</text><text x="184" y="40" class="lbl-s">converts to AC</text>
+          <rect class="node em" x="290" y="8" width="128" height="46" rx="2"/><use href="#i-meter" x="298" y="20" width="21" height="21"/>
+          <text x="326" y="28" class="lbl">Solar meter</text><text x="326" y="40" class="lbl-s">counts all generation</text>
+          <rect class="node" x="562" y="8" width="112" height="120" rx="2"/><use href="#i-pylon" x="570" y="20" width="21" height="21"/>
+          <text x="598" y="28" class="lbl">Grid</text><text x="598" y="40" class="lbl-s">your DISCOM</text>
+          <rect class="node em" x="290" y="82" width="128" height="46" rx="2"/><use href="#i-meter" x="298" y="94" width="21" height="21"/>
+          <text x="326" y="102" class="lbl">Consumption meter</text><text x="326" y="114" class="lbl-s">counts all use</text>
+          <rect class="node" x="148" y="82" width="112" height="46" rx="2"/><use href="#i-board" x="156" y="94" width="21" height="21"/>
+          <text x="184" y="102" class="lbl">Main board</text><text x="184" y="114" class="lbl-s">building wiring</text>
+          <rect class="node" x="6" y="82" width="112" height="46" rx="2"/><use href="#i-plug" x="14" y="94" width="21" height="21"/>
+          <text x="42" y="102" class="lbl">Building loads</text><text x="42" y="114" class="lbl-s">lights, machines</text>
+        </g>
+        <!-- path 1: generation -->
+        <path class="flow solar" d="M118 31 H146"/>
+        <path class="flow solar" d="M260 31 H288"/>
+        <path class="flow export" d="M418 31 H560"/>
+        <text x="490" y="24" text-anchor="middle" class="cap c-export">All solar out</text>
+        <text x="490" y="45" text-anchor="middle" class="lbl-s">paid at the feed-in tariff</text>
+        <!-- path 2: consumption -->
+        <path class="flow grid" d="M562 105 H420"/>
+        <path class="flow grid" d="M290 105 H262"/>
+        <path class="flow grid" d="M148 105 H120"/>
+        <text x="490" y="98" text-anchor="middle" class="cap c-grid">All use in</text>
+        <text x="490" y="119" text-anchor="middle" class="lbl-s">billed at the retail tariff</text>
+        <!-- no link -->
+        <path class="guide" d="M204 57 V79" style="stroke:#D9453D"/>
+        <circle cx="204" cy="68" r="5" fill="#fff" stroke="#D9453D" stroke-width="1"/>
+        <path d="M201.6 65.6 l4.8 4.8 M206.4 65.6 l-4.8 4.8" stroke="#D9453D" stroke-width="1" stroke-linecap="round"/>
+        <text x="215" y="70.5" class="lbl-s c-cost">No direct link: the plant does not supply the building</text>
+        <!-- key -->
+        <path d="M6 143 H28" class="flow solar noarrow"/><text x="36" y="146" class="lbl-s">Solar power</text>
+        <path d="M110 143 H132" class="flow export noarrow"/><text x="140" y="146" class="lbl-s">Export: every unit generated, through the solar meter</text>
+        <path d="M352 143 H374" class="flow grid noarrow"/><text x="382" y="146" class="lbl-s">Import: every unit used, through the consumption meter</text>
+      </svg>
+    </div>
+
+    <div class="row">
+      <div class="fig" style="flex:1.22">
+        <div class="fig-title">Exhibit 2 &nbsp;·&nbsp; One month of energy <span>Units (kWh)</span></div>
+        <svg viewBox="0 0 400 262" role="img" aria-label="Flow diagram for one month. The solar plant generates 360 units, and all 360 are exported to the grid. The grid supplies all 500 units the building uses. No units pass directly from the plant to the building.">
+          <!-- ribbons (0.26 px per unit, as page 07) -->
+          <path class="band f-export" d="M96 14 H312 V107.6 H96 Z"/>
+          <path class="band f-grid" d="M96 125.6 H312 V255.6 H96 Z"/>
+          <!-- nodes -->
+          <rect class="f-solar" x="90" y="14" width="6" height="93.6"/>
+          <rect class="f-grid" x="90" y="125.6" width="6" height="130"/>
+          <rect class="f-export" x="312" y="14" width="6" height="93.6"/>
+          <rect class="f-ink" x="312" y="125.6" width="6" height="130"/>
+          <!-- left labels -->
+          <text x="82" y="48" text-anchor="end" class="cap">Solar plant</text>
+          <text x="82" y="66" text-anchor="end" class="num">360</text>
+          <text x="82" y="77" text-anchor="end" class="lbl-s">units generated</text>
+          <text x="82" y="176" text-anchor="end" class="cap">Grid</text>
+          <text x="82" y="194" text-anchor="end" class="num">500</text>
+          <text x="82" y="205" text-anchor="end" class="lbl-s">units imported</text>
+          <!-- right labels -->
+          <text x="326" y="48" class="cap">To the grid</text>
+          <text x="326" y="66" class="num">360</text>
+          <text x="326" y="77" class="lbl-s">units exported</text>
+          <text x="326" y="176" class="cap">The building</text>
+          <text x="326" y="194" class="num">500</text>
+          <text x="326" y="205" class="lbl-s">units used</text>
+          <!-- ribbon labels -->
+          <text x="110" y="64" class="lbl">All 360 sold</text>
+          <text x="110" y="194" class="lbl">All 500 bought</text>
+          <text x="204" y="119.6" text-anchor="middle" class="lbl-s c-cost">No units go straight from the plant to the building</text>
+          <!-- meter markers -->
+          <g font-size="7" font-weight="700" text-anchor="middle">
+            <circle cx="270" cy="60.8" r="7.5" fill="#fff" stroke="#0B1F3A" stroke-width="1"/><text x="270" y="63.4">S</text>
+            <circle cx="270" cy="190.6" r="7.5" fill="#fff" stroke="#0B1F3A" stroke-width="1"/><text x="270" y="193.2">C</text>
+          </g>
+        </svg>
+        <p class="fig-cap"><b>S</b> = solar meter, <b>C</b> = consumption meter. Same home and plant as page 07, where 140 units were used directly.</p>
+      </div>
+
+      <div class="stack" style="flex:1;gap:4.6mm">
+        <div class="card top">
+          <h4>What the bill counts</h4>
+          <h2>Paid minus earned</h2>
+          <div class="eq" style="margin-top:3mm">
+            <div class="t grid"><span class="k">Pays</span><span class="n">₹3,500</span><span class="u">500 × ₹7</span></div>
+            <span class="op">−</span>
+            <div class="t export"><span class="k">Earns</span><span class="n">₹1,080</span><span class="u">360 × ₹3</span></div>
+            <span class="op">=</span>
+            <div class="t total"><span class="k">Net cost</span><span class="n">₹2,420</span><span class="u">a month</span></div>
+          </div>
+        </div>
+        <div class="card top grow">
+          <h4>From bill to net cost</h4>
+          <svg viewBox="0 0 300 98" style="display:block;width:100%;margin-top:2.4mm" role="img" aria-label="Waterfall chart: the consumption bill of 3,500 rupees, less 1,080 rupees of feed-in income, gives a net cost of 2,420 rupees.">
+            <!-- 0..4000 rupees over y 80..8 (0.018 px per rupee) -->
+            <g class="gridline"><path d="M44 8H296M44 26H296M44 44H296M44 62H296"/></g>
+            <g class="tick" text-anchor="end"><text x="38" y="82.5">₹0</text><text x="38" y="64.5">1,000</text><text x="38" y="46.5">2,000</text><text x="38" y="28.5">3,000</text><text x="38" y="10.5">4,000</text></g>
+            <rect class="f-grid" x="60" y="17" width="54" height="63"/>
+            <rect class="f-export" x="150" y="17" width="54" height="19.44"/>
+            <rect class="f-ink" x="240" y="36.44" width="54" height="43.56"/>
+            <path class="guide" d="M114 17H150M204 36.44H240"/>
+            <text x="87" y="13" text-anchor="middle" class="num-b">₹3,500</text>
+            <text x="177" y="47" text-anchor="middle" class="num-b c-export">−₹1,080</text>
+            <text x="267" y="32" text-anchor="middle" class="num-b">₹2,420</text>
+            <path class="axis" d="M44 80H296"/>
+            <g class="tick" text-anchor="middle"><text x="87" y="92">Pays for use</text><text x="177" y="92">Earns from solar</text><text x="267" y="92">Net cost</text></g>
+          </svg>
+          <p class="small" style="margin-top:1.6mm">The same home pays <b>₹980</b> under net metering. The gap is the export rate: here every solar unit earns ₹3, while under net metering each one offsets a ₹7 unit.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="cols-3 grow">
+      <div class="card top">
+        <h3>The feed-in tariff</h3>
+        <p class="small">The rate per unit paid for solar power sent to the grid. It is set by the State Electricity Regulatory Commission and usually fixed for the agreement term. It is usually lower than the retail tariff, which also pays for the wires and services that bring power to the door.</p>
+      </div>
+      <div class="card top">
+        <h3>Why it can still appeal</h3>
+        <ul class="dots small" style="margin-top:1.4mm">
+          <li>A fixed, predictable income for the agreement term.</li>
+          <li>Income does not depend on how much power the building uses.</li>
+          <li>Plants can be larger than net-metering limits allow.</li>
+        </ul>
+      </div>
+      <div class="card top">
+        <h3>Where it is typically used</h3>
+        <p class="small">Large roofs with little daytime use, plants owned by investors, and systems above net-metering limits. In Andhra Pradesh it is available for larger systems, up to 5 MW. Confirm current rules with your DISCOM before you decide.</p>
+      </div>
+    </div>
+    <p class="tiny">Illustrative example: ₹7 a unit from the grid, ₹3 a unit for exports. Real tariffs have slabs and fixed charges, and export rates are set by each state.</p>
+  </div>
+  <footer class="pf"><span>{{FOOT}}</span><span class="pn">{{PN}}</span></footer>
+</section>

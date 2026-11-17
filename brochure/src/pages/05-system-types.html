@@ -1,0 +1,162 @@
+<section class="page" data-sec="basics">
+  <style>
+    .p05-seq { list-style: none; display: flex; flex-direction: column; gap: 1.2mm; margin-top: 2.2mm; counter-reset: q; }
+    .p05-seq li { counter-increment: q; display: flex; gap: 2mm; align-items: baseline; font-size: 7.8pt; line-height: 1.3; }
+    .p05-seq li::before { content: counter(q); flex: none; font-family: var(--head); font-weight: 800; font-size: 7pt; color: #A8322B; width: 3mm; }
+    .p05 table.cmp td { font-size: 7.9pt; }
+    .p05 table.cmp td:first-child { width: 19%; }
+  </style>
+  <header class="ph"><span class="sec">The basics &nbsp;·&nbsp; System types</span><img src="{{LOGO}}" alt="Ray2Volt"></header>
+  <div class="pb p05">
+    <div>
+      <div class="kicker">Solar basics · Three ways to wire a plant</div>
+      <h1 class="title">On-grid, off-grid and hybrid: <em>three kinds of solar system</em></h1>
+      <p class="lede">Every solar plant has panels and an <b>inverter</b>, which turns the panels' direct current into the alternating current a building uses. What differs is whether it is connected to the <b>grid</b> (the network of your DISCOM, the local electricity distribution company) and whether it has a <b>battery</b>.</p>
+    </div>
+
+    <div class="fig">
+      <div class="fig-title">The same parts, wired three ways</div>
+      <svg viewBox="0 0 680 244" role="img" aria-label="Three wiring schematics. On-grid: solar panels to a grid-tied inverter to the building, which exchanges power with the grid; no battery. Off-grid: solar panels to an inverter with a battery, to the building; no grid connection. Hybrid: solar panels to a hybrid inverter with a battery, to the building, which is also connected to the grid.">
+        <g transform="translate(0 0)">
+        <rect x="0.5" y="0.5" width="219" height="243" rx="6" fill="#fff" stroke="#D9E2EC"/>
+        <circle cx="22" cy="21" r="10" fill="#0A2540"/><text x="22" y="24.3" text-anchor="middle" class="lbl on-dark">1</text>
+        <text x="40" y="19" class="lbl-b">On-grid</text><text x="40" y="30" class="lbl-s">Grid-connected · no battery</text>
+        <path d="M12 41H208" stroke="#E6EDF4"/>
+        <rect x="12" y="50" width="86" height="26" rx="3" fill="#fff" stroke="#0A2540" stroke-width="1.1"/><rect x="12" y="50" width="3.5" height="26" fill="#F5A300"/>
+        <text x="56" y="61.5" text-anchor="middle" class="lbl">Solar panels</text><text x="56" y="71" text-anchor="middle" class="lbl-s">make DC power</text>
+        <rect x="12" y="100" width="86" height="26" rx="3" fill="#fff" stroke="#0A2540" stroke-width="1.1"/><rect x="12" y="100" width="3.5" height="26" fill="#0A2540"/>
+        <text x="56" y="111.5" text-anchor="middle" class="lbl">Inverter</text><text x="56" y="121" text-anchor="middle" class="lbl-s">grid-tied</text>
+        <rect x="12" y="150" width="86" height="26" rx="3" fill="#F7F9FC" stroke="#B9C7D6" stroke-width="1.1" stroke-dasharray="4 3"/>
+        <text x="55" y="166.5" text-anchor="middle" class="lbl-s">No battery</text>
+        <rect x="122" y="50" width="86" height="26" rx="3" fill="#fff" stroke="#0A2540" stroke-width="1.1"/><rect x="122" y="50" width="3.5" height="26" fill="#0B63CE"/>
+        <text x="166" y="61.5" text-anchor="middle" class="lbl">Grid</text><text x="166" y="71" text-anchor="middle" class="lbl-s">DISCOM network</text>
+        <rect x="122" y="100" width="86" height="26" rx="3" fill="#fff" stroke="#0A2540" stroke-width="1.1"/><rect x="122" y="100" width="3.5" height="26" fill="#0A2540"/>
+        <text x="166" y="111.5" text-anchor="middle" class="lbl">Building</text><text x="166" y="121" text-anchor="middle" class="lbl-s">lights, machines</text>
+        <path class="flow solar" style="stroke-width:2" d="M55 79V95"/>
+        <path class="flow solar" style="stroke-width:2" d="M100 113H117"/>
+        <path class="flow export" style="stroke-width:2" d="M152 98V81"/><path class="flow grid" style="stroke-width:2" d="M182 79V96"/>
+        <text x="147" y="92" text-anchor="end" class="lbl-s c-export">out</text><text x="187" y="92" class="lbl-s c-grid">in</text>
+        <path d="M12 188H208" stroke="#0A2540" stroke-width="1"/>
+        <text x="12" y="202" class="lbl-s">In a power cut</text><text x="208" y="202" text-anchor="end" class="lbl c-cost">Switches off</text>
+        <path d="M12 208H208" stroke="#E6EDF4"/>
+        <text x="12" y="219" class="lbl-s">Sends surplus to grid</text><text x="208" y="219" text-anchor="end" class="lbl c-export">Yes</text>
+        <path d="M12 225H208" stroke="#E6EDF4"/>
+        <text x="12" y="236" class="lbl-s">Relative cost</text><text x="208" y="236" text-anchor="end" class="lbl ">Lowest</text>
+        </g>
+        <g transform="translate(230 0)">
+        <rect x="0.5" y="0.5" width="219" height="243" rx="6" fill="#fff" stroke="#D9E2EC"/>
+        <circle cx="22" cy="21" r="10" fill="#0A2540"/><text x="22" y="24.3" text-anchor="middle" class="lbl on-dark">2</text>
+        <text x="40" y="19" class="lbl-b">Off-grid</text><text x="40" y="30" class="lbl-s">Battery · no grid connection</text>
+        <path d="M12 41H208" stroke="#E6EDF4"/>
+        <rect x="12" y="50" width="86" height="26" rx="3" fill="#fff" stroke="#0A2540" stroke-width="1.1"/><rect x="12" y="50" width="3.5" height="26" fill="#F5A300"/>
+        <text x="56" y="61.5" text-anchor="middle" class="lbl">Solar panels</text><text x="56" y="71" text-anchor="middle" class="lbl-s">make DC power</text>
+        <rect x="12" y="100" width="86" height="26" rx="3" fill="#fff" stroke="#0A2540" stroke-width="1.1"/><rect x="12" y="100" width="3.5" height="26" fill="#0A2540"/>
+        <text x="56" y="111.5" text-anchor="middle" class="lbl">Inverter</text><text x="56" y="121" text-anchor="middle" class="lbl-s">off-grid</text>
+        <rect x="12" y="150" width="86" height="26" rx="3" fill="#fff" stroke="#0A2540" stroke-width="1.1"/><rect x="12" y="150" width="3.5" height="26" fill="#6B5BD2"/>
+        <text x="56" y="161.5" text-anchor="middle" class="lbl">Battery</text><text x="56" y="171" text-anchor="middle" class="lbl-s">the only reserve</text>
+        <rect x="122" y="50" width="86" height="26" rx="3" fill="#F7F9FC" stroke="#B9C7D6" stroke-width="1.1" stroke-dasharray="4 3"/>
+        <text x="165" y="66.5" text-anchor="middle" class="lbl-s">No grid connection</text>
+        <rect x="122" y="100" width="86" height="26" rx="3" fill="#fff" stroke="#0A2540" stroke-width="1.1"/><rect x="122" y="100" width="3.5" height="26" fill="#0A2540"/>
+        <text x="166" y="111.5" text-anchor="middle" class="lbl">Building</text><text x="166" y="121" text-anchor="middle" class="lbl-s">lights, machines</text>
+        <path class="flow solar" style="stroke-width:2" d="M55 79V95"/>
+        <path class="flow solar" style="stroke-width:2" d="M100 113H117"/>
+        <path class="flow store" style="stroke-width:2;marker-start:url(#ah-store)" d="M55 131V145"/>
+        <path d="M165 78V98" stroke="#B9C7D6" stroke-width="1.4" stroke-dasharray="3 3"/><circle cx="165" cy="88" r="6" fill="#D9453D"/><path d="M162.6 85.6l4.8 4.8M167.4 85.6l-4.8 4.8" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/>
+        <path d="M12 188H208" stroke="#0A2540" stroke-width="1"/>
+        <text x="12" y="202" class="lbl-s">In a power cut</text><text x="208" y="202" text-anchor="end" class="lbl c-store">Not affected</text>
+        <path d="M12 208H208" stroke="#E6EDF4"/>
+        <text x="12" y="219" class="lbl-s">Sends surplus to grid</text><text x="208" y="219" text-anchor="end" class="lbl c-cost">No</text>
+        <path d="M12 225H208" stroke="#E6EDF4"/>
+        <text x="12" y="236" class="lbl-s">Relative cost</text><text x="208" y="236" text-anchor="end" class="lbl ">Higher</text>
+        </g>
+        <g transform="translate(460 0)">
+        <rect x="0.5" y="0.5" width="219" height="243" rx="6" fill="#fff" stroke="#D9E2EC"/>
+        <circle cx="22" cy="21" r="10" fill="#0A2540"/><text x="22" y="24.3" text-anchor="middle" class="lbl on-dark">3</text>
+        <text x="40" y="19" class="lbl-b">Hybrid</text><text x="40" y="30" class="lbl-s">Battery and grid</text>
+        <path d="M12 41H208" stroke="#E6EDF4"/>
+        <rect x="12" y="50" width="86" height="26" rx="3" fill="#fff" stroke="#0A2540" stroke-width="1.1"/><rect x="12" y="50" width="3.5" height="26" fill="#F5A300"/>
+        <text x="56" y="61.5" text-anchor="middle" class="lbl">Solar panels</text><text x="56" y="71" text-anchor="middle" class="lbl-s">make DC power</text>
+        <rect x="12" y="100" width="86" height="26" rx="3" fill="#fff" stroke="#0A2540" stroke-width="1.1"/><rect x="12" y="100" width="3.5" height="26" fill="#0A2540"/>
+        <text x="56" y="111.5" text-anchor="middle" class="lbl">Hybrid inverter</text><text x="56" y="121" text-anchor="middle" class="lbl-s">manages all three</text>
+        <rect x="12" y="150" width="86" height="26" rx="3" fill="#fff" stroke="#0A2540" stroke-width="1.1"/><rect x="12" y="150" width="3.5" height="26" fill="#6B5BD2"/>
+        <text x="56" y="161.5" text-anchor="middle" class="lbl">Battery</text><text x="56" y="171" text-anchor="middle" class="lbl-s">backup reserve</text>
+        <rect x="122" y="50" width="86" height="26" rx="3" fill="#fff" stroke="#0A2540" stroke-width="1.1"/><rect x="122" y="50" width="3.5" height="26" fill="#0B63CE"/>
+        <text x="166" y="61.5" text-anchor="middle" class="lbl">Grid</text><text x="166" y="71" text-anchor="middle" class="lbl-s">DISCOM network</text>
+        <rect x="122" y="100" width="86" height="26" rx="3" fill="#fff" stroke="#0A2540" stroke-width="1.1"/><rect x="122" y="100" width="3.5" height="26" fill="#0A2540"/>
+        <text x="166" y="111.5" text-anchor="middle" class="lbl">Building</text><text x="166" y="121" text-anchor="middle" class="lbl-s">lights, machines</text>
+        <path class="flow solar" style="stroke-width:2" d="M55 79V95"/>
+        <path class="flow solar" style="stroke-width:2" d="M100 113H117"/>
+        <path class="flow store" style="stroke-width:2;marker-start:url(#ah-store)" d="M55 131V145"/>
+        <path class="flow export" style="stroke-width:2" d="M152 98V81"/><path class="flow grid" style="stroke-width:2" d="M182 79V96"/>
+        <text x="147" y="92" text-anchor="end" class="lbl-s c-export">out</text><text x="187" y="92" class="lbl-s c-grid">in</text>
+        <path d="M12 188H208" stroke="#0A2540" stroke-width="1"/>
+        <text x="12" y="202" class="lbl-s">In a power cut</text><text x="208" y="202" text-anchor="end" class="lbl c-export">Chosen loads stay on</text>
+        <path d="M12 208H208" stroke="#E6EDF4"/>
+        <text x="12" y="219" class="lbl-s">Sends surplus to grid</text><text x="208" y="219" text-anchor="end" class="lbl c-export">Yes</text>
+        <path d="M12 225H208" stroke="#E6EDF4"/>
+        <text x="12" y="236" class="lbl-s">Relative cost</text><text x="208" y="236" text-anchor="end" class="lbl ">Higher than on-grid</text>
+        </g>
+      </svg>
+      <div class="legend" style="margin-top:2.4mm"><span><i></i>Solar power</span><span><i class="export"></i>Sent out to the grid</span><span><i class="grid"></i>Drawn from the grid</span><span><i class="store"></i>Battery charging and discharging</span></div>
+    </div>
+
+    <div class="row">
+      <div class="card red" style="flex:1">
+        <h4 style="color:#A8322B">The part that surprises most people</h4>
+        <h2>Why does an on-grid system switch off in a power cut?</h2>
+        <p class="small" style="margin-top:1.4mm">To protect the <b>linemen</b> who repair the wires. When the grid fails, they work on lines they expect to be dead. If rooftop plants kept feeding power in, a “dead” wire could be live. So grid-connected inverters must switch off automatically. This is called <b>anti-islanding</b>: the plant may not become a powered “island” on a dead network.</p>
+        <ol class="p05-seq">
+          <li>The grid supply fails.</li>
+          <li>The inverter senses it and switches itself off.</li>
+          <li>No power reaches the lines being repaired, even in full sun.</li>
+        </ol>
+      </div>
+      <div class="card" style="flex:1">
+        <h4>Illustrative · one sunny day</h4>
+        <h2>A midday power cut, three ways</h2>
+        <svg viewBox="0 0 330 150" role="img" aria-label="Illustrative 24-hour timeline. During a power cut from 11:00 to 14:00, the on-grid building has no supply even though the sun is shining; the off-grid building is unaffected; the hybrid building runs chosen loads on solar and battery." style="display:block;width:100%;height:auto;margin-top:2mm">
+          <rect x="178.8" y="18" width="32.4" height="86" fill="#FDECEA"/>
+          <text x="195" y="13" text-anchor="middle" class="lbl-s c-cost" style="font-weight:800">Power cut</text>
+          <g stroke="#D9E2EC" stroke-width=".8"><path d="M60 18V104M124.8 18V104M189.6 18V104M254.4 18V104M319.2 18V104"/></g>
+          <text x="54" y="35" text-anchor="end" class="lbl">On-grid</text>
+          <rect x="60" y="22" width="75.6" height="18" fill="#0B63CE"/>
+          <rect x="135.6" y="22" width="43.2" height="18" fill="#F5A300"/>
+          <rect x="179.4" y="22.6" width="31.2" height="16.8" fill="#fff" stroke="#D9453D" stroke-width="1.2" stroke-dasharray="3 2"/>
+          <rect x="211.2" y="22" width="32.4" height="18" fill="#F5A300"/>
+          <rect x="243.6" y="22" width="75.6" height="18" fill="#0B63CE"/>
+          <text x="195" y="34" text-anchor="middle" class="lbl-s c-cost" style="font-weight:800">none</text>
+          <text x="54" y="63" text-anchor="end" class="lbl">Off-grid</text>
+          <rect x="60" y="50" width="64.8" height="18" fill="#6B5BD2"/>
+          <rect x="124.8" y="50" width="129.6" height="18" fill="#F5A300"/>
+          <rect x="254.4" y="50" width="64.8" height="18" fill="#6B5BD2"/>
+          <text x="54" y="91" text-anchor="end" class="lbl">Hybrid</text>
+          <rect x="60" y="78" width="75.6" height="18" fill="#0B63CE"/>
+          <rect x="135.6" y="78" width="43.2" height="18" fill="#F5A300"/>
+          <rect x="178.8" y="78" width="32.4" height="9" fill="#F5A300"/>
+          <rect x="178.8" y="87" width="32.4" height="9" fill="#6B5BD2"/>
+          <rect x="211.2" y="78" width="32.4" height="18" fill="#F5A300"/>
+          <rect x="243.6" y="78" width="75.6" height="18" fill="#0B63CE"/>
+          <g stroke="#fff" stroke-width="1"><path d="M135.6 22v18M211.2 22v18M243.6 22v18M124.8 50v18M254.4 50v18M135.6 78v18M178.8 78v18M211.2 78v18M243.6 78v18"/></g>
+          <path d="M60 104H319.2" stroke="#0A2540" stroke-width="1"/>
+          <g class="lbl-s" text-anchor="middle"><text x="60" y="115">00:00</text><text x="124.8" y="115">06:00</text><text x="189.6" y="115">12:00</text><text x="254.4" y="115">18:00</text><text x="319.2" y="115" text-anchor="end">24:00</text></g>
+          <g transform="translate(60 127)">
+            <rect width="10" height="7" fill="#0B63CE"/><text x="14" y="6.5" class="lbl-s">Grid</text>
+            <rect x="46" width="10" height="7" fill="#F5A300"/><text x="60" y="6.5" class="lbl-s">Solar</text>
+            <rect x="96" width="10" height="7" fill="#6B5BD2"/><text x="110" y="6.5" class="lbl-s">Battery</text>
+            <rect x="152" width="10" height="7" fill="#fff" stroke="#D9453D" stroke-dasharray="3 2"/><text x="166" y="6.5" class="lbl-s">No supply</text>
+          </g>
+          <text x="60" y="146" class="lbl-s">Main source of supply in each hour. Not to scale.</text>
+        </svg>
+      </div>
+    </div>
+
+    <table class="cmp grow">
+      <tr><th></th><th>On-grid</th><th>Off-grid</th><th>Hybrid</th></tr>
+      <tr><td>In a power cut</td><td>Switches off for safety: no solar power, even in sunshine</td><td>Not connected to the DISCOM, so grid cuts do not reach it; supply is limited to what the panels and battery hold</td><td>Keeps chosen loads running on solar and battery, isolated from the grid</td></tr>
+      <tr><td>Relative cost</td><td>Lowest: no battery to buy or replace</td><td>Higher: the battery must carry the whole load through nights and cloudy days</td><td>Higher than on-grid: adds a battery and a hybrid inverter</td></tr>
+      <tr><td>Typically suits</td><td>Homes, shops, offices and industry with a dependable grid supply, where the aim is a lower bill</td><td>Farms, remote sites and buildings with no grid connection, or a very unreliable one</td><td>Places with frequent power cuts, or loads that must keep running, such as a clinic or a cold store</td></tr>
+      <tr><td>On the electricity bill</td><td>Savings through net metering or another billing method (from page 7)</td><td>No link to a DISCOM bill</td><td>Same billing methods as on-grid</td></tr>
+    </table>
+  </div>
+  <footer class="pf"><span>{{FOOT}}</span><span class="pn">{{PN}}</span></footer>
+</section>

@@ -24,10 +24,12 @@ function assemble(inline) {
   const css = fs.readFileSync(path.join(src, 'base.css'), 'utf8');
   const sprite = fs.readFileSync(path.join(src, 'sprite.svg'), 'utf8');
   const logo = `data:image/png;base64,${b64(path.join(root, '..', 'images', 'logo.png'))}`;
+  const hero = `data:image/jpeg;base64,${b64(path.join(root, '..', 'images', 'hero-solar.png'))}`;
   const files = fs.readdirSync(path.join(src, 'pages')).filter(f => f.endsWith('.html')).sort().filter(f => !only.length || only.some(o => f.startsWith(o)));
   const pages = files.map(f => {
     let h = fs.readFileSync(path.join(src, 'pages', f), 'utf8');
     return h.replace(/\{\{LOGO\}\}/g, logo)
+            .replace(/\{\{HERO\}\}/g, hero)
             .replace(/\{\{PN\}\}/g, f.slice(0, 2))
             .replace(/\{\{FOOT\}\}/g, `Ray2Volt Solar &nbsp;·&nbsp; ${TITLE}`)
             .replace(/<section class="page/, `<section data-file="${f}" class="page`);

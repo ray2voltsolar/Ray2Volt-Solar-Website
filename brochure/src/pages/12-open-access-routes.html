@@ -1,0 +1,222 @@
+<section class="page p12" data-sec="access">
+  <style>
+    .p12 .p12-node { fill: #fff; stroke: #B9C7D6; stroke-width: 1; }
+    .p12 .p12-rule { stroke: #D9E2EC; stroke-width: .8; }
+    .p12 .p12-axis { stroke: #8FA3B8; stroke-width: 1; }
+    .p12 .p12-thin { fill: none; stroke: #8FA3B8; stroke-width: 1; }
+    .p12 .p12-h { font-size: 7.6px; font-weight: 800; letter-spacing: .14em; fill: var(--navy-2); }
+    .p12 .p12-terms { display: flex; flex-direction: column; gap: 2mm; }
+    .p12 .p12-terms > div { border-top: .3mm solid var(--line); padding-top: 1.6mm; }
+    .p12 .p12-terms b { font-family: var(--head); font-size: 7.6pt; display: block; }
+  </style>
+  <header class="ph"><span class="sec">Open access &nbsp;·&nbsp; Routes and charges</span><img src="{{LOGO}}" alt="Ray2Volt"></header>
+  <div class="pb">
+    <div>
+      <div class="kicker">Open access, continued</div>
+      <h1 class="title">Open access: <em>three routes, and what the journey costs</em></h1>
+      <p class="lede">You can own the plant, share one with others, or simply buy its power. The route decides which charges you pay on the way from the plant to your meter.</p>
+    </div>
+
+    <!-- ===== 1. Three routes ===== -->
+    <div class="fig">
+      <div class="fig-title">Three routes: who owns the plant, who uses the power</div>
+      <svg viewBox="0 0 680 222" role="img" aria-label="Three open access routes. Captive: you own the plant and use its power; you must hold at least 26 percent of ownership and use at least 51 percent of the output; exempt from cross-subsidy and additional surcharge. Group captive: several users together hold at least 26 percent and use at least 51 percent, a developer owns the rest; also exempt. Third-party sale: you buy power under an agreement with no ownership; pays both surcharges.">
+        <defs>
+          <g id="p12-donut-track"><circle r="22" fill="none" stroke="#E3EAF2" stroke-width="8"/></g>
+        </defs>
+        <!-- column frames -->
+        <g class="p12-rule"><line x1="226" y1="0" x2="226" y2="222"/><line x1="454" y1="0" x2="454" y2="222"/></g>
+
+        <!-- ===== Captive ===== -->
+        <g transform="translate(0,0)">
+          <text x="0" y="12" class="lbl-b">Captive</text>
+          <text x="0" y="25" class="lbl-s">You own the plant and use its power.</text>
+          <rect x="0" y="36" width="84" height="30" rx="4" class="p12-node" style="stroke:#F5A300"/>
+          <text x="42" y="54" text-anchor="middle" class="lbl">Plant</text>
+          <rect x="126" y="36" width="84" height="30" rx="4" class="p12-node" style="stroke:#0A2540"/>
+          <text x="168" y="54" text-anchor="middle" class="lbl">You</text>
+          <path class="flow solar" style="stroke-width:2" d="M86 46 H120"/>
+          <path class="p12-thin" style="stroke:#0A2540;stroke-dasharray:3 3" d="M124 58 H90"/>
+          <text x="105" y="77" text-anchor="middle" class="lbl-s">owns · uses</text>
+          <!-- donuts -->
+          <g transform="translate(46,124)">
+            <use href="#p12-donut-track"/>
+            <circle r="22" fill="none" stroke="#123A63" stroke-width="8" pathLength="100" stroke-dasharray="100 0" transform="rotate(-90)"/>
+            <line x1="0" y1="-26" x2="0" y2="-18" stroke="#D9453D" stroke-width="1.6" transform="rotate(93.6)"/>
+            <text y="4" text-anchor="middle" class="lbl">100%</text>
+          </g>
+          <text x="46" y="160" text-anchor="middle" class="lbl">Ownership</text>
+          <text x="46" y="171" text-anchor="middle" class="lbl-s">test: at least 26%</text>
+          <g transform="translate(164,124)">
+            <use href="#p12-donut-track"/>
+            <circle r="22" fill="none" stroke="#F5A300" stroke-width="8" pathLength="100" stroke-dasharray="80 20" transform="rotate(-90)"/>
+            <line x1="0" y1="-26" x2="0" y2="-18" stroke="#D9453D" stroke-width="1.6" transform="rotate(183.6)"/>
+            <text y="4" text-anchor="middle" class="lbl">80%</text>
+          </g>
+          <text x="164" y="160" text-anchor="middle" class="lbl">Power used</text>
+          <text x="164" y="171" text-anchor="middle" class="lbl-s">test: at least 51%</text>
+          <rect x="0" y="186" width="210" height="30" rx="4" fill="#E6F6EE"/>
+          <text x="10" y="199" class="lbl c-export">Exempt</text>
+          <text x="10" y="210" class="lbl-s">cross-subsidy and additional surcharge</text>
+        </g>
+
+        <!-- ===== Group captive ===== -->
+        <g transform="translate(236,0)">
+          <text x="0" y="12" class="lbl-b">Group captive</text>
+          <text x="0" y="25" class="lbl-s">Several users share a plant with a developer.</text>
+          <rect x="0" y="36" width="70" height="30" rx="4" class="p12-node" style="stroke:#F5A300"/>
+          <text x="35" y="54" text-anchor="middle" class="lbl">Plant</text>
+          <rect x="112" y="36" width="30" height="30" rx="4" class="p12-node" style="stroke:#0A2540"/>
+          <rect x="146" y="36" width="30" height="30" rx="4" class="p12-node" style="stroke:#0A2540"/>
+          <rect x="180" y="36" width="30" height="30" rx="4" class="p12-node" style="stroke:#0A2540"/>
+          <text x="127" y="54" text-anchor="middle" class="lbl">A</text><text x="161" y="54" text-anchor="middle" class="lbl">B</text><text x="195" y="54" text-anchor="middle" class="lbl">C</text>
+          <path class="flow solar" style="stroke-width:2" d="M72 51 H106"/>
+          <text x="161" y="77" text-anchor="middle" class="lbl-s">users A, B, C</text>
+          <text x="35" y="77" text-anchor="middle" class="lbl-s">developer runs it</text>
+          <g transform="translate(46,124)">
+            <use href="#p12-donut-track"/>
+            <circle r="22" fill="none" stroke="#123A63" stroke-width="8" pathLength="100" stroke-dasharray="32 68" transform="rotate(-90)"/>
+            <circle r="22" fill="none" stroke="#B9C7D6" stroke-width="8" pathLength="100" stroke-dasharray="0 32 68 0" transform="rotate(-90)"/>
+            <line x1="0" y1="-26" x2="0" y2="-18" stroke="#D9453D" stroke-width="1.6" transform="rotate(93.6)"/>
+            <text y="4" text-anchor="middle" class="lbl">32%</text>
+          </g>
+          <text x="46" y="160" text-anchor="middle" class="lbl">Users' ownership</text>
+          <text x="46" y="171" text-anchor="middle" class="lbl-s">together, at least 26%</text>
+          <g transform="translate(164,124)">
+            <use href="#p12-donut-track"/>
+            <circle r="22" fill="none" stroke="#F5A300" stroke-width="8" pathLength="100" stroke-dasharray="75 25" transform="rotate(-90)"/>
+            <line x1="0" y1="-26" x2="0" y2="-18" stroke="#D9453D" stroke-width="1.6" transform="rotate(183.6)"/>
+            <text y="4" text-anchor="middle" class="lbl">75%</text>
+          </g>
+          <text x="164" y="160" text-anchor="middle" class="lbl">Users' power use</text>
+          <text x="164" y="171" text-anchor="middle" class="lbl-s">together, at least 51%</text>
+          <rect x="0" y="186" width="210" height="30" rx="4" fill="#E6F6EE"/>
+          <text x="10" y="199" class="lbl c-export">Exempt</text>
+          <text x="10" y="210" class="lbl-s">cross-subsidy and additional surcharge</text>
+        </g>
+
+        <!-- ===== Third-party ===== -->
+        <g transform="translate(470,0)">
+          <text x="0" y="12" class="lbl-b">Third-party sale</text>
+          <text x="0" y="25" class="lbl-s">You buy from an independent generator.</text>
+          <rect x="0" y="36" width="84" height="30" rx="4" class="p12-node" style="stroke:#F5A300"/>
+          <text x="42" y="54" text-anchor="middle" class="lbl">Generator</text>
+          <rect x="126" y="36" width="84" height="30" rx="4" class="p12-node" style="stroke:#0A2540"/>
+          <text x="168" y="54" text-anchor="middle" class="lbl">You</text>
+          <path class="flow solar" style="stroke-width:2" d="M86 51 H120"/>
+          <text x="105" y="77" text-anchor="middle" class="lbl-s">power purchase agreement</text>
+          <g transform="translate(46,124)">
+            <use href="#p12-donut-track"/>
+            <text y="4" text-anchor="middle" class="lbl-s">none</text>
+          </g>
+          <text x="46" y="160" text-anchor="middle" class="lbl">Ownership</text>
+          <text x="46" y="171" text-anchor="middle" class="lbl-s">not needed</text>
+          <g transform="translate(164,124)">
+            <use href="#p12-donut-track"/>
+            <text y="4" text-anchor="middle" class="lbl-s">n/a</text>
+          </g>
+          <text x="164" y="160" text-anchor="middle" class="lbl">Power used</text>
+          <text x="164" y="171" text-anchor="middle" class="lbl-s">as agreed in the contract</text>
+          <rect x="0" y="186" width="210" height="30" rx="4" fill="#FDECEA"/>
+          <text x="10" y="199" class="lbl c-cost">Pays</text>
+          <text x="10" y="210" class="lbl-s">cross-subsidy and additional surcharge</text>
+        </g>
+      </svg>
+      <p class="fig-cap">Percentages in the dials are illustrative; the red tick marks each legal test. In group captive, each user's share of the power must be in proportion to its shareholding. All three routes pay transmission and wheeling charges, losses, banking and scheduling charges.</p>
+    </div>
+
+    <!-- ===== 2. Charges waterfall ===== -->
+    <div class="fig">
+      <div class="fig-title">What gets added between the plant and your meter</div>
+      <svg viewBox="0 0 680 236" role="img" aria-label="Schematic waterfall of open access charges, from the price at the plant to the landed cost at your meter. Segments are not to scale.">
+        <!-- chart frame: x 400..676 -->
+        <g class="p12-rule">
+          <line x1="400" y1="0" x2="400" y2="222"/><line x1="469" y1="0" x2="469" y2="222"/><line x1="538" y1="0" x2="538" y2="222"/><line x1="607" y1="0" x2="607" y2="222"/><line x1="676" y1="0" x2="676" y2="222"/>
+        </g>
+        <text x="676" y="232" text-anchor="end" class="lbl-s">cost per unit → (schematic, not to scale)</text>
+        <!-- rows: 20 high, start y 4 -->
+        <g>
+          <text x="0" y="15" class="lbl">Price at the plant</text><text x="118" y="15" class="lbl-s">what the seller charges per unit, or your own cost if captive</text>
+          <rect x="400" y="5" width="80" height="13" fill="#F5A300"/>
+
+          <text x="0" y="35" class="lbl">Transmission charge</text><text x="118" y="35" class="lbl-s">for using the high-voltage grid</text>
+          <rect x="480" y="25" width="22" height="13" fill="#D9453D"/>
+          <text x="0" y="55" class="lbl">Wheeling charge</text><text x="118" y="55" class="lbl-s">for using the DISCOM's local distribution network</text>
+          <rect x="502" y="45" width="22" height="13" fill="#D9453D"/>
+          <text x="0" y="75" class="lbl">Losses</text><text x="118" y="75" class="lbl-s">a share of energy deducted in kind for what is lost in the wires</text>
+          <rect x="524" y="65" width="22" height="13" fill="#D9453D"/>
+          <text x="0" y="95" class="lbl">Cross-subsidy surcharge</text><text x="118" y="95" class="lbl-s">compensates the DISCOM: large users' tariffs help subsidise others</text>
+          <rect x="546" y="85" width="22" height="13" fill="#fff" stroke="#D9453D" stroke-dasharray="2 2"/>
+          <text x="0" y="115" class="lbl">Additional surcharge</text><text x="118" y="115" class="lbl-s">covers the DISCOM's fixed costs for power already contracted for you</text>
+          <rect x="568" y="105" width="22" height="13" fill="#fff" stroke="#D9453D" stroke-dasharray="2 2"/>
+          <text x="0" y="135" class="lbl">Scheduling (SLDC)</text><text x="118" y="135" class="lbl-s">for scheduling, metering and accounts</text>
+          <rect x="590" y="125" width="22" height="13" fill="#D9453D"/>
+          <text x="0" y="155" class="lbl">Banking charge</text><text x="118" y="155" class="lbl-s">fee for "storing" surplus with the DISCOM, usually taken in kind</text>
+          <rect x="612" y="145" width="22" height="13" fill="#D9453D"/>
+          <text x="0" y="175" class="lbl">Standby charge</text><text x="118" y="175" class="lbl-s">for backup supply from the DISCOM if your source fails</text>
+          <rect x="634" y="165" width="22" height="13" fill="#D9453D"/>
+          <text x="0" y="195" class="lbl">Electricity duty</text><text x="118" y="195" class="lbl-s">a state tax on consumption</text>
+          <rect x="656" y="185" width="20" height="13" fill="#D9453D"/>
+          <line x1="0" y1="203" x2="676" y2="203" stroke="#0A2540" stroke-width="1"/>
+          <text x="0" y="217" class="lbl">Landed cost at your meter</text><text x="118" y="217" class="lbl-s">what each unit really costs you, delivered</text>
+          <rect x="400" y="207" width="276" height="13" fill="#0A2540"/>
+        </g>
+      </svg>
+    </div>
+
+    <!-- ===== 3. Banking ===== -->
+    <div class="row">
+      <div class="fig" style="flex:1.45">
+        <div class="fig-title">Energy banking across one day</div>
+        <svg viewBox="0 0 400 190" role="img" aria-label="Area chart of one day: plant output peaks at midday above the factory's steady demand; the surplus is deposited with the DISCOM and drawn back in the evening, less a banking charge.">
+          <g class="p12-rule"><line x1="34" y1="30" x2="390" y2="30"/><line x1="34" y1="60" x2="390" y2="60"/><line x1="34" y1="90" x2="390" y2="90"/><line x1="34" y1="120" x2="390" y2="120"/></g>
+          <text x="30" y="33" text-anchor="end" class="lbl-s">kW</text>
+          <!-- areas -->
+          <path d="M34.0 150 L34.0 80.0 L156.7 80.0 L153.3 86.3 L149.9 92.8 L146.6 99.5 L143.2 106.4 L139.8 113.4 L136.5 120.6 L133.1 127.8 L129.7 135.2 L126.4 142.6 L123.0 150.0 Z" fill="#D6E6F8"/>
+          <path d="M337.1 80.0 L390.0 80.0 L390.0 150 L337.1 150 Z" fill="#D6E6F8"/>
+          <path d="M123.0 150.0 L126.4 142.6 L129.7 135.2 L133.1 127.8 L136.5 120.6 L139.8 113.4 L143.2 106.4 L146.6 99.5 L149.9 92.8 L153.3 86.3 L156.7 80.0 L267.3 80.0 L270.7 86.3 L274.1 92.8 L277.4 99.5 L280.8 106.4 L284.2 113.4 L287.5 120.6 L290.9 127.8 L294.3 135.2 L297.6 142.6 L301.0 150.0 Z" fill="#FFE7A8"/>
+          <path d="M156.7 80.0 L160.1 73.8 L163.6 67.9 L167.1 62.3 L170.5 57.0 L174.0 52.1 L177.4 47.6 L180.9 43.4 L184.3 39.6 L187.8 36.2 L191.3 33.3 L194.7 30.8 L198.2 28.7 L201.6 27.1 L205.1 25.9 L208.5 25.2 L212.0 25.0 L215.5 25.2 L218.9 25.9 L222.4 27.1 L225.8 28.7 L229.3 30.8 L232.7 33.3 L236.2 36.2 L239.7 39.6 L243.1 43.4 L246.6 47.6 L250.0 52.1 L253.5 57.0 L256.9 62.3 L260.4 67.9 L263.9 73.8 L267.3 80.0 Z" fill="#1F9D62"/>
+          <path d="M267.3 80.0 L337.1 80.0 L337.1 150 L301.0 150.0 L297.6 142.6 L294.3 135.2 L290.9 127.8 L287.5 120.6 L284.2 113.4 L280.8 106.4 L277.4 99.5 L274.1 92.8 L270.7 86.3 Z" fill="#6B5BD2"/>
+          <!-- solar output line -->
+          <path d="M123.0 150.0 L126.7 141.8 L130.4 133.7 L134.1 125.6 L137.8 117.6 L141.5 109.8 L145.3 102.2 L149.0 94.7 L152.7 87.5 L156.4 80.6 L160.1 73.9 L163.8 67.6 L167.5 61.6 L171.2 56.0 L174.9 50.8 L178.6 46.1 L182.3 41.7 L186.0 37.9 L189.8 34.5 L193.5 31.6 L197.2 29.3 L200.9 27.4 L204.6 26.1 L208.3 25.3 L212.0 25.0 L215.7 25.3 L219.4 26.1 L223.1 27.4 L226.8 29.3 L230.5 31.6 L234.3 34.5 L238.0 37.9 L241.7 41.7 L245.4 46.1 L249.1 50.8 L252.8 56.0 L256.5 61.6 L260.2 67.6 L263.9 74.8 L267.6 80.6 L271.3 87.5 L275.0 94.7 L278.8 102.2 L282.5 109.8 L286.2 117.6 L289.9 125.6 L293.6 133.7 L297.3 141.8 L301.0 150.0" fill="none" stroke="#F5A300" stroke-width="2"/>
+          <!-- demand line -->
+          <line x1="34" y1="80" x2="390" y2="80" stroke="#0A2540" stroke-width="1.4" stroke-dasharray="4 3"/>
+          <text x="38" y="74" class="lbl-s" style="fill:#0A2540">Factory demand, steady</text>
+          <!-- axis -->
+          <line x1="34" y1="150" x2="390" y2="150" class="p12-axis"/>
+          <g class="lbl-s" text-anchor="middle"><text x="34" y="162">0:00</text><text x="123" y="162">6:00</text><text x="212" y="162">12:00</text><text x="301" y="162">18:00</text><text x="390" y="162" text-anchor="end">24:00</text></g>
+          <!-- labels -->
+          <text x="212" y="60" text-anchor="middle" class="lbl on-dark">Deposited</text>
+          <text x="212" y="71" text-anchor="middle" class="lbl-s" style="fill:#E6F6EE">midday surplus</text>
+          <text x="212" y="118" text-anchor="middle" class="lbl-s" style="fill:#9A6200">used directly as it is made</text>
+          <text x="78" y="118" text-anchor="middle" class="lbl-s c-grid">from the DISCOM</text>
+          <text x="364" y="118" text-anchor="middle" class="lbl-s c-grid">DISCOM</text>
+          <path class="flow store" style="stroke-width:1.6" d="M246 36 Q300 30 304 96"/>
+          <text x="312" y="22" class="lbl c-export">100 units deposited</text>
+          <text x="312" y="34" class="lbl c-store">92 drawn back</text>
+          <text x="312" y="45" class="lbl-s c-cost">8 kept as the charge</text>
+          <text x="0" y="182" class="lbl-s">Illustrative day. The 8% charge is the Andhra Pradesh figure; other states differ.</text>
+        </svg>
+        <div class="legend" style="margin-top:1.6mm"><span><i></i>Plant output</span><span><i class="export"></i>Banked</span><span><i class="store"></i>Drawn back</span><span><i class="grid"></i>Normal DISCOM supply</span></div>
+      </div>
+      <div class="card" style="flex:1">
+        <h4>Banking terms</h4>
+        <div class="p12-terms small">
+          <div><b>Same billing cycle</b>Banked units are drawn back within the cycle; national rules allow banking at least monthly.</div>
+          <div><b>A cap on the amount</b>At least 30% of your monthly consumption from the DISCOM. Andhra Pradesh: up to 30%, within the monthly cycle.</div>
+          <div><b>Charge taken in kind</b>A share of the banked units is kept. Andhra Pradesh: 8%.</div>
+          <div><b>Use it or lose it</b>Unused banked energy is generally not carried forward. Terms vary by state.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card dark grow">
+      <div class="cols-3 small">
+        <div><h4>Who it suits</h4><p>Typically viable for consumers with large, steady daytime demand.</p></div>
+        <div><h4>Savings</h4><p>Savings depend on state charges, voltage level and consumption pattern; ask for a site-specific estimate.</p></div>
+        <div><h4>Commitment</h4><p>Long-term agreements, often 10 years or more. Confirm current rules with your DISCOM before you decide.</p></div>
+      </div>
+    </div>
+  </div>
+  <footer class="pf"><span>{{FOOT}}</span><span class="pn">{{PN}}</span></footer>
+</section>

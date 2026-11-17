@@ -1,218 +1,112 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="0" height="0" style="position:absolute" aria-hidden="true">
   <defs>
-    <!-- arrowheads for .flow lines -->
-    <marker id="ah-solar"  viewBox="0 0 10 10" refX="6.5" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M1 1.2 L9 5 L1 8.8 Z" fill="#F5A300"/></marker>
-    <marker id="ah-grid"   viewBox="0 0 10 10" refX="6.5" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M1 1.2 L9 5 L1 8.8 Z" fill="#0B63CE"/></marker>
-    <marker id="ah-export" viewBox="0 0 10 10" refX="6.5" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M1 1.2 L9 5 L1 8.8 Z" fill="#1F9D62"/></marker>
-    <marker id="ah-store"  viewBox="0 0 10 10" refX="6.5" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M1 1.2 L9 5 L1 8.8 Z" fill="#6B5BD2"/></marker>
-    <marker id="ah-money"  viewBox="0 0 10 10" refX="6.5" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M1 1.2 L9 5 L1 8.8 Z" fill="#D9453D"/></marker>
-    <marker id="ah-plain"  viewBox="0 0 10 10" refX="6.5" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M1 1.2 L9 5 L1 8.8 Z" fill="#8FA3B8"/></marker>
+    <!-- arrowheads for .flow lines (small, sharp) -->
+    <marker id="ah-solar"  viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M1 1.5 L9 5 L1 8.5 Z" fill="#E0A106"/></marker>
+    <marker id="ah-grid"   viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M1 1.5 L9 5 L1 8.5 Z" fill="#1257C9"/></marker>
+    <marker id="ah-export" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M1 1.5 L9 5 L1 8.5 Z" fill="#17855A"/></marker>
+    <marker id="ah-store"  viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M1 1.5 L9 5 L1 8.5 Z" fill="#5A54B4"/></marker>
+    <marker id="ah-money"  viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M1 1.5 L9 5 L1 8.5 Z" fill="#C2463C"/></marker>
+    <marker id="ah-plain"  viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M1 1.5 L9 5 L1 8.5 Z" fill="#7F8FA3"/></marker>
 
-    <linearGradient id="g-sun" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FFD24D"/><stop offset="1" stop-color="#F59A00"/></linearGradient>
-    <linearGradient id="g-panel" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1B6FD0"/><stop offset="1" stop-color="#0A3F8A"/></linearGradient>
-    <linearGradient id="g-sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#EAF4FE"/><stop offset="1" stop-color="#F8FBFF"/></linearGradient>
+    <!-- kept for compatibility; flat, not glossy -->
+    <linearGradient id="g-sun" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#E0A106"/><stop offset="1" stop-color="#E0A106"/></linearGradient>
+    <linearGradient id="g-panel" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1F3A5F"/><stop offset="1" stop-color="#1F3A5F"/></linearGradient>
+    <linearGradient id="g-sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F5F7FA"/><stop offset="1" stop-color="#F5F7FA"/></linearGradient>
   </defs>
 
-  <!-- All icons: viewBox 0 0 64 64. Use: <use href="#i-sun" x= y= width= height=/> -->
+  <!-- Thin-line monochrome icons. viewBox 0 0 64 64, stroke = currentColor.
+       Use: <use href="#i-sun" x= y= width= height=/>  (set style="color:…" on the <use> or a parent to tint) -->
 
-  <symbol id="i-sun" viewBox="0 0 64 64">
-    <g stroke="#F5A300" stroke-width="4" stroke-linecap="round">
-      <path d="M32 5v7M32 52v7M5 32h7M52 32h7M12.9 12.9l5 5M46.1 46.1l5 5M51.1 12.9l-5 5M17.9 46.1l-5 5"/>
-    </g>
-    <circle cx="32" cy="32" r="14" fill="url(#g-sun)"/>
-  </symbol>
+  <symbol id="i-sun" viewBox="0 0 64 64"><g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="32" cy="32" r="11"/><path d="M32 7v7M32 50v7M7 32h7M50 32h7M14.300 14.300l5 5M44.700 44.700l5 5M49.700 14.300l-5 5M19.300 44.700l-5 5"/></g></symbol>
 
-  <symbol id="i-panel" viewBox="0 0 64 64">
-    <path d="M30 44v10M20 56h20" stroke="#7C8FA5" stroke-width="3.4" stroke-linecap="round" fill="none"/>
-    <path d="M15 14h40a2 2 0 0 1 2 2.5l-6 26a2.6 2.6 0 0 1-2.5 2H8.600000000000001a2 2 0 0 1-2-2.500l6-26a2.600 2.600 0 0 1 2.400-2z" fill="url(#g-panel)"/>
-    <path d="M28.500 14l-6 30.500M42.500 14l-6 30.500M10.800 24.300h44M8.400 34.600h44" stroke="#8CC4F7" stroke-width="1.5" fill="none"/>
-  </symbol>
+  <symbol id="i-panel" viewBox="0 0 64 64"><g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M16 12h40l-8 30H8z"/><path d="M29.300 12l-8 30M42.700 12l-8 30M12 27h40"/><path d="M28 42v12M18 54h20"/></g></symbol>
 
-  <symbol id="i-house" viewBox="0 0 64 64">
-    <path d="M12 30h40v24a2 2 0 0 1-2 2H14a2 2 0 0 1-2-2z" fill="#FFFFFF" stroke="#0A2540" stroke-width="2.6" stroke-linejoin="round"/>
-    <path d="M5 32L32 9l27 23" fill="none" stroke="#0A2540" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-    <rect x="27" y="40" width="10" height="16" rx="1" fill="#00A9D6"/>
-    <rect x="16.500" y="36" width="7" height="7" rx="1" fill="#BFE6F5"/><rect x="40.500" y="36" width="7" height="7" rx="1" fill="#BFE6F5"/>
-  </symbol>
+  <symbol id="i-house" viewBox="0 0 64 64"><g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M7 31L32 10l25 21"/><path d="M13 27v27h38V27"/><path d="M27 54V39h10v15"/></g></symbol>
 
-  <symbol id="i-house-solar" viewBox="0 0 64 64">
-    <path d="M12 30h40v24a2 2 0 0 1-2 2H14a2 2 0 0 1-2-2z" fill="#FFFFFF" stroke="#0A2540" stroke-width="2.6" stroke-linejoin="round"/>
-    <path d="M5 32L32 9l27 23" fill="none" stroke="#0A2540" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="M35 13.500l17.500 15-5 4.500L30 18z" fill="url(#g-panel)" stroke="#fff" stroke-width="1"/>
-    <path d="M38.500 22.500l5-4.500M43.500 27l5-4.500" stroke="#8CC4F7" stroke-width="1.200"/>
-    <rect x="27" y="40" width="10" height="16" rx="1" fill="#00A9D6"/>
-    <rect x="16.500" y="36" width="7" height="7" rx="1" fill="#BFE6F5"/><rect x="40.500" y="36" width="7" height="7" rx="1" fill="#BFE6F5"/>
-  </symbol>
+  <symbol id="i-house-solar" viewBox="0 0 64 64"><g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M7 31L32 10l25 21"/><path d="M13 27v27h38V27"/><path d="M27 54V39h10v15"/><path d="M36 20l12 10" stroke-width="5.500"/></g></symbol>
 
-  <symbol id="i-factory" viewBox="0 0 64 64">
-    <rect x="45" y="8" width="8" height="24" rx="1" fill="#7C8FA5"/>
-    <path d="M6 56V32l14-9v9l14-9v9l14-9v9h10v24z" fill="#FFFFFF" stroke="#0A2540" stroke-width="2.6" stroke-linejoin="round"/>
-    <rect x="13" y="41" width="8" height="7" rx="1" fill="#BFE6F5"/><rect x="26" y="41" width="8" height="7" rx="1" fill="#BFE6F5"/><rect x="39" y="41" width="8" height="7" rx="1" fill="#BFE6F5"/>
-  </symbol>
+  <symbol id="i-factory" viewBox="0 0 64 64"><g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M7 54V31l13-8v8l13-8v8l13-8v8h11v23z"/><path d="M47 23V9h8v22"/><path d="M16 42h6M29 42h6M42 42h6"/></g></symbol>
 
-  <symbol id="i-office" viewBox="0 0 64 64">
-    <rect x="14" y="8" width="26" height="48" rx="2" fill="#FFFFFF" stroke="#0A2540" stroke-width="2.6"/>
-    <path d="M40 26h10a2 2 0 0 1 2 2v28H40z" fill="#EAF4FE" stroke="#0A2540" stroke-width="2.6" stroke-linejoin="round"/>
-    <g fill="#00A9D6"><rect x="19" y="14" width="6" height="6" rx="1"/><rect x="29" y="14" width="6" height="6" rx="1"/><rect x="19" y="24" width="6" height="6" rx="1"/><rect x="29" y="24" width="6" height="6" rx="1"/><rect x="19" y="34" width="6" height="6" rx="1"/><rect x="29" y="34" width="6" height="6" rx="1"/></g>
-    <rect x="23" y="46" width="8" height="10" fill="#0A2540"/>
-    <path d="M44 34h4M44 41h4M44 48h4" stroke="#0B63CE" stroke-width="2.400" stroke-linecap="round"/>
-  </symbol>
+  <symbol id="i-office" viewBox="0 0 64 64"><g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M13 55V9h26v46"/><path d="M39 25h12v30"/><path d="M7 55h50"/><path d="M21 18h3M29 18h3M21 27h3M29 27h3M21 36h3M29 36h3M45 34v0M45 43v0"/><path d="M23 55V45h7v10"/></g></symbol>
 
-  <symbol id="i-apartment" viewBox="0 0 64 64">
-    <rect x="12" y="12" width="40" height="44" rx="2" fill="#FFFFFF" stroke="#0A2540" stroke-width="2.6"/>
-    <path d="M14 8.500h36" stroke="url(#g-panel)" stroke-width="4" stroke-linecap="round"/>
-    <g fill="#BFE6F5"><rect x="17" y="18" width="7" height="7" rx="1"/><rect x="28.500" y="18" width="7" height="7" rx="1"/><rect x="40" y="18" width="7" height="7" rx="1"/><rect x="17" y="30" width="7" height="7" rx="1"/><rect x="28.500" y="30" width="7" height="7" rx="1"/><rect x="40" y="30" width="7" height="7" rx="1"/></g>
-    <rect x="27" y="44" width="10" height="12" fill="#00A9D6"/>
-    <rect x="17" y="42" width="7" height="7" rx="1" fill="#BFE6F5"/><rect x="40" y="42" width="7" height="7" rx="1" fill="#BFE6F5"/>
-  </symbol>
+  <symbol id="i-apartment" viewBox="0 0 64 64"><g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M13 55V13h38v42"/><path d="M7 55h50"/><path d="M21 22h4M30 22h4M39 22h4M21 31h4M30 31h4M39 31h4M21 40h4M39 40h4"/><path d="M28 55V44h8v11"/><path d="M17 8h30" stroke-width="4"/></g></symbol>
 
-  <symbol id="i-pylon" viewBox="0 0 64 64">
-    <g fill="none" stroke="#0A2540" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M26 6h12l8 52M26 6l-8 52"/>
-      <path d="M8 18h48M12 30h40"/>
-      <path d="M24 18l16 12M40 18L24 30M22.500 30l21 14M41.500 30l-21 14M20 44h24M20.500 44L45 58M43.500 44L19 58"/>
-    </g>
-    <g fill="#0B63CE"><circle cx="8" cy="21" r="2.600"/><circle cx="56" cy="21" r="2.600"/><circle cx="12" cy="33" r="2.600"/><circle cx="52" cy="33" r="2.600"/></g>
-  </symbol>
+  <symbol id="i-pylon" viewBox="0 0 64 64"><g fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M27 7h10l9 50M27 7l-9 50"/><path d="M10 19h44M14 31h36"/><path d="M25 19l14 12M39 19L25 31M23 31l19 13M41 31L22 44M20.300 44h23.400"/><path d="M10 19v4M54 19v4M14 31v4M50 31v4"/></g></symbol>
 
-  <symbol id="i-meter" viewBox="0 0 64 64">
-    <rect x="11" y="6" width="42" height="52" rx="7" fill="#FFFFFF" stroke="#0A2540" stroke-width="2.6"/>
-    <rect x="17" y="13" width="30" height="13" rx="2.500" fill="#0A2540"/>
-    <path d="M21 22v-5M26 22v-5M31 22v-5M36 22v-5M41 22v-5" stroke="#5FD0EC" stroke-width="2.400" stroke-linecap="round"/>
-    <circle cx="32" cy="40" r="8.500" fill="#EAF4FE" stroke="#0B63CE" stroke-width="2.200"/>
-    <path d="M32 40l4.500-4.500" stroke="#0A2540" stroke-width="2.400" stroke-linecap="round"/>
-    <circle cx="20" cy="52" r="1.800" fill="#7C8FA5"/><circle cx="44" cy="52" r="1.800" fill="#7C8FA5"/>
-  </symbol>
+  <symbol id="i-meter" viewBox="0 0 64 64"><g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="12" y="7" width="40" height="50" rx="5"/><rect x="19" y="14" width="26" height="11" rx="1.500"/><circle cx="32" cy="40" r="8"/><path d="M32 40l4-4.500"/></g></symbol>
 
-  <symbol id="i-meter-bi" viewBox="0 0 64 64">
-    <rect x="11" y="6" width="42" height="52" rx="7" fill="#FFFFFF" stroke="#0A2540" stroke-width="2.6"/>
-    <rect x="17" y="13" width="30" height="13" rx="2.500" fill="#0A2540"/>
-    <path d="M21 22v-5M26 22v-5M31 22v-5M36 22v-5M41 22v-5" stroke="#5FD0EC" stroke-width="2.400" stroke-linecap="round"/>
-    <g fill="none" stroke-width="3.200" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M19 36h24M38 31.500l5 4.500-5 4.500" stroke="#1F9D62"/>
-      <path d="M45 48H21M26 43.500L21 48l5 4.500" stroke="#0B63CE"/>
-    </g>
-  </symbol>
+  <symbol id="i-meter-bi" viewBox="0 0 64 64"><g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="12" y="7" width="40" height="50" rx="5"/><rect x="19" y="14" width="26" height="11" rx="1.500"/><path d="M20 35h23M38.500 30.500L43 35l-4.500 4.500"/><path d="M44 47H21M25.500 42.500L21 47l4.500 4.500"/></g></symbol>
 
-  <symbol id="i-inverter" viewBox="0 0 64 64">
-    <rect x="10" y="8" width="44" height="46" rx="6" fill="#FFFFFF" stroke="#0A2540" stroke-width="2.6"/>
-    <rect x="16" y="14" width="32" height="15" rx="2.500" fill="#E3F6FB"/>
-    <path d="M19.500 21.500h6M19.500 25h6" stroke="#F5A300" stroke-width="2.200" stroke-linecap="round"/>
-    <path d="M29 23.500h4M31 21.500l2 2-2 2" stroke="#7C8FA5" stroke-width="1.600" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="M36 23.500c1.500-5 3-5 4.500 0s3 5 4.500 0" stroke="#0B63CE" stroke-width="2.200" fill="none" stroke-linecap="round"/>
-    <circle cx="20" cy="40" r="2.600" fill="#1F9D62"/><path d="M28 40h18M28 46h12" stroke="#B9C7D6" stroke-width="2.400" stroke-linecap="round"/>
-    <path d="M22 54v5M42 54v5" stroke="#7C8FA5" stroke-width="3" stroke-linecap="round"/>
-  </symbol>
+  <symbol id="i-inverter" viewBox="0 0 64 64"><g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="10" y="10" width="44" height="44" rx="4"/><path d="M10 54L54 10" stroke-width="1.800"/><path d="M17 20h10M17 26h10" /><path d="M36 44c2-6 4-6 6 0s4 6 6 0"/></g></symbol>
 
-  <symbol id="i-battery" viewBox="0 0 64 64">
-    <rect x="25" y="5" width="14" height="7" rx="2" fill="#7C8FA5"/>
-    <rect x="14" y="10" width="36" height="48" rx="6" fill="#FFFFFF" stroke="#0A2540" stroke-width="2.6"/>
-    <rect x="20" y="42" width="24" height="10" rx="2" fill="#6B5BD2"/>
-    <rect x="20" y="29" width="24" height="10" rx="2" fill="#6B5BD2" opacity=".7"/>
-    <rect x="20" y="16" width="24" height="10" rx="2" fill="#6B5BD2" opacity=".25"/>
-  </symbol>
+  <symbol id="i-battery" viewBox="0 0 64 64"><g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="15" y="12" width="34" height="45" rx="4"/><path d="M26 12V7h12v5"/><path d="M23 47h18M23 38h18M23 29h18"/></g></symbol>
 
-  <symbol id="i-plug" viewBox="0 0 64 64">
-    <path d="M23 6v14M41 6v14" stroke="#0A2540" stroke-width="5" stroke-linecap="round"/>
-    <path d="M15 20h34v8a17 17 0 0 1-34 0z" fill="#00A9D6" stroke="#0A2540" stroke-width="2.6" stroke-linejoin="round"/>
-    <path d="M32 45v6a7 7 0 0 0 7 7h6" fill="none" stroke="#0A2540" stroke-width="4" stroke-linecap="round"/>
-  </symbol>
+  <symbol id="i-plug" viewBox="0 0 64 64"><g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M24 8v13M40 8v13"/><path d="M16 21h32v7a16 16 0 0 1-32 0z"/><path d="M32 44v13"/></g></symbol>
 
-  <symbol id="i-bulb" viewBox="0 0 64 64">
-    <path d="M32 6a18 18 0 0 0-10 33c2 1.500 3 3.500 3 6h14c0-2.500 1-4.500 3-6A18 18 0 0 0 32 6z" fill="#FFC53D" stroke="#0A2540" stroke-width="2.6" stroke-linejoin="round"/>
-    <path d="M25 51h14M27 57h10" stroke="#0A2540" stroke-width="3.400" stroke-linecap="round"/>
-    <path d="M28 30l4 5 4-5" fill="none" stroke="#fff" stroke-width="2.400" stroke-linecap="round" stroke-linejoin="round"/>
-  </symbol>
+  <symbol id="i-bulb" viewBox="0 0 64 64"><g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M32 7a17 17 0 0 0-10 30.800c2 1.500 3 3.700 3 6.200h14c0-2.500 1-4.700 3-6.200A17 17 0 0 0 32 7z"/><path d="M25 51h14M28 57h8"/></g></symbol>
 
-  <symbol id="i-rupee" viewBox="0 0 64 64">
-    <circle cx="32" cy="32" r="25" fill="url(#g-sun)"/>
-    <circle cx="32" cy="32" r="19.500" fill="none" stroke="#fff" stroke-width="1.600" opacity=".7"/>
-    <path d="M23 20h18M23 27h18M23 20h6a7 7 0 0 1 0 14h-6l13 12" fill="none" stroke="#0A2540" stroke-width="3.600" stroke-linecap="round" stroke-linejoin="round"/>
-  </symbol>
+  <symbol id="i-rupee" viewBox="0 0 64 64"><g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="32" cy="32" r="24"/><path d="M24 21h17M24 28h17M24 21h5a7 7 0 0 1 0 14h-5l12 11"/></g></symbol>
 
-  <symbol id="i-leaf" viewBox="0 0 64 64">
-    <path d="M54 8C28 8 10 20 10 38c0 10 7 16 16 16 20 0 28-22 28-46z" fill="#55C28C"/>
-    <path d="M54 8C28 8 10 20 10 38c0 4 1.100 7.300 3 9.900C22 32 36 20 54 8z" fill="#1F9D62"/>
-    <path d="M8 58c6-14 16-26 32-36" fill="none" stroke="#0A2540" stroke-width="2.600" stroke-linecap="round"/>
-  </symbol>
+  <symbol id="i-leaf" viewBox="0 0 64 64"><g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M54 9C29 9 11 20 11 37c0 9 7 15 16 15 19 0 27-20 27-43z"/><path d="M9 57c6-13 15-24 30-33"/></g></symbol>
 
-  <symbol id="i-bank" viewBox="0 0 64 64">
-    <path d="M6 24L32 8l26 16z" fill="#0A2540"/>
-    <rect x="8" y="50" width="48" height="6" rx="1.500" fill="#0A2540"/>
-    <g fill="#FFFFFF" stroke="#0A2540" stroke-width="2.400"><rect x="13" y="27" width="7" height="21"/><rect x="28.500" y="27" width="7" height="21"/><rect x="44" y="27" width="7" height="21"/></g>
-    <circle cx="32" cy="17.500" r="2.800" fill="#FFC53D"/>
-  </symbol>
+  <symbol id="i-bank" viewBox="0 0 64 64"><g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M7 25L32 9l25 16z"/><path d="M8 55h48M12 49h40"/><path d="M17 30v19M27 30v19M37 30v19M47 30v19"/></g></symbol>
 
-  <symbol id="i-doc" viewBox="0 0 64 64">
-    <path d="M14 6h26l12 12v38a2 2 0 0 1-2 2H14a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2z" fill="#FFFFFF" stroke="#0A2540" stroke-width="2.6" stroke-linejoin="round"/>
-    <path d="M40 6v12h12" fill="#EAF4FE" stroke="#0A2540" stroke-width="2.6" stroke-linejoin="round"/>
-    <path d="M20 26h18M20 33h24M20 40h14" stroke="#7C8FA5" stroke-width="2.600" stroke-linecap="round"/>
-    <circle cx="41" cy="47" r="5.500" fill="#1F9D62"/><path d="M38.500 47l2 2 3.200-3.500" fill="none" stroke="#fff" stroke-width="1.700" stroke-linecap="round" stroke-linejoin="round"/>
-  </symbol>
+  <symbol id="i-doc" viewBox="0 0 64 64"><g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M15 7h24l11 11v39H15z"/><path d="M39 7v11h11"/><path d="M23 29h18M23 37h18M23 45h11"/></g></symbol>
 
-  <symbol id="i-transformer" viewBox="0 0 64 64">
-    <path d="M20 22V10M32 22V8M44 22V10" stroke="#7C8FA5" stroke-width="3" stroke-linecap="round"/>
-    <g fill="#0B63CE"><circle cx="20" cy="9" r="3"/><circle cx="32" cy="7" r="3"/><circle cx="44" cy="9" r="3"/></g>
-    <rect x="12" y="22" width="40" height="30" rx="4" fill="#FFFFFF" stroke="#0A2540" stroke-width="2.6"/>
-    <path d="M19 30v14M26 30v14M38 30v14M45 30v14" stroke="#B9C7D6" stroke-width="2.600" stroke-linecap="round"/>
-    <path d="M33.500 29l-4 8h5l-3.500 8" fill="none" stroke="#F5A300" stroke-width="2.400" stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="M18 52v6M46 52v6" stroke="#0A2540" stroke-width="3" stroke-linecap="round"/>
-  </symbol>
+  <symbol id="i-transformer" viewBox="0 0 64 64"><g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="12" y="23" width="40" height="28" rx="3"/><path d="M21 23V10M32 23V8M43 23V10"/><path d="M18 51v6M46 51v6"/><path d="M34 29l-5 8h6l-4 8"/></g></symbol>
 
-  <symbol id="i-solarfarm" viewBox="0 0 64 64">
-    <path d="M4 54h56" stroke="#55C28C" stroke-width="4" stroke-linecap="round"/>
-    <g>
-      <path d="M8 20h22l-4 14H4z" fill="url(#g-panel)"/><path d="M17 34v18" stroke="#7C8FA5" stroke-width="2.600"/>
-      <path d="M19.500 20l-4 14M6 27h22" stroke="#8CC4F7" stroke-width="1.200"/>
-      <path d="M38 26h22l-4 14H34z" fill="url(#g-panel)"/><path d="M47 40v12" stroke="#7C8FA5" stroke-width="2.600"/>
-      <path d="M49.500 26l-4 14M36 33h22" stroke="#8CC4F7" stroke-width="1.200"/>
-    </g>
-    <circle cx="48" cy="11" r="6" fill="url(#g-sun)"/>
-  </symbol>
+  <symbol id="i-solarfarm" viewBox="0 0 64 64"><g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M10 20h20l-4 14H6z"/><path d="M18 34v18"/><path d="M38 26h20l-4 14H34z"/><path d="M46 40v12"/><path d="M5 55h54"/><circle cx="48" cy="11" r="4.500"/></g></symbol>
 
-  <symbol id="i-shop" viewBox="0 0 64 64">
-    <path d="M10 28h44v26a2 2 0 0 1-2 2H12a2 2 0 0 1-2-2z" fill="#FFFFFF" stroke="#0A2540" stroke-width="2.6"/>
-    <path d="M6 28l5-16h42l5 16a6.500 6.500 0 0 1-13 0 6.500 6.500 0 0 1-13 0 6.500 6.500 0 0 1-13 0 6.500 6.500 0 0 1-13 0z" fill="#FFC53D" stroke="#0A2540" stroke-width="2.6" stroke-linejoin="round"/>
-    <rect x="17" y="39" width="12" height="17" fill="#00A9D6"/><rect x="35" y="39" width="13" height="9" rx="1" fill="#BFE6F5"/>
-  </symbol>
+  <symbol id="i-shop" viewBox="0 0 64 64"><g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M11 30v25h42V30"/><path d="M7 26l5-15h40l5 15a6.250 6.250 0 0 1-12.500 0 6.250 6.250 0 0 1-12.500 0 6.250 6.250 0 0 1-12.500 0 6.250 6.250 0 0 1-12.500 0z"/><path d="M19 55V41h11v14"/><path d="M37 41h9v7h-9z"/></g></symbol>
 
-  <symbol id="i-farm" viewBox="0 0 64 64">
-    <path d="M4 56c8-6 18-6 28 0s20 6 28 0" fill="none" stroke="#55C28C" stroke-width="4" stroke-linecap="round"/>
-    <path d="M32 50V26" stroke="#0A2540" stroke-width="3" stroke-linecap="round"/>
-    <path d="M32 34c-9 0-13-5-13-12 8 0 13 4 13 12zM32 28c0-9 5-13 12-13 0 8-4 13-12 13z" fill="#1F9D62"/>
-    <circle cx="13" cy="13" r="6" fill="url(#g-sun)"/>
-  </symbol>
+  <symbol id="i-farm" viewBox="0 0 64 64"><g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M32 52V26"/><path d="M32 35c-9 0-13-5-13-12 8 0 13 4 13 12zM32 29c0-9 5-13 12-13 0 8-4 13-12 13z"/><path d="M6 56c8-5 17-5 26 0s18 5 26 0"/></g></symbol>
 
-  <symbol id="i-investor" viewBox="0 0 64 64">
-    <path d="M8 54h48" stroke="#0A2540" stroke-width="3" stroke-linecap="round"/>
-    <rect x="12" y="38" width="9" height="14" rx="1.500" fill="#5FD0EC"/><rect x="27.500" y="29" width="9" height="23" rx="1.500" fill="#00A9D6"/><rect x="43" y="19" width="9" height="33" rx="1.500" fill="#0B63CE"/>
-    <path d="M10 27l14-9 10 5 18-13" fill="none" stroke="#F5A300" stroke-width="3.400" stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="M44 9h9v9" fill="none" stroke="#F5A300" stroke-width="3.400" stroke-linecap="round" stroke-linejoin="round"/>
-  </symbol>
+  <symbol id="i-investor" viewBox="0 0 64 64"><g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M8 55h48"/><path d="M15 55V40M27 55V32M39 55V37M51 55V24"/><path d="M11 27l14-9 11 6 17-13"/><path d="M45 10h8v8"/></g></symbol>
 
-  <symbol id="i-handshake" viewBox="0 0 64 64">
-    <path d="M4 22l12-4 10 4 6-3 8 3 12-4 8 4v18l-8 2-14 12a4 4 0 0 1-5 0L12 40l-8-2z" fill="#FFFFFF" stroke="#0A2540" stroke-width="2.6" stroke-linejoin="round"/>
-    <path d="M26 22l-6 8a3.500 3.500 0 0 0 5 4.500l7-6 14 12" fill="none" stroke="#0A2540" stroke-width="2.600" stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="M4 22v16M60 22v18" stroke="#00A9D6" stroke-width="5" stroke-linecap="round"/>
-  </symbol>
+  <symbol id="i-handshake" viewBox="0 0 64 64"><g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M6 22l10-3 10 4 6-3 8 3 10-4 8 3"/><path d="M6 22v17l7 2 14 12a4 4 0 0 0 5 0l19-12 7-2V22"/><path d="M26 23l-6 8a3.500 3.500 0 0 0 5 4.500l7-6 12 10"/></g></symbol>
 
-  <symbol id="i-shield" viewBox="0 0 64 64">
-    <path d="M32 6l22 8v16c0 14-9 23-22 28C19 53 10 44 10 30V14z" fill="#E6F6EE" stroke="#0A2540" stroke-width="2.6" stroke-linejoin="round"/>
-    <path d="M22 31l7 7 13-14" fill="none" stroke="#1F9D62" stroke-width="4.400" stroke-linecap="round" stroke-linejoin="round"/>
-  </symbol>
+  <symbol id="i-shield" viewBox="0 0 64 64"><g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M32 7l21 8v15c0 14-8.500 22.500-21 27-12.500-4.500-21-13-21-27V15z"/><path d="M23 31l7 7 12-13"/></g></symbol>
 
-  <symbol id="i-clock" viewBox="0 0 64 64">
-    <circle cx="32" cy="32" r="24" fill="#FFFFFF" stroke="#0A2540" stroke-width="2.6"/>
-    <path d="M32 17v15l10 7" fill="none" stroke="#0B63CE" stroke-width="3.600" stroke-linecap="round" stroke-linejoin="round"/>
-  </symbol>
+  <symbol id="i-clock" viewBox="0 0 64 64"><g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="32" cy="32" r="24"/><path d="M32 18v14l9 6"/></g></symbol>
 
-  <symbol id="i-moon" viewBox="0 0 64 64">
-    <path d="M40 8a24 24 0 1 0 16 34A20 20 0 0 1 40 8z" fill="#123A63"/>
-    <circle cx="48" cy="16" r="2" fill="#FFC53D"/><circle cx="56" cy="27" r="1.500" fill="#FFC53D"/>
-  </symbol>
+  <symbol id="i-moon" viewBox="0 0 64 64"><g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M40 9a23 23 0 1 0 15 33A19 19 0 0 1 40 9z"/></g></symbol>
 
-  <symbol id="i-cloud-co2" viewBox="0 0 64 64">
-    <path d="M18 48a11 11 0 0 1-1-22 15 15 0 0 1 29-3 12.500 12.500 0 0 1 1 25z" fill="#C9D5E2"/>
-    <path d="M12 12l40 44" stroke="#D9453D" stroke-width="4.400" stroke-linecap="round"/>
-  </symbol>
+  <symbol id="i-cloud-co2" viewBox="0 0 64 64"><g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M19 47a10.500 10.500 0 0 1-1-21 14.500 14.500 0 0 1 28-3 12 12 0 0 1 1 24z"/><path d="M13 11l38 44"/></g></symbol>
+
+  <symbol id="i-chart" viewBox="0 0 64 64"><g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M9 9v46h46"/><path d="M17 43l11-12 9 7 15-19"/></g></symbol>
+
+  <symbol id="i-board" viewBox="0 0 64 64"><g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="11" y="9" width="42" height="46" rx="3"/><path d="M20 20v10M28 20v10M36 20v10M44 20v10"/><path d="M19 41h26M19 47h16"/></g></symbol>
+
+  <symbol id="i-people" viewBox="0 0 64 64"><g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="23" cy="22" r="8"/><path d="M8 53c0-9 6.500-15 15-15s15 6 15 15"/><circle cx="44" cy="25" r="6"/><path d="M44 37c7 0 12 5 12 13"/></g></symbol>
 </svg>

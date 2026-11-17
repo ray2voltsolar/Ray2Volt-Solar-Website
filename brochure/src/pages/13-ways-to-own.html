@@ -1,0 +1,171 @@
+<section class="page p13" data-sec="money">
+  <style>
+    .p13 svg .ln { fill: none; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+    .p13 svg .node { fill: #fff; stroke: #0B1F3A; stroke-width: 1; }
+    .p13 svg .node.own { fill: #FBF5E4; stroke: #8A5F00; }
+    .p13 svg .panel { fill: #fff; stroke: #D8DFE8; stroke-width: 1; }
+    .p13 svg .grid-l { stroke: #E9EDF2; stroke-width: .8; }
+    .p13 svg .axis { stroke: #627287; stroke-width: .9; }
+    .p13 svg .ax { font-size: 7.5px; font-weight: 600; fill: #627287; }
+    .p13 svg .cap { font-size: 7.5px; font-weight: 700; letter-spacing: .08em; fill: #1F3A5F; }
+    .p13 svg .tagt { font-size: 7px; font-weight: 700; letter-spacing: .1em; }
+    .p13 table.cmp td:first-child { width: 18%; }
+    .p13 .legend i.dash { background: repeating-linear-gradient(90deg, var(--red) 0 1.2mm, transparent 1.2mm 2.2mm); }
+    .p13 .legend i.build { background: #8FA3B8; }
+    .p13 .legend i.owner { background: var(--t-gold); border: .25mm solid var(--gold-ink); height: 2.6mm; width: 5mm; }
+    .p13 .inv { display: grid; grid-template-columns: 1.2fr 1fr; gap: 5mm; align-items: start; }
+  </style>
+  <header class="ph"><span class="sec">Money &nbsp;·&nbsp; Ways to own</span><img src="{{LOGO}}" alt="Ray2Volt"></header>
+  <div class="pb">
+    <div>
+      <div class="kicker">Paying for solar · Ownership models</div>
+      <h1 class="title">Ways to own a solar plant: <em>who pays, who owns, who saves</em></h1>
+      <p class="lede">There are two main routes. In <b>CAPEX</b> (capital expenditure) the customer buys the plant and keeps all the savings. In <b>OPEX</b> or <b>RESCO</b> (Renewable Energy Service Company), a developer pays for a plant on the customer’s roof; the customer pays only for the units it uses.</p>
+    </div>
+
+    <div class="fig">
+      <div class="fig-title">The same rooftop plant, two ways of paying for it</div>
+      <svg viewBox="0 0 680 290" role="img" aria-label="Side-by-side schematic. CAPEX: the customer pays the installer the full cost up front, the installer builds the plant, and the customer owns it, maintains it and uses all its power; the customer's cash flow is one large payment at the start followed by savings every year. OPEX or RESCO: a developer or investor pays the installer, owns and maintains the plant on the customer's roof, and sells the solar units to the customer, who pays per unit used; the customer's cash flow has nothing up front and a smaller saving from the first month.">
+        <!-- ================= CAPEX ================= -->
+        <g>
+          <rect class="panel" x="0.5" y="0.5" width="331" height="289" rx="4"/>
+          <text x="16" y="22" class="lbl-b">CAPEX<tspan class="lbl-s" dx="6">the customer buys the plant</tspan></text>
+          <path d="M16 31 H316" class="grid-l"/>
+
+          <rect class="node own" x="16" y="50" width="100" height="112" rx="3"/>
+          <rect x="16" y="40" width="46" height="12" rx="1.5" fill="#8A5F00"/>
+          <text x="39" y="49" text-anchor="middle" class="tagt" fill="#fff">OWNER</text>
+          <text x="26" y="68" class="lbl-b">Customer</text>
+          <text x="26" y="79" class="lbl-s">home or business</text>
+          <g class="lbl-s" style="fill:#2A3A4E">
+            <text x="26" y="96">• pays for the plant</text>
+            <text x="26" y="108">• owns it</text>
+            <text x="26" y="120">• arranges upkeep</text>
+            <text x="26" y="132">• uses all its power</text>
+            <text x="26" y="144">• keeps all the savings</text>
+          </g>
+
+          <rect class="node" x="216" y="50" width="100" height="40" rx="3"/>
+          <text x="226" y="67" class="lbl-b">Installer</text>
+          <text x="226" y="80" class="lbl-s">designs and builds</text>
+          <rect class="node" x="216" y="122" width="100" height="40" rx="3"/>
+          <text x="226" y="139" class="lbl-b">Solar plant</text>
+          <text x="226" y="152" class="lbl-s">on the customer’s roof</text>
+
+          <path class="flow money ln" d="M118 70 H212"/>
+          <text x="166" y="62" text-anchor="middle" class="lbl c-cost">Full cost</text>
+          <text x="166" y="83" text-anchor="middle" class="lbl-s">paid up front</text>
+          <path class="flow plain ln" d="M266 92 V118"/>
+          <text x="258" y="109" text-anchor="end" class="lbl-s">builds it</text>
+          <path class="flow solar ln" d="M214 142 H120"/>
+          <text x="166" y="134" text-anchor="middle" class="lbl c-solar">All the power</text>
+          <text x="166" y="155" text-anchor="middle" class="lbl-s">used on site</text>
+
+          <text x="16" y="186" class="cap">CUSTOMER’S CASH FLOW, YEAR BY YEAR · ILLUSTRATIVE</text>
+          <path class="grid-l" d="M44 200 H316 M44 216 H316 M44 248 H316 M44 264 H316"/>
+          <path class="axis" d="M44 196 V268"/>
+          <text x="40" y="212" text-anchor="end" class="ax">in +</text>
+          <text x="40" y="256" text-anchor="end" class="ax">out −</text>
+          <rect x="49" y="232" width="16" height="32" rx="1" fill="#C2463C"/>
+          <g fill="#17855A"><rect x="74" y="217" width="16" height="15" rx="1"/><rect x="98" y="217" width="16" height="15" rx="1"/><rect x="122" y="217" width="16" height="15" rx="1"/><rect x="146" y="217" width="16" height="15" rx="1"/><rect x="170" y="217" width="16" height="15" rx="1"/><rect x="194" y="217" width="16" height="15" rx="1"/><rect x="218" y="217" width="16" height="15" rx="1"/><rect x="242" y="217" width="16" height="15" rx="1"/><rect x="266" y="217" width="16" height="15" rx="1"/><rect x="290" y="217" width="16" height="15" rx="1"/></g>
+          <text x="306" y="210" text-anchor="end" class="lbl c-export">Savings, year after year</text>
+          <text x="72" y="253" class="lbl c-cost">Large payment up front</text>
+          <path class="axis" d="M44 232 H316"/>
+          <g class="ax" text-anchor="middle"><text x="57" y="280">Start</text><text x="82" y="280">1</text><text x="106" y="280">2</text><text x="130" y="280">3</text><text x="154" y="280">4</text><text x="178" y="280">5</text><text x="202" y="280">6</text><text x="226" y="280">7</text><text x="250" y="280">8</text><text x="274" y="280">9</text><text x="298" y="280">10</text></g>
+        </g>
+
+        <!-- ================= OPEX / RESCO ================= -->
+        <g transform="translate(348 0)">
+          <rect class="panel" x="0.5" y="0.5" width="331" height="289" rx="4"/>
+          <text x="16" y="22" class="lbl-b">OPEX / RESCO<tspan class="lbl-s" dx="6">the customer pays per unit</tspan></text>
+          <path d="M16 31 H316" class="grid-l"/>
+
+          <rect class="node own" x="16" y="50" width="100" height="40" rx="3"/>
+          <rect x="16" y="40" width="46" height="12" rx="1.5" fill="#8A5F00"/>
+          <text x="39" y="49" text-anchor="middle" class="tagt" fill="#fff">OWNER</text>
+          <text x="26" y="67" class="lbl-b">Developer</text>
+          <text x="26" y="80" class="lbl-s">or investor; runs it</text>
+          <rect class="node" x="16" y="122" width="100" height="40" rx="3"/>
+          <text x="26" y="139" class="lbl-b">Customer</text>
+          <text x="26" y="152" class="lbl-s">uses the power</text>
+          <rect class="node" x="216" y="50" width="100" height="40" rx="3"/>
+          <text x="226" y="67" class="lbl-b">Installer</text>
+          <text x="226" y="80" class="lbl-s">designs and builds</text>
+          <rect class="node" x="216" y="122" width="100" height="40" rx="3"/>
+          <text x="226" y="139" class="lbl-b">Solar plant</text>
+          <text x="226" y="152" class="lbl-s">on the customer’s roof</text>
+
+          <path class="flow money ln" d="M118 70 H212"/>
+          <text x="166" y="62" text-anchor="middle" class="lbl c-cost">Full cost</text>
+          <text x="166" y="83" text-anchor="middle" class="lbl-s">paid by the developer</text>
+          <path class="flow plain ln" d="M266 92 V118"/>
+          <text x="258" y="109" text-anchor="end" class="lbl-s">builds it</text>
+          <path class="flow solar ln" d="M214 142 H120"/>
+          <text x="166" y="134" text-anchor="middle" class="lbl c-solar">Solar units</text>
+          <text x="166" y="155" text-anchor="middle" class="lbl-s">sold to the customer</text>
+          <path class="flow money ln" d="M66 120 V94"/>
+          <text x="74" y="104" class="lbl c-cost">Pays per unit used</text>
+          <text x="74" y="115" class="lbl-s">agreed rate, under a PPA</text>
+
+          <text x="16" y="186" class="cap">CUSTOMER’S CASH FLOW, YEAR BY YEAR · ILLUSTRATIVE</text>
+          <path class="grid-l" d="M44 200 H316 M44 216 H316 M44 248 H316 M44 264 H316"/>
+          <path class="axis" d="M44 196 V268"/>
+          <text x="40" y="212" text-anchor="end" class="ax">in +</text>
+          <text x="40" y="256" text-anchor="end" class="ax">out −</text>
+          <rect x="49" y="230" width="16" height="4" rx="1" fill="none" stroke="#93A1B3" stroke-dasharray="2 2"/>
+          <g fill="#17855A"><rect x="74" y="225" width="16" height="7" rx="1"/><rect x="98" y="225" width="16" height="7" rx="1"/><rect x="122" y="225" width="16" height="7" rx="1"/><rect x="146" y="225" width="16" height="7" rx="1"/><rect x="170" y="225" width="16" height="7" rx="1"/><rect x="194" y="225" width="16" height="7" rx="1"/><rect x="218" y="225" width="16" height="7" rx="1"/><rect x="242" y="225" width="16" height="7" rx="1"/><rect x="266" y="225" width="16" height="7" rx="1"/><rect x="290" y="225" width="16" height="7" rx="1"/></g>
+          <text x="306" y="210" text-anchor="end" class="lbl c-export">A smaller saving, from the first month</text>
+          <text x="72" y="253" class="lbl">Nothing up front</text>
+          <path class="axis" d="M44 232 H316"/>
+          <g class="ax" text-anchor="middle"><text x="57" y="280">Start</text><text x="82" y="280">1</text><text x="106" y="280">2</text><text x="130" y="280">3</text><text x="154" y="280">4</text><text x="178" y="280">5</text><text x="202" y="280">6</text><text x="226" y="280">7</text><text x="250" y="280">8</text><text x="274" y="280">9</text><text x="298" y="280">10</text></g>
+        </g>
+      </svg>
+      <div class="legend" style="margin-top:2.4mm">
+        <span><i class="dash"></i>Money</span>
+        <span><i class="build"></i>Plant built</span>
+        <span><i></i>Solar power</span>
+        <span><i class="export"></i>Saving on the electricity bill</span>
+        <span><i class="owner"></i>Owns the plant</span>
+      </div>
+      <p class="fig-cap">Bars are schematic: not to scale, no rupee values. Real savings depend on the tariff, on-site use and, under RESCO, the agreed rate.</p>
+    </div>
+
+    <table class="cmp">
+      <thead><tr><th></th><th>CAPEX · buy the plant</th><th>OPEX / RESCO · buy the power</th></tr></thead>
+      <tbody>
+        <tr><td>Upfront cost</td><td>Full cost, from own funds or a loan</td><td>None; the developer pays</td></tr>
+        <tr><td>Ownership</td><td>The customer</td><td>The developer or investor</td></tr>
+        <tr><td>Maintenance</td><td>Customer (annual maintenance contract)</td><td>Developer handles operation and upkeep</td></tr>
+        <tr><td>Tax benefit</td><td>A business can claim depreciation</td><td>None, as the customer owns no plant</td></tr>
+        <tr><td>Typical term</td><td>Design life of 25 years or more</td><td>Typically 15–25 years for businesses</td></tr>
+        <tr><td>Typically suits</td><td>Those who can pay or borrow up front</td><td>Businesses that prefer not to invest</td></tr>
+      </tbody>
+    </table>
+
+    <div class="row grow">
+      <div class="card top" style="flex:1">
+        <h4>Two variations</h4>
+        <p class="small" style="margin-top:1.6mm"><b>Lease.</b> The customer pays a fixed monthly rent for the system; the company renting it out (the lessor) owns it.</p>
+        <p class="small" style="margin-top:1.8mm"><b>BOOT</b> (build, own, operate, transfer). Like RESCO, but ownership of the plant passes to the customer at the end of the term.</p>
+      </div>
+      <div class="card dark" style="flex:1.75">
+        <h4>The same model, seen from the investor’s side</h4>
+        <div class="inv" style="margin-top:1.8mm">
+          <div>
+            <h3>Where the income comes from</h3>
+            <p class="small" style="margin-top:1mm">Under RESCO the investor pays for the plant. Its income is the per-unit payments the power user makes over the contract, which for business rooftops typically runs 15–25 years.</p>
+          </div>
+          <div>
+            <h3>The main risks</h3>
+            <ul class="dots small" style="margin-top:1.2mm">
+              <li><b>The user’s ability to pay</b> for the whole term</li>
+              <li><b>Plant performance</b> over the years</li>
+              <li><b>Regulation</b>, which can change</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer class="pf"><span>{{FOOT}}</span><span class="pn">{{PN}}</span></footer>
+</section>
